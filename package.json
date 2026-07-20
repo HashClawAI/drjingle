@@ -9,7 +9,8 @@
     "build": "node scripts/generate-geo-files.mjs && astro build",
     "preview": "astro preview",
     "geo:generate": "node scripts/generate-geo-files.mjs",
-    "export:geoflow": "node scripts/export-from-geoflow.mjs"
+    "export:geoflow": "node scripts/export-from-geoflow.mjs",
+    "import:cache": "python3 scripts/import-from-local-cache.py"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
