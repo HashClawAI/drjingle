@@ -244,8 +244,9 @@ html {
 }
 
 .dj-brand-mark .dj-site-logo-icon {
-    height: 24px;
+    height: 30px;
     width: auto;
+    filter: drop-shadow(0 0 7px rgba(48, 209, 88, 0.2));
 }
 
 .dj-brand-mark-card {
@@ -255,7 +256,7 @@ html {
 }
 
 .dj-brand-mark-card .dj-site-logo-icon {
-    height: 28px;
+    height: 36px;
 }
 
 .dj-brand-text {
