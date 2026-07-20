@@ -99,7 +99,7 @@ const en: typeof zh = {
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: 'Home', events: 'Events', insights: 'Insights', research: 'Research', ecosystem: 'Ecosystem', primary: 'Main' },
   home: {
-    kicker: 'GEO Flow · AI / RWA / Web3',
+    kicker: 'AI / RWA / Web3',
     tagline: 'Evolving as a super individual',
     bio: 'Blockchain protocols & AI agent research',
     picksEyebrow: 'Dr.Jingle Picks',
