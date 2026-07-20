@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CategoryPage from '@/components/mirror/CategoryPage.astro';
+import type { Locale, NavKey } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import {
+  categoryPageHref,
+  loadCategoryArticles,
+  type CategorySlug,
+} from '@/lib/categoryPage';
+import { parsePageParam } from '@/lib/pagination';
+
+export async function getStaticPaths() {
+  const { categoryStaticPagePaths } = await import('@/lib/categoryPage');
+  return categoryStaticPagePaths('en');
+}
+
+const locale: Locale = 'en';
+const { slug, page: pageRaw } = Astro.params;
+const valid: CategorySlug[] = ['insights', 'research', 'events'];
+if (!slug || !valid.includes(slug as CategorySlug)) {
+  return Astro.redirect('/');
+}
+
+const cat = slug as CategorySlug;
+const pageNum = parsePageParam(pageRaw);
+if (pageNum <= 1) {
+  return Astro.redirect(categoryPageHref(cat, 1, locale));
+}
+
+const { pageData } = await loadCategoryArticles(cat, locale, pageNum);
+if (pageNum > pageData.totalPages) {
+  return Astro.redirect(categoryPageHref(cat, pageData.totalPages, locale));
+}
+
+const tr = t(locale);
+const navCurrent: NavKey = cat;
+
+const pageTitle = `${tr.nav[cat]} · ${tr.category.paginationStatus(pageData.currentPage, pageData.totalPages)}`;
+const pageDesc =
+  cat === 'insights'
+    ? tr.category.insightsDesc
+    : cat === 'research'
+      ? tr.category.researchDesc
+      : tr.category.eventsDesc;
+---
+
+<BaseLayout locale={locale} title={pageTitle} description={pageDesc} navCurrent={navCurrent}>
+  <CategoryPage
+    locale={locale}
+    slug={cat}
+    items={pageData.items}
+    totalItems={pageData.totalItems}
+    currentPage={pageData.currentPage}
+    totalPages={pageData.totalPages}
+  />
+</BaseLayout>

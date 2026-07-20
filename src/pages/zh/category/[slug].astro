@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import CategoryPage from '@/components/mirror/CategoryPage.astro';
 import type { Locale, NavKey } from '@/lib/i18n';
 import { t } from '@/lib/i18n';
-import { getArticlesByCategory } from '@/lib/articles';
+import { loadCategoryArticles, type CategorySlug } from '@/lib/categoryPage';
 
 export function getStaticPaths() {
   return ['insights', 'research', 'events', 'ecosystem'].map((slug) => ({ params: { slug } }));
@@ -16,9 +16,13 @@ if (!slug || !valid.includes(slug as (typeof valid)[number])) {
   return Astro.redirect('/zh/');
 }
 
-const cat = slug as (typeof valid)[number];
+const cat = slug as CategorySlug;
 const tr = t(locale);
-const items = cat === 'ecosystem' ? [] : await getArticlesByCategory(cat, locale);
+const { pageData } =
+  cat === 'ecosystem'
+    ? { pageData: { items: [], totalItems: 0, currentPage: 1, totalPages: 1 } }
+    : await loadCategoryArticles(cat, locale, 1);
+const items = pageData.items;
 
 const navCurrent: NavKey = cat;
 
@@ -34,5 +38,12 @@ const pageDesc =
 ---
 
 <BaseLayout locale={locale} title={pageTitle} description={pageDesc} navCurrent={navCurrent}>
-  <CategoryPage locale={locale} slug={cat} items={items} />
+  <CategoryPage
+    locale={locale}
+    slug={cat}
+    items={items}
+    totalItems={pageData.totalItems}
+    currentPage={pageData.currentPage}
+    totalPages={pageData.totalPages}
+  />
 </BaseLayout>
