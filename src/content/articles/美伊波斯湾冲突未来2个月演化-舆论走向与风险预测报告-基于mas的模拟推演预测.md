@@ -6,7 +6,7 @@ category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - 本报告基于模拟推演显示，美以与伊朗的军事冲突将在未来2个月经历低烈度对抗、霍尔木兹封锁、调停降级三个阶段，各方叙事博弈与两次关键舆论拐点将直接决定战事是否外溢，海湾中等强国的调停行动是实现冲突软着陆的核心变量。
 - ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibu320hOC23LfqR3KialroaqSEVWWvJg5oNyqnEZrlwW8wwMghZHVHB7CBrNZawxUPnILicSOZQzdriay13eh9FfhSWKHhXibyWA6M3nVHz8rmlI/640?wx_fmt=png&from=appmsg)
 - 未来2个月波斯湾冲突的演化路径呈现清晰的三阶特征，不同阶段的核心事件、各方行动与风险水平存在显著差异。

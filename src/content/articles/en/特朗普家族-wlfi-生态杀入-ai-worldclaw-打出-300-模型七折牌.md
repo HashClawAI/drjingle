@@ -50,9 +50,9 @@ Diagram: AgentPay SDK emphasizes policy constraints, human approval, local signi
 AgentPay SDK is WLFI's open toolkit for AI agents to hold, move, and manage USD1 under policy constraints—moving "AI agent payments" from concept to developer tools.
 - **Self-hosted locally**: wallet keys generated/stored on operator machine; WLFI does not custody wallets or access key material.
 - **Policy before signature**: every request passes spend policy (limits, address allowlists, thresholds) before signing.
-- **Human approval**: operations above thresholds can pause for review.
+- operations above thresholds can pause for review.
 - **Local signing, no telemetry**: docs say signing is local; SDK sends no telemetry to WLFI or third parties.
-- **Agent hosts**: docs mention skill packs for Claude Code, Codex, OpenClaw, etc.
+- docs mention skill packs for Claude Code, Codex, OpenClaw, etc.
 ## VI. Why WLFI Enters the AI Agent Track
 WorldRouter "~30% off" alone looks like cost optimization; add USD1 and AgentPay SDK and it becomes infrastructure narrative.
 ### 1. Expand USD1 use cases
@@ -62,11 +62,11 @@ DeFi is often low-frequency; AI/agent workflows may be high-frequency. WorldRout
 ### 3. Capture the agent economy payment layer
 If agents need APIs, data, services, micropayments—whoever provides payment policy, permissions, audit may become agent-economy infrastructure.
 ## VII. Five Questions Readers Should Verify
-- **Price**: Is ~30% off live? All models, tiers, scenarios?
-- **Models**: Availability, rate limits, context, capability boundaries transparent?
-- **Data**: Are prompts, files, context, logs stored/deletable/used for training?
-- **Payment**: Rules clear among USD1 purchase, WLFI lock, token credit burn?
-- **Liability**: How are WorldClaw (third-party) vs. WLFI legal/ops boundaries drawn?
+- Is ~30% off live? All models, tiers, scenarios?
+- Availability, rate limits, context, capability boundaries transparent?
+- Are prompts, files, context, logs stored/deletable/used for training?
+- Rules clear among USD1 purchase, WLFI lock, token credit burn?
+- How are WorldClaw (third-party) vs. WLFI legal/ops boundaries drawn?
 ## VIII. One-Line Summary
 WorldClaw's memorable sell is WorldRouter: 300+ models, ~30% call cost. It connects three layers: model gateway, USD1 settlement, AgentPay SDK agent payments.
 If the bundle holds, WorldClaw is not just a model relay—it tries to make "using AI" a workflow of stablecoin pay, policy control, agent execution. Success depends on sustained pricing, stable models, safe payments, and clear liability boundaries.

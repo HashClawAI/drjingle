@@ -1,6 +1,6 @@
 ---
 title: "AI Agent玩家的自嗨陷阱：95%的项目没赚到钱"
-description: "一个 Agent 能写代码、调工具、跑工作流，Demo 往往惊艳。可一旦追问：谁付钱？付多少？省了哪条成本线？——很多团队就开始含糊其辞。；MIT Project NANDA 2025 年发布的《The GenAI Divide: State of AI in Business 2025》指出：在企业 GenAI 领域，尽管已投入 300–400 亿美元，95% 的组织未…；这个通过率，比许…"
+description: "一个 Agent 能写代码、调工具、跑工作流，Demo 往往惊艳。可一旦追问：谁付钱？付多少？省了哪条成本线？——很多团队就开始含糊其辞。 MIT Project NANDA 2025 年发布的《The GenAI Divide: State of AI in Business 2025》指出：在企业 GenAI 领域，尽管已投入 300–400 亿美元，95% 的组织未… 这个通过率，比许…"
 pubDate: 2026-07-06
 category: insights
 series: ai-agent-pitfalls
@@ -8,7 +8,7 @@ seriesOrder: 2
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - 一个 Agent 能写代码、调工具、跑工作流，Demo 往往惊艳。可一旦追问：谁付钱？付多少？省了哪条成本线？——很多团队就开始含糊其辞。
 - MIT Project NANDA 2025 年发布的《The GenAI Divide: State of AI in Business 2025》指出：在企业 GenAI 领域，尽管已投入 300–400 亿美元，95% 的组织未…
 - 这个通过率，比许多传统 SaaS 试点还低。报告强调：瓶颈往往不是模型不够强，而是工具接不进真实工作流、学不会业务上下文、解决不了有人愿意付费的问题。

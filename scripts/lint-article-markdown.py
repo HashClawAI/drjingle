@@ -30,6 +30,9 @@ BOILERPLATE_SUFFIX_RE = re.compile(
     r"|更多细节见上文分节论述。?)\s*$",
     re.I,
 )
+GEO_LABEL_BULLET_RE = re.compile(r"^(-\s*)\*\*([^*]{1,14})\*\*[：:]\s*(.+)$")
+GEO_LABEL_INLINE_RE = re.compile(r"\*\*([^*]{1,14})\*\*[：:]\s*")
+SUMMARY_HEADING = "## 核心要点摘要"
 
 
 def collect_mmbiz_urls(*sources: Path) -> list[str]:
@@ -113,6 +116,7 @@ def strip_broken_images(line: str, catalog: list[str]) -> str | None:
 
     line = BRACKET_BOLD_RE.sub(r"**\1**", line)
     line = BOILERPLATE_SUFFIX_RE.sub("", line)
+    line = strip_geo_summary_labels(line)
     if not line.strip():
         return None
     return line
@@ -122,6 +126,15 @@ def clean_body_line(line: str, catalog: list[str]) -> str | None:
     return strip_broken_images(line, catalog)
 
 
+def strip_geo_summary_labels(line: str) -> str:
+    m = GEO_LABEL_BULLET_RE.match(line.strip())
+    if m:
+        return f"{m.group(1)}{m.group(3)}"
+    if line.strip() == SUMMARY_HEADING:
+        return "## 导读"
+    return line
+
+
 def clean_description(raw: str, catalog: list[str]) -> str:
     text = raw
     text = IMG_MD_RE.sub(
@@ -129,7 +142,9 @@ def clean_description(raw: str, catalog: list[str]) -> str:
         text,
     )
     text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
+    text = GEO_LABEL_INLINE_RE.sub("", text)
     text = re.sub(r"●+", " ", text)
+    text = re.sub(r"[；;]+\s*", " ", text)
     text = re.sub(r"\s+", " ", text).strip(" ；;")
     if len(text) > 200:
         text = text[:197].rstrip() + "…"

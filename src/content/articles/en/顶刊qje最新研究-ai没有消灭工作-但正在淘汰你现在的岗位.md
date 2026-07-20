@@ -1,6 +1,6 @@
 ---
 title: "QJE: AI Hasn't Destroyed Jobs — But It's Phasing Out Your Current Role"
-description: "Top journal QJE finds aggregate employment stable while middle-skill roles shrink fastest. A temple analogy: AI bookkeeping replaces the registrar monk; demand rises for the abbot and the novice."
+description: "Top journal QJE finds aggregate employment stable while middle-skill roles shrink fastest. A temple analogy: AI bookkeeping replaces the registrar monk demand rises for the abbot and the novice."
 pubDate: 2026-07-05
 category: research
 articleSlug: "顶刊qje最新研究-ai没有消灭工作-但正在淘汰你现在的岗位"

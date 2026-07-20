@@ -40,8 +40,8 @@ Can the vision land in the next year? Tesla, Waymo, Uber **split the market** or
 **Wood's known stance**
 Wood thinks Robotaxi won't be "several equals"—vertical integrators more likely define the platform. Tesla built a **platform layer** others can develop on—consistent with ARK's "platform innovation" bet since founding.
 **Two readings**
-- **Split**: networks, licenses, maps, ops experience differ—early competition by city/scenario.
-- **Take-all**: if autonomy unit economics clearly better and platform replicates fast, capital and data concentrate at the head.
+- networks, licenses, maps, ops experience differ—early competition by city/scenario.
+- if autonomy unit economics clearly better and platform replicates fast, capital and data concentrate at the head.
 Wood leans take-all but admits **deployment pace** depends on regulation, safety data, commercial ops—not vision alone. Next year: watch **FSD/Robotaxi move from demo to scalable unit profit**, not just mileage press releases.
 ---
 ## III. SpaceX IPO: "Voracious" Demand—Tesla-Style Roller Coaster?
@@ -78,7 +78,7 @@ ARK tracks **full AI hardware stack**: GPU core for training/large inference; **
 Practical view:
 - **Training clusters**: GPU/high-end accelerators still lead.
 - **Inference/mixed**: CPU + GPU synergy, dedicated chips rising.
-- **Musk stack**: If Terafab lands, debate extends from "whose GPU" to **"can they self-design + self-manufacture the whole stack."**
+- If Terafab lands, debate extends from "whose GPU" to **"can they self-design + self-manufacture the whole stack."**
 ---
 ## VI. Policy Variables: White House Model Review, Can Stablecoins Scale in America?
 **Background**
@@ -88,9 +88,9 @@ Google, Microsoft reportedly agreed to **U.S. government pre-review** of AI mode
 - Under new regulatory framework, can stablecoins truly scale?
 **Issue framing (Wood interview policy angle)**
 **AI model review**
-- **Pro**: national security, election deepfakes, biosecurity need upfront assessment.
-- **Con**: opaque standards slow innovation; disadvantage smaller model companies.
-- **Middle**: likely **tiered regulation**—foundation models, gov-enterprise cooperation, critical infrastructure different rules—not all pass or all ban.
+- national security, election deepfakes, biosecurity need upfront assessment.
+- opaque standards slow innovation; disadvantage smaller model companies.
+- likely **tiered regulation**—foundation models, gov-enterprise cooperation, critical infrastructure different rules—not all pass or all ban.
 **Stablecoins**
 - U.S. debate: **bank-style regulation, transparent reserves, interest allowed, CBDC division**.
 - If federal framework clarifies **compliant issuers + auditable reserves + clear TradFi interfaces**, USDC etc. may expand **payment/settlement**—separate from **speculative trading**.

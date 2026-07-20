@@ -6,7 +6,7 @@ category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - MICHAEL SAYLOR
 - ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8KOtUCplia5lLuaZ75vFWN8QOCrT6HMtjleMzRdfZQaibSexMoLnYXLWIwqaNLWW61THDgT5TDBVO7g/640?wx_fmt=jpeg&from=appmsg)
 - [Digital Gold Rush ]

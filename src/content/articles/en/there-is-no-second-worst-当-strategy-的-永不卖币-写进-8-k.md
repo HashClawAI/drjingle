@@ -1,6 +1,6 @@
 ---
 title: "There Is No Second Worst: When Strategy's \"Never Sell\" Lands in an 8-K"
-description: "On June 29, 2026 Strategy authorized BTC sales via a Digital Credit Capital Framework—32 BTC sold in May, up to $1.25B more allowed. The DAT \\\\\\\\\\\"never sell\\\\\\\\\\\" gospel meets monetizable treasury…"
+description: "On June 29, 2026 Strategy authorized BTC sales via a Digital Credit Capital Framework—32 BTC sold in May, up to $1.25B more allowed. The DAT \\\\\\\\\\\\\\\\\\\\\\\"never sell\\\\\\\\\\\\\\\\\\\\\\\" gospel meets monetiza…"
 pubDate: 2026-07-05
 category: insights
 articleSlug: "there-is-no-second-worst-当-strategy-的-永不卖币-写进-8-k"

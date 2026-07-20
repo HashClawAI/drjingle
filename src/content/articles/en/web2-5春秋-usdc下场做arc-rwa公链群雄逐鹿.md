@@ -1,6 +1,6 @@
 ---
 title: "Web2.5 Warring States: USDC Builds Arc, RWA Chains Compete"
-description: "RWA chains compete on treasuries, funds, and stablecoin settlement—not TPS hype. Circle's Arc puts USDC at L1 gas; Canton targets institutional privacy; Web2.5 is the bridge, RWA chains the piers."
+description: "RWA chains compete on treasuries, funds, and stablecoin settlement—not TPS hype. Circle's Arc puts USDC at L1 gas Canton targets institutional privacy Web2.5 is the bridge, RWA chains the piers."
 pubDate: 2026-07-05
 category: insights
 series: stablecoin-2026

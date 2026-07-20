@@ -6,7 +6,7 @@ category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - ![](https://mmbiz.qpic.cn/mmbiz_png/Q6r8uQ3Lf8JjbfWP9O2C3y3pia48TXiadnTjW5gvlYhLWr0Ng7dyeyhZiaibNib71CLSLOG6Q3NzkAE0jiaQREbJ0UrQ/640?wx_fmt=png&from=appmsg)
 - [L1 Blockchain ]
 - 在2025年，区块链技术已从实验阶段迈入机构主流应用的时代。作为金融市场数字化转型的核心引擎，Canton Network（简称Canton网络）以其独特的隐私保护机制和互操作性，成为连接传统金融（TradFi）与去中心化金融（DeF…

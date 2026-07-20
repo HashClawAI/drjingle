@@ -1,6 +1,6 @@
 ---
 title: "World's Most Profitable Companies TOP 10 (FY2025): Alphabet Leads, NVIDIA at $2.86M Per Employee"
-description: "Alphabet led FY2025 net profit at ~$132.2B; NVIDIA hit ~$1.2B total and ~$2.86M per employee. Tether and Jane Street dwarf listed giants on a per-head basis."
+description: "Alphabet led FY2025 net profit at ~$132.2B NVIDIA hit ~$1.2B total and ~$2.86M per employee. Tether and Jane Street dwarf listed giants on a per-head basis."
 pubDate: 2026-07-05
 category: insights
 articleSlug: "全球最赚钱公司top10-2025年报-alphabet登顶-nvidia人均286万美元"

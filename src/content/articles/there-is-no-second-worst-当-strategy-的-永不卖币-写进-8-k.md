@@ -1,12 +1,12 @@
 ---
 title: "There Is No Second Worst：当 Strategy 的「永不卖币」写进 8-K"
-description: "2026 年 6 月 29 日，Michael Saylor 旗下的 Strategy（原 MicroStrategy）在一份新闻稿与 SEC 8-K 里，做了一件过去几年几乎不可想象的事：；正式授权，在特定条件下出售比特币。；不是隐喻，不是「用比特币作抵押借法币」——是 BTC Monetization Program：把国库里的 BTC 变现，去填美元储备、付优先股股息、回购证券。"
+description: "2026 年 6 月 29 日，Michael Saylor 旗下的 Strategy（原 MicroStrategy）在一份新闻稿与 SEC 8-K 里，做了一件过去几年几乎不可想象的事： 正式授权，在特定条件下出售比特币。 不是隐喻，不是「用比特币作抵押借法币」——是 BTC Monetization Program：把国库里的 BTC 变现，去填美元储备、付优先股股息、回购证券。"
 pubDate: 2026-07-05
 category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - 2026 年 6 月 29 日，Michael Saylor 旗下的 Strategy（原 MicroStrategy）在一份新闻稿与 SEC 8-K 里，做了一件过去几年几乎不可想象的事：
 - 正式授权，在特定条件下出售比特币。
 - 不是隐喻，不是「用比特币作抵押借法币」——是 BTC Monetization Program：把国库里的 BTC 变现，去填美元储备、付优先股股息、回购证券。
