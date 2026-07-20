@@ -1,12 +1,12 @@
 ---
 title: "AI Native 的产品灵魂：AI 正在重构产品范式"
-description: "AI浪潮袭来，目前市面上混杂着各种打着 AI 旗号的产品。那么，到底哪些产品是真正的 AI 产品？我试着分成三类：AI 开发（Developed），AI 赋能（Enabled），与 AI 原生（Native）。；AI Developed 容易识别。难的是区别 AI Enabled 和 AI Native。两者之间从估值，到技术含量，到未来的竞争力完全不同。我对这两者的理解也随着时间变化而变化…"
+description: "AI浪潮袭来，目前市面上混杂着各种打着 AI 旗号的产品。那么，到底哪些产品是真正的 AI 产品？我试着分成三类：AI 开发（Developed），AI 赋能（Enabled），与 AI 原生（Native）。 AI Developed 容易识别。难的是区别 AI Enabled 和 AI Native。两者之间从估值，到技术含量，到未来的竞争力完全不同。我对这两者的理解也随着时间变化而变化…"
 pubDate: 2026-07-06
 category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - AI浪潮袭来，目前市面上混杂着各种打着 AI 旗号的产品。那么，到底哪些产品是真正的 AI 产品？我试着分成三类：AI 开发（Developed），AI 赋能（Enabled），与 AI 原生（Native）。
 - AI Developed 容易识别。难的是区别 AI Enabled 和 AI Native。两者之间从估值，到技术含量，到未来的竞争力完全不同。我对这两者的理解也随着时间变化而变化。
 - 在 2025 年初，普遍认为 AI Native= Dialog + RAG + LLM（+CoT）。判定标准为：把底层 AI 模型拿掉，如果这个产品崩塌了，那它就是 AI Native。现在看来，即便是很简单的 AI 产品（AI 在…

@@ -1,6 +1,6 @@
 ---
 title: "140 家巨头联手 Open USD：Visa 入局的「共享稳定币」是什么？"
-description: "**事件**：2026 年 6 月 30 日，Visa 加密负责人 Cuy Sheffield 宣布 Visa 加入 **Open Standard**，参与发行 **Open USD（OUSD）**——为全球金融体系设计的「共享稳定币」。；**阵容**：Stripe、Coinbase、Mastercard、AmEx、BlackRock、U.S. Bank、BBVA、Standard Cha…"
+description: "2026 年 6 月 30 日 Visa 加入 Open Standard，与 Stripe、Coinbase 等约 140 家机构共同推动 Open USD（OUSD）——面向全球金融体系的「共享稳定币」倡议 OUSD 尚未发行，目标 2026 年内上线。"
 pubDate: 2026-07-06
 category: insights
 series: stablecoin-2026
@@ -8,14 +8,13 @@ seriesOrder: 1
 locale: zh
 draft: false
 ---
-## 核心要点摘要
-- **事件**：2026 年 6 月 30 日，Visa 加密负责人 Cuy Sheffield 宣布 Visa 加入 **Open Standard**，参与发行 **Open USD（OUSD）**——为全球金融体系设计的「共享稳定币」。
-- **阵容**：Stripe、Coinbase、Mastercard、AmEx、BlackRock、U.S. Bank、BBVA、Standard Chartered 等 **100+** 初始伙伴；媒体报道合计约 **140+** 机构。
-- **机制差异**：相对 USDC/USDT 的单一发行方模式，OUSD 强调 **伙伴董事会治理**、**储备收益分润**、企业 **免手续费 mint/redeem**（以最终条款为准）。
-- **时间线**：OUSD **尚未正式发行**；目标 **2026 年内** 晚些时候上线；Stripe 称将成为其平台 **企业默认稳定币**。
-- **适用边界**：本文为公开报道整理与评论，不构成投资建议；托管方、绑定强度等细节仍待官方披露。
+## 导读
+2026 年 6 月 30 日，Visa 加密负责人 Cuy Sheffield 宣布：Visa 加入 Open Standard，参与发行 Open USD（OUSD）——一套面向全球金融体系设计的「共享稳定币」。
+首批公开伙伴包括 Stripe、Coinbase、Mastercard、American Express、BlackRock、U.S. Bank、BBVA、Standard Chartered 等；综合 The Block、SiliconANGLE 等报道，参与机构约 140+ 家。
+与 USDC/USDT 的单一发行方模式相比，OUSD 强调伙伴董事会治理、储备收益向参与方分润，以及面向企业的免手续费 mint/redeem（以最终条款为准）。代币尚未正式发行，目标 2026 年内晚些时候上线；Stripe 称 OUSD 将成为其平台企业默认稳定币。
+本文为公开报道整理与评论，不构成投资建议；托管方、绑定强度等细节仍待官方披露。
 ## 一句话定义
-**Open USD（OUSD）**：由 Open Standard 治理、Visa/Stripe/140+ 机构联合背书的美元锚定稳定币倡议——试图用「联盟制 + 收益共享 + 多链部署」把稳定币从单一 issuer 竞争，升级为支付与银行共同参与的 **金融基础设施层**。
+Open USD（OUSD）：由 Open Standard 治理、Visa/Stripe/140+ 机构联合背书的美元锚定稳定币倡议——试图用「联盟制 + 收益共享 + 多链部署」把稳定币从单一 issuer 竞争，升级为支付与银行共同参与的金融基础设施层。
 ---
 ## 正文
 ### 2026-06-30：Visa 为何加入 Open Standard？
@@ -52,8 +51,8 @@ draft: false
 ### 与 USDC、USDT 的关键差异
 稳定币市场长期由 **Circle（USDC）** 与 **Tether（USDT）** 主导。Open USD 的差异化集中在：
 **1. 收益分配**
-- **USDC / USDT**：储备收益 largely 留在 **发行方**；
-- **OUSD**：**伙伴分润**——参与机构是储备利息的 **利益相关方**。
+- 储备收益 largely 留在 **发行方**；
+- **伙伴分润**——参与机构是储备利息的 **利益相关方**。
 **2. 治理结构**
 - 单一 issuer vs **伙伴董事会**——更接近 **行业标准组织** 逻辑。
 **3. 企业接入成本**

@@ -25,8 +25,8 @@ It reads more like a signal: institutional finance on-chain is moving from conce
 ## Where Is the Money Going?
 Per Digital Asset's release, funds support Canton's next growth phase: expanding the ecosystem, deepening developer and institution participation, and onboarding more assets, applications, and regulated workflows.
 Three keywords:
-- **Assets**: more securities, cash, collateral, fund shares, and other financial assets on-chain
-- **Applications**: networks around trading, settlement, payments, collateral movement
+- more securities, cash, collateral, fund shares, and other financial assets on-chain
+- networks around trading, settlement, payments, collateral movement
 - **Regulated workflows**: not DeFi wild growth, but processes institutions can actually deploy
 Digital Asset positions Canton clearly: capital markets need shared infrastructure while preserving privacy, compliance, control, and interoperability. Public chains excel at openness but weak on institutional privacy; private chains excel at control but create silos. Canton targets the hard middle.
 ## What Makes Canton Different?

@@ -1,12 +1,12 @@
 ---
 title: "Tether：稳定币王者的全球雄心"
-description: "日前，Tether的CEO Paolo Ardoino接受了Bankless的一次视频采访，信息量满满。本文根据视频采访的内容，总结了Tether的成功之道、未来战略以及其对美国和加密行业的深远影响。对我们发展港元和人民币稳定币也颇有…；在数字金融的浪潮中，Tether以其旗舰稳定币USDT稳坐行业龙头宝座。近日，Tether首席执行官Paolo Ardoino在Bankless播客中分享了…"
+description: "日前，Tether的CEO Paolo Ardoino接受了Bankless的一次视频采访，信息量满满。本文根据视频采访的内容，总结了Tether的成功之道、未来战略以及其对美国和加密行业的深远影响。对我们发展港元和人民币稳定币也颇有… 在数字金融的浪潮中，Tether以其旗舰稳定币USDT稳坐行业龙头宝座。近日，Tether首席执行官Paolo Ardoino在Bankless播客中分享了…"
 pubDate: 2026-07-06
 category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - 日前，Tether的CEO Paolo Ardoino接受了Bankless的一次视频采访，信息量满满。本文根据视频采访的内容，总结了Tether的成功之道、未来战略以及其对美国和加密行业的深远影响。对我们发展港元和人民币稳定币也颇有…
 - 在数字金融的浪潮中，Tether以其旗舰稳定币USDT稳坐行业龙头宝座。近日，Tether首席执行官Paolo Ardoino在Bankless播客中分享了公司去年的惊人业绩——137亿美元的利润，并预计2025年将再创新高。这一数字…
 - 惊人财务表现：从137亿到潜在万亿估值

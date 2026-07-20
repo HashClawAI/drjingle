@@ -6,7 +6,7 @@ category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - ![](https://mmbiz.qpic.cn/mmbiz_png/Q6r8uQ3Lf8JuschUDROREgZDVibEVqQPoBVloCb5panJa6yk0jOUgeMm6UibHiaRHxjgcdDA6mpA1Ypz0RScQ4XDA/0?wx_fmt=png&from=appmsg)
 - [Trading Agent ]
 - 在人工智能（AI）迅猛发展的时代，我们常常看到AI在棋类游戏、围棋甚至视频游戏中大放异彩，比如DeepMind的AlphaZero通过自学击败了人类顶尖高手。这些成就令人惊叹，但AI研究者们很快意识到：游戏环境虽严谨，却终究是“人造沙…

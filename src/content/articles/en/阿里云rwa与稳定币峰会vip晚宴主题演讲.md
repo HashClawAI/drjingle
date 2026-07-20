@@ -1,6 +1,6 @@
 ---
 title: "Alibaba Cloud RWA & Stablecoin Summit VIP Dinner Keynote"
-description: "A ~10-minute CXO briefing on \\\\\\\\\\\"Cloud Rises, All Things Grow\\\\\\\\\\\": U.S. strategic moves, RWA and stablecoin scale, and how Alibaba Cloud can ride the everything-on-chain wave. For entertainment…"
+description: "A ~10-minute CXO briefing on \\\\\\\\\\\\\\\\\\\\\\\"Cloud Rises, All Things Grow\\\\\\\\\\\\\\\\\\\\\\\": U.S. strategic moves, RWA and stablecoin scale, and how Alibaba Cloud can ride the everything-on-chain wave. For e…"
 pubDate: 2026-07-05
 category: insights
 articleSlug: "阿里云rwa与稳定币峰会vip晚宴主题演讲"

@@ -1,12 +1,12 @@
 ---
 title: "值BTC新高，祭铭文时代之终结"
-description: "创世区块铭文见证时代起点；比特币新高之际，铭文与符文时代走向终结——从 Ordinals 到 Runes 等协议的狂欢与局限。"
+description: "创世区块铭文见证时代起点 比特币新高之际，铭文与符文时代走向终结——从 Ordinals 到 Runes 等协议的狂欢与局限。"
 pubDate: 2026-07-06
 category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks." ——这句刻在比特币创世区块中的话，见证了一个时代的开始。
 - 而如今，当比特币屡创新高之际，我们也正在见证另一个曾经辉煌时代的终结——铭文与符文
 - 从2023年初Ordinals协议的横空出世，到BRC20的疯狂炒作，再到Runes、Atomical、CAT20、RGB++、Alkanes等协议的轮番登场，比特币生态经历了一场史无前例的"铭文革命"。

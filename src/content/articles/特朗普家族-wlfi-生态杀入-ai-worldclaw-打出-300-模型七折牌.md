@@ -1,12 +1,12 @@
 ---
 title: "特朗普家族 WLFI 生态杀入 AI？WorldClaw 打出 300+ 模型七折牌"
-description: "WorldClaw 官网最抓眼球的一句话，不是“AI agents 操作系统”，而是更直接的价格承诺：通过 WorldRouter 访问 300+ 模型，示例价格约为官方价和 OpenRouter 价格的 7 折。本文先解释这个“7 …；对重度使用 AI 的个人和团队来说，大模型成本正在变成一项真实开支：写作、代码、检索、Agent 自动化、长上下文分析，每一步都可能消耗 token。Wor…"
+description: "WorldClaw 官网最抓眼球的一句话，不是“AI agents 操作系统”，而是更直接的价格承诺：通过 WorldRouter 访问 300+ 模型，示例价格约为官方价和 OpenRouter 价格的 7 折。本文先解释这个“7 … 对重度使用 AI 的个人和团队来说，大模型成本正在变成一项真实开支：写作、代码、检索、Agent 自动化、长上下文分析，每一步都可能消耗 token。Wor…"
 pubDate: 2026-07-06
 category: insights
 locale: zh
 draft: false
 ---
-## 核心要点摘要
+## 导读
 - WorldClaw 官网最抓眼球的一句话，不是“AI agents 操作系统”，而是更直接的价格承诺：通过 WorldRouter 访问 300+ 模型，示例价格约为官方价和 OpenRouter 价格的 7 折。本文先解释这个“7 …
 - 对重度使用 AI 的个人和团队来说，大模型成本正在变成一项真实开支：写作、代码、检索、Agent 自动化、长上下文分析，每一步都可能消耗 token。WorldClaw 把切入点选在“模型调用成本”上，因此比单纯讲一个宏大的 Agen…
 - WorldClaw 官网在 WorldRouter 页面展示了多组价格对比：同一模型分别列出官方价格、OpenRouter 价格和 WorldRouter 价格。示例中，WorldRouter 的输入/输出价格大约比对应官方价和 Op…
@@ -47,11 +47,11 @@ USD1 是 WLFI 推出的美元稳定币。WLFI 官网介绍称，USD1 可 1:1 兑
 ![](https://mmbiz.qpic.cn/sz_mmbiz_png/ibu320hOC23J7FJr2qpl8zpyJH3cClCYIFI3icNPWdA3ff5YyaL4LYfNGT80Y1LGWic8FNnRs7B90pWU7bT6jVwsricfZY3IYgKgPvaxSt0yPyM/0?from=appmsg)
 示意图：AgentPay SDK 的重点是策略约束、人工审批、本地签名与链上 USD1 结算。
 AgentPay SDK 是 WLFI 官方文档中介绍的一套开源工具包，用于构建能够持有、移动并在策略约束下管理 USD1 的 AI 代理。它把“AI 代理支付”从概念推进到开发者工具层。
-- **本地自托管**：钱包私钥在操作者本机生成和保存，WLFI 不托管钱包，也不访问私钥材料。
-- **先策略、后签名**：每一笔请求在签名前先经过支出策略，例如额度、目标地址白名单和阈值规则。
-- **人工审批**：超过阈值的操作可以暂停，等待人工审核。
-- **本地签名与无遥测**：文档称签名在本机完成，SDK 不向 WLFI 或第三方发送遥测数据。
-- **面向 agent host**：文档提到 Claude Code、Codex、OpenClaw 等宿主的 skill pack。
+- 钱包私钥在操作者本机生成和保存，WLFI 不托管钱包，也不访问私钥材料。
+- 每一笔请求在签名前先经过支出策略，例如额度、目标地址白名单和阈值规则。
+- 超过阈值的操作可以暂停，等待人工审核。
+- 文档称签名在本机完成，SDK 不向 WLFI 或第三方发送遥测数据。
+- 文档提到 Claude Code、Codex、OpenClaw 等宿主的 skill pack。
 ## 六、为什么 WLFI 要进入 AI Agent 赛道
 如果只看 WorldRouter 的“模型 7 折”，它像一个成本优化产品；如果把 USD1 和 AgentPay SDK 放进来，它就变成了一个更大的基础设施故事。
 ### 1. 扩大 USD1 的使用场景
@@ -61,11 +61,11 @@ DeFi 产品通常低频，而 AI 工具和 agent 工作流可能高频。通过 
 ### 3. 抢占“代理人经济”的支付入口
 如果未来 AI 代理需要访问 API、购买数据、调用服务或执行小额支付，那么谁提供支付策略、权限控制与审计能力，谁就可能成为 agent 经济的基础设施层。
 ## 七、读者最该核验的五个问题
-- **价格**：7 折是否实时有效？是否适用于所有模型、所有档位和所有调用场景？
-- **模型**：300+ 模型的可用性、限速、上下文和能力边界是否透明？
-- **数据**：提示词、文件、上下文和调用日志是否保存、是否可删除、是否用于训练？
-- **支付**：USD1 购买、锁仓 WLFI、token credits 消耗之间的规则是否清楚？
-- **责任**：WorldClaw 作为第三方服务，与 WLFI 的法律和运营边界如何界定？
+- 7 折是否实时有效？是否适用于所有模型、所有档位和所有调用场景？
+- 300+ 模型的可用性、限速、上下文和能力边界是否透明？
+- 提示词、文件、上下文和调用日志是否保存、是否可删除、是否用于训练？
+- USD1 购买、锁仓 WLFI、token credits 消耗之间的规则是否清楚？
+- WorldClaw 作为第三方服务，与 WLFI 的法律和运营边界如何界定？
 ## 八、一句话总结
 WorldClaw 最容易被记住的卖点，是 WorldRouter 的“300+ 模型、约 7 折调用成本”。但它真正想连接的，是三层东西：模型调用入口、USD1 结算资产，以及 AgentPay SDK 支持的代理支付。
 如果这套组合成立，WorldClaw 不是单纯的模型中转站，而是在尝试把“用 AI”变成“用稳定币支付、用策略控制、由 agent 执行”的一套新工作流。至于它能否走到这一步，取决于价格是否持续、模型是否稳定、支付是否安全，以及责任边界是否足够清晰。

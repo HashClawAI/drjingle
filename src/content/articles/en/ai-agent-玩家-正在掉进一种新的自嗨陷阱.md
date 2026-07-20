@@ -1,6 +1,6 @@
 ---
 title: "AI Agent Builders Are Falling Into a New Kind of Vanity Trap"
-description: "MIT NANDA finds 95% of enterprise GenAI spend shows no measurable ROI. Agent demos look like digital employees—but mistaking \\\\\\\\\\\"I can build it\\\\\\\\\\\" for \\\\\\\\\\\"it's valuable\\\\\\\\\\\" is the new vani…"
+description: "MIT NANDA finds 95% of enterprise GenAI spend shows no measurable ROI. Agent demos look like digital employees—but mistaking \\\\\\\\\\\\\\\\\\\\\\\"I can build it\\\\\\\\\\\\\\\\\\\\\\\" for \\\\\\\\\\\\\\\\\\\\\\\"it's valuable\\\\\\\\…"
 pubDate: 2026-07-05
 category: insights
 series: ai-agent-pitfalls

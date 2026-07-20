@@ -28,11 +28,11 @@ Expanded into fixed income, futures, commodities, global options. HQ 250 Vesey S
 Rarely gives media interviews or brand ads. Outside view comes from bond prospectuses, regulatory filings, occasional tech events.
 ## II. Financial Numbers: 2024 Doubling and 2025 Leap
 ### Key disclosed metrics
-- **2023**: Net trading revenue ~$10.6B (bond filings/media)
-- **2024**: Net trading revenue ~$20.5B, net profit ~$13B (IFR, bond disclosures)
-- **2025**: Net trading revenue ~$39.6B, adjusted EBITDA ~$31.2B (Bloomberg, April 2026)
-- **2025 Q2**: Net trading revenue ~$10.1B, quarter net profit ~$6.9B (media)
-- **2026 Q1**: Net trading revenue ~$16.1B (Reuters / Economic Times citing sources; full annual report pending)
+- Net trading revenue ~$10.6B (bond filings/media)
+- Net trading revenue ~$20.5B, net profit ~$13B (IFR, bond disclosures)
+- Net trading revenue ~$39.6B, adjusted EBITDA ~$31.2B (Bloomberg, April 2026)
+- Net trading revenue ~$10.1B, quarter net profit ~$6.9B (media)
+- Net trading revenue ~$16.1B (Reuters / Economic Times citing sources; full annual report pending)
 [Bloomberg April 24, 2026](https://www.bloomberg.com/news/articles/2026-04-24/jane-street-snatches-wall-street-crown-with-record-39-6-billion-trading-haul) reported 2025 full-year net trading revenue $39.6B, Q4 ~$15.5B; ~$11.3M revenue per employee on ~3,500 staff. JPMorgan trading revenue ~$35.8B on ~316,000 employees.
 ### What "~$9M per person" means
 Media "~$9M profit per person" = **company EBITDA or operating profit ÷ headcount**, not take-home pay.
@@ -88,8 +88,8 @@ Full talk (~62 min) on Jane Street tech page. Video requires WeChat backend appr
 Long recruits from MIT, Cambridge etc.—math, physics, CS; interviews famous for probability, mental math, game puzzles. Sam Bankman-Fried joined 2014, left 2017 to start businesses—a known personnel case.
 ~3,500 staff, high engineer/trader ratio; capital and talent density far above traditional IB. Media: members' equity grew fast; high employee ownership; most profit retained in firm capital for inventory risk and expansion.
 ### Peer comparison (2025 trading revenue, media)
-- **Jane Street**: ~$39.6B, ~3,500 staff
-- **JPMorgan**: ~$35.8B, ~316,000 staff
+- ~$39.6B, ~3,500 staff
+- ~$35.8B, ~316,000 staff
 - **Citadel Securities**: ~$12.2B
 - **Hudson River Trading**: ~$12.3B
 ## VI. Conclusion: Three Layers Behind ~$9M per Person
