@@ -31,7 +31,7 @@ draft: false
 
 ## 黑洞：不是画了个圈，是做了空间物理
 
-![video:Fable 5 黑洞渲染视频——58 秒带字幕的 Gargantua 飞行](fable-5/blackhole.wechat.mp4)
+![video:Fable 5 黑洞渲染视频——58 秒带字幕的 Gargantua 飞行](/images/articles/fable-5/blackhole.wechat.mp4)
 
 *接近《星际穿越》卡冈图雅观感的 WebGL2 实时渲染，附完整视频与字幕解说。*
 
@@ -47,7 +47,7 @@ draft: false
 
 ## 虫洞：把「穿越」做成了可感知的空间变化
 
-![Fable 5 生成的虫洞效果：两侧宇宙与喉道穿越](fable-5/wormhole.png)
+![Fable 5 生成的虫洞效果：两侧宇宙与喉道穿越](/images/articles/fable-5/wormhole.png)
 
 *Ellis wormhole 几何设定，从冷色银河系穿越到暖色远方宇宙。*
 
@@ -61,7 +61,7 @@ draft: false
 
 ## 红警 Web：不只复刻外观，还补齐了 RTS 闭环
 
-![Fable 5 生成的网页版红色警戒：资源、建造与战斗闭环](fable-5/redalert.png)
+![Fable 5 生成的网页版红色警戒：资源、建造与战斗闭环](/images/articles/fable-5/redalert.png)
 
 *单页 Web 原型：采矿、建造、生产、进攻，完整 RTS 垂直切片。*
 
@@ -75,7 +75,7 @@ draft: false
 
 ## WebCraft：Minecraft 是成熟套路，但它把密度打满了
 
-![video:Fable 5 网页版 Minecraft 实机录屏](fable-5/minecraft.wechat.mp4)
+![video:Fable 5 网页版 Minecraft 实机录屏](/images/articles/fable-5/minecraft.wechat.mp4)
 
 *Three.js 体素沙盒：chunk 加载、地形生成、方块编辑与第一人称控制。*
 

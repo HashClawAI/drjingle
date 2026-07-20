@@ -1,0 +1,20 @@
+{
+  "01-yang-musk-customers": {
+    "video": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/01-yang-musk-customers.wechat.mp4",
+    "cover": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/01-yang-musk-customers.jpg",
+    "size_bytes": 1547446,
+    "title": "2014：杨元庆问马斯克有多少客户"
+  },
+  "02-jack-ma-musk-mars": {
+    "video": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/02-jack-ma-musk-mars.wechat.mp4",
+    "cover": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/02-jack-ma-musk-mars.jpg",
+    "size_bytes": 3544270,
+    "title": "2019：马云与马斯克论火星与地球"
+  },
+  "03-spacex-ipo-speech-en": {
+    "video": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/03-spacex-ipo-speech-en.wechat.mp4",
+    "cover": "artifacts/spacex-ipo-musk-dialogues-2026-06-13/videos/03-spacex-ipo-speech-en.jpg",
+    "size_bytes": 4865142,
+    "title": "2026：SpaceX IPO 马斯克演讲（英文字幕）"
+  }
+}

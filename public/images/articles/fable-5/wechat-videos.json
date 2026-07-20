@@ -1,0 +1,18 @@
+{
+  "fable-5/wormhole.png": {
+    "url": "http://mmbiz.qpic.cn/mmbiz_png/ibu320hOC23LraowSZUtDMHSynhYVGn6rGS9TJoU38hsuIrx90p9ktX3eZX0PA3kRSBUdQ8tBvly6BbB7NcdRazUN00RX5qnhzhVwqg3s1DQ/0?from=appmsg"
+  },
+  "fable-5/redalert.png": {
+    "url": "http://mmbiz.qpic.cn/mmbiz_png/ibu320hOC23IJjVttGviahHP7IAFYiaawxXEEVNKhGCE9L5AxmsOoBOcMKN4oic0Q0hudBEApYHaNypvZwm2oDjqp1A7qqOjMmkicXFlKJVpzzmQ/0?from=appmsg"
+  },
+  "fable-5/blackhole.wechat.mp4": {
+    "media_id": "sG-p835ZNkREHwdlAZhpdly0gepjS9uZAhIV4ObFGDKM3CgtZiSClSmn5fmcXekx",
+    "cover_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/ibu320hOC23Kmj4lBGaUXlAFia3aKruMGJXT5496iaUgCJic43TUh28YgFlJdxaV9cT48l7fgyJTRUlonPnibyJpkzNxrLQ4vBicibJS4X4hj5fUj4/0?from=appmsg",
+    "iframe_html": "<iframe class=\"video_iframe rich_pages\" data-vidtype=\"2\" data-mpvid=\"sG-p835ZNkREHwdlAZhpdly0gepjS9uZAhIV4ObFGDKM3CgtZiSClSmn5fmcXekx\" data-cover=\"http://mmbiz.qpic.cn/sz_mmbiz_jpg/ibu320hOC23Kmj4lBGaUXlAFia3aKruMGJXT5496iaUgCJic43TUh28YgFlJdxaV9cT48l7fgyJTRUlonPnibyJpkzNxrLQ4vBicibJS4X4hj5fUj4/0?from=appmsg\" allowfullscreen=\"\" frameborder=\"0\" style=\"width:100%;height:320px;z-index:1;\" data-w=\"1920\" data-src=\"https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=sG-p835ZNkREHwdlAZhpdly0gepjS9uZAhIV4ObFGDKM3CgtZiSClSmn5fmcXekx\"></iframe>"
+  },
+  "fable-5/minecraft.wechat.mp4": {
+    "media_id": "sG-p835ZNkREHwdlAZhpdqFK4Qi4wBJRzJfn1wzd-5JcKuV3zULF0BcB_DGkZAXe",
+    "cover_url": "http://mmbiz.qpic.cn/sz_mmbiz_jpg/ibu320hOC23K3PaUKich2OjItM4mGDPyicnfianqANA9mlBdaB7q7A05FXAAXUWngaPfvjpsOyQB0lr5XmdXNB8zkkym9fNuytMgdqENwBS5xwM/0?from=appmsg",
+    "iframe_html": "<iframe class=\"video_iframe rich_pages\" data-vidtype=\"2\" data-mpvid=\"sG-p835ZNkREHwdlAZhpdqFK4Qi4wBJRzJfn1wzd-5JcKuV3zULF0BcB_DGkZAXe\" data-cover=\"http://mmbiz.qpic.cn/sz_mmbiz_jpg/ibu320hOC23K3PaUKich2OjItM4mGDPyicnfianqANA9mlBdaB7q7A05FXAAXUWngaPfvjpsOyQB0lr5XmdXNB8zkkym9fNuytMgdqENwBS5xwM/0?from=appmsg\" allowfullscreen=\"\" frameborder=\"0\" style=\"width:100%;height:320px;z-index:1;\" data-w=\"1920\" data-src=\"https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&action=mpvideo&auto=0&vid=sG-p835ZNkREHwdlAZhpdqFK4Qi4wBJRzJfn1wzd-5JcKuV3zULF0BcB_DGkZAXe\"></iframe>"
+  }
+}
