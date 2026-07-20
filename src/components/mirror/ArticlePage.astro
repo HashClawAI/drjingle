@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import AuthorCard from '@/components/mirror/AuthorCard.astro';
+import ShareBar from '@/components/mirror/ShareBar.astro';
+import type { Locale } from '@/lib/i18n';
+import { t, localePath } from '@/lib/i18n';
+import { formatDate, articleHref, excerpt } from '@/lib/articles';
+import { categoryLabel } from '@/lib/categoryLabel';
+
+interface Props {
+  locale: Locale;
+  entry: CollectionEntry<'articles'>;
+  Content: Awaited<ReturnType<typeof import('astro:content').render>>['Content'];
+  related: CollectionEntry<'articles'>[];
+}
+
+const { locale, entry, Content, related } = Astro.props;
+const tr = t(locale);
+const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
+const shareUrl = new URL(articleHref(entry.slug, locale), siteOrigin).href;
+const cat = entry.data.category;
+const isPapers = cat === 'research';
+const lede = entry.data.description ?? excerpt(entry, 240);
+---
+
+<div class="dj-shell dj-article-shell">
+  <article class="dj-article dj-reveal">
+    <header class="dj-article-header">
+      <div class="dj-article-overline">
+        <a
+          href={localePath(locale, `/category/${cat}`)}
+          class:list={['dj-article-tag', isPapers ? 'dj-article-tag-papers' : 'dj-article-tag-insights']}
+        >
+          {categoryLabel(cat, locale)}
+        </a>
+        <span>{tr.article.overline}</span>
+      </div>
+      <h1 class="dj-article-title">{entry.data.title}</h1>
+      <div class="dj-article-meta">
+        <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate, locale)}</time>
+        <span>Dr.Jingle</span>
+      </div>
+      {lede && <p class="dj-article-lede">{lede}</p>}
+      <ShareBar locale={locale} shareUrl={shareUrl} shareTitle={entry.data.title} />
+    </header>
+
+    <div class="dj-prose">
+      <Content />
+    </div>
+
+    <ShareBar locale={locale} shareUrl={shareUrl} shareTitle={entry.data.title} />
+  </article>
+
+  <AuthorCard locale={locale} />
+
+  {related.length > 0 && (
+    <section class="dj-section dj-related">
+      <div class="dj-section-head">
+        <p class="dj-section-eyebrow">{tr.article.relatedEyebrow}</p>
+        <h2 class="dj-section-title">{tr.article.relatedTitle}</h2>
+      </div>
+      <div class="dj-related-list">
+        {related.map((r, index) => (
+          <a href={articleHref(r.slug, locale)} class="dj-related-link">
+            <span class="dj-related-index">{String(index + 1).padStart(2, '0')}</span>
+            <span class="dj-related-title">{r.data.title}</span>
+            <time datetime={r.data.pubDate.toISOString()}>{formatDate(r.data.pubDate, locale)}</time>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</div>

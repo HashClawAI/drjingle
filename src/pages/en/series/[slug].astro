@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import ArticleCard from '@/components/ArticleCard.astro';
+import SeriesPage from '@/components/mirror/SeriesPage.astro';
 import type { Locale } from '@/lib/i18n';
-import { t } from '@/lib/i18n';
 import { getPublishedArticles } from '@/lib/articles';
 import seriesData from '@/data/series.json';
 
@@ -15,19 +14,12 @@ const { slug } = Astro.params;
 const meta = seriesData[slug as keyof typeof seriesData];
 if (!meta) return Astro.redirect('/en/');
 
-const tr = t(locale);
+const title = meta.title_en;
+const desc = meta.desc_en;
 const all = await getPublishedArticles(locale);
-const items = meta.articles
-  .map((s) => all.find((a) => a.slug === s))
-  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+const items = meta.articles.map((s) => all.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
 ---
 
-<BaseLayout locale={locale} title={meta.title_en} description={meta.desc_en} navCurrent="insights">
-  <h1 class="dj-page-title">{meta.title_en}</h1>
-  <p class="dj-page-intro">{meta.desc_en}</p>
-  <div class="dj-card-grid">
-    {items.map((entry) => (
-      <ArticleCard entry={entry} locale={locale} />
-    ))}
-  </div>
+<BaseLayout locale={locale} title={title} description={desc} navCurrent="insights">
+  <SeriesPage locale={locale} title={title} desc={desc} items={items} />
 </BaseLayout>

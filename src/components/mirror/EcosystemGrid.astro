@@ -1,0 +1,41 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const sites = [
+  { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc, accent: 'cyan', current: true },
+  { name: 'hashclaw.ai', url: 'https://hashclaw.ai', tag: tr.ecosystem.hashclaw.tag, desc: tr.ecosystem.hashclaw.desc, accent: 'gold', logo: '/themes/drjingle-mirror/hashclaw-logo.jpeg' },
+  { name: 'ccprivacy.club', url: 'https://ccprivacy.club', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc, accent: 'violet' },
+];
+---
+
+<div class="dj-site-grid">
+  {sites.map((site) => (
+    <a
+      href={site.url}
+      class:list={['dj-site-card', `dj-site-card-${site.accent}`, site.current && 'is-current']}
+      target={site.current ? undefined : '_blank'}
+      rel={site.current ? undefined : 'noopener noreferrer'}
+    >
+      <div class="dj-site-card-head">
+        {site.logo ? (
+          <img src={site.logo} alt="" class="dj-site-card-logo" loading="lazy" decoding="async" />
+        ) : (
+          <span class="dj-site-card-mark" aria-hidden="true">DJ</span>
+        )}
+        <div>
+          <span class="dj-site-card-tag">{site.tag}</span>
+          <h2 class="dj-site-card-name">{site.name}</h2>
+        </div>
+      </div>
+      <p class="dj-site-card-desc">{site.desc}</p>
+      <span class="dj-site-card-cta">{tr.category.ecosystemVisit} →</span>
+    </a>
+  ))}
+</div>

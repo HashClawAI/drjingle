@@ -1,0 +1,41 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+  shareUrl: string;
+  shareTitle: string;
+}
+
+const { locale, shareUrl, shareTitle } = Astro.props;
+const tr = t(locale);
+const encodedUrl = encodeURIComponent(shareUrl);
+const encodedTitle = encodeURIComponent(shareTitle);
+const xUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}&via=drjingle`;
+const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+const wechatQr = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodedUrl}`;
+---
+
+<div class="dj-share" data-share-bar>
+  <span class="dj-share-label">{tr.share.label}</span>
+  <div class="dj-share-actions">
+    <a href={xUrl} class="dj-share-btn dj-share-x" target="_blank" rel="noopener noreferrer" aria-label={tr.share.x}>
+      <span>X</span>
+    </a>
+    <a href={linkedinUrl} class="dj-share-btn dj-share-linkedin" target="_blank" rel="noopener noreferrer" aria-label={tr.share.linkedin}>
+      <span>LinkedIn</span>
+    </a>
+    <button type="button" class="dj-share-btn dj-share-wechat" data-wechat-toggle aria-expanded="false" aria-controls="dj-wechat-qr">
+      <span>{tr.share.wechat}</span>
+    </button>
+    <button type="button" class="dj-share-btn dj-share-copy" data-copy-link={shareUrl} aria-label={tr.share.copy}>
+      <span>{tr.share.copy}</span>
+    </button>
+  </div>
+  <div id="dj-wechat-qr" class="dj-wechat-qr" hidden>
+    <img src={wechatQr} width="180" height="180" alt={tr.share.wechatQrAlt} loading="lazy" />
+    <p>{tr.share.wechatHint}</p>
+  </div>
+  <p class="dj-share-toast" data-copy-toast hidden>{tr.share.copied}</p>
+</div>

@@ -1,62 +1,40 @@
 ---
+import Newsletter from '@/components/mirror/Newsletter.astro';
 import type { Locale } from '@/lib/i18n';
 import { t } from '@/lib/i18n';
 
 interface Props {
   locale: Locale;
+  year: number;
+  showNewsletter?: boolean;
 }
 
-const { locale } = Astro.props;
+const { locale, year, showNewsletter = false } = Astro.props;
 const tr = t(locale);
-const year = new Date().getFullYear();
 ---
 
 <footer class="dj-footer">
-  <div class="dj-footer-inner">
-    <div>
-      <strong>{tr.footer.brand}</strong>
-      <p>{tr.footer.desc}</p>
+  <div class="dj-shell">
+    <div class="dj-footer-grid">
+      <div>
+        <div class="dj-footer-brand">{tr.footer.brand}</div>
+        <p class="dj-footer-desc">{tr.footer.desc}</p>
+      </div>
+      <div class="dj-footer-links">
+        <div class="dj-footer-linkset" aria-label="Footer links">
+          <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://t.me/Y2049" target="_blank" rel="noopener noreferrer">TG</a>
+          <a href="https://paragraph.com/fahayek.eth" target="_blank" rel="noopener noreferrer">Paragraph</a>
+          <a href="/llms.txt">llms</a>
+          <a href="/sitemap-index.xml">Sitemap</a>
+        </div>
+        <a href="https://hashclaw.ai" class="dj-hashclaw-mark" target="_blank" rel="noopener noreferrer" aria-label="HashClaw.ai">
+          <img src="/themes/drjingle-mirror/hashclaw-logo.jpeg" alt="HashClaw" loading="lazy" decoding="async" />
+          <span>hashclaw.ai</span>
+        </a>
+      </div>
     </div>
-    <div class="dj-footer-links">
-      <a href="https://x.com/drjingle" target="_blank" rel="noopener noreferrer">X @drjingle</a>
-      <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://ccprivacy.club/" target="_blank" rel="noopener noreferrer">Canton Edu</a>
-    </div>
+    <div class="dj-footer-copy">{tr.footer.copy(year)}</div>
+    {showNewsletter && <Newsletter locale={locale} />}
   </div>
-  <p class="dj-footer-copy">{tr.footer.copy.replace(':year', String(year))}</p>
 </footer>
-
-<style>
-  .dj-footer {
-    border-top: 1px solid var(--dj-line);
-    padding: 2rem 0 2.5rem;
-    margin-top: auto;
-    color: var(--dj-text-muted);
-    font-size: 0.88rem;
-  }
-  .dj-footer-inner {
-    width: min(var(--dj-max), calc(100% - 2rem));
-    margin: 0 auto 1rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .dj-footer-inner p {
-    margin: 0.35rem 0 0;
-    max-width: 28rem;
-  }
-  .dj-footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-  .dj-footer-links a:hover {
-    color: var(--dj-cyan);
-  }
-  .dj-footer-copy {
-    width: min(var(--dj-max), calc(100% - 2rem));
-    margin: 0 auto;
-    font-size: 0.78rem;
-  }
-</style>

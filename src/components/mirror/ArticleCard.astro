@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '@/lib/i18n';
+import { t, localePath } from '@/lib/i18n';
+import { articleHref, excerpt, formatDate } from '@/lib/articles';
+import { categoryLabel, categorySignal } from '@/lib/categoryLabel';
+import Avatar from '@/components/mirror/Avatar.astro';
+
+interface Props {
+  entry: CollectionEntry<'articles'>;
+  locale: Locale;
+  variant?: 'feed' | 'featured';
+  rank?: number;
+}
+
+const { entry, locale, variant = 'feed', rank } = Astro.props;
+const tr = t(locale);
+const href = articleHref(entry.slug, locale);
+const cat = entry.data.category;
+const isFeatured = variant === 'featured';
+const isFeed = variant === 'feed';
+const isPapers = cat === 'research';
+const isInsights = cat === 'insights';
+const signal = categorySignal(cat, locale);
+const dateStr = formatDate(entry.data.pubDate, locale);
+const catHref = localePath(locale, `/category/${cat}`);
+---
+
+<article
+  class:list={[
+    'dj-card',
+    isFeatured && 'dj-card-featured dj-reveal',
+    isFeed && 'dj-card-post',
+    isPapers && 'dj-card-post-papers',
+    isInsights && 'dj-card-post-insights',
+  ]}
+>
+  {isFeatured && (
+    <>
+      <div class="dj-card-glow" aria-hidden="true"></div>
+      {rank != null && <span class="dj-card-rank dj-card-rank-featured">{String(rank).padStart(2, '0')}</span>}
+      <div class="dj-card-signal">{signal}</div>
+    </>
+  )}
+
+  {isFeed ? (
+    <header class="dj-card-post-head">
+      <Avatar size="feed" withRing={false} />
+      <div class="dj-card-post-meta">
+        <span class="dj-card-post-author">Dr.Jingle</span>
+        <time datetime={entry.data.pubDate.toISOString()}>{dateStr}</time>
+        <span class="dj-card-post-dot">·</span>
+        <a href={catHref}>{categoryLabel(cat, locale)}</a>
+      </div>
+      {rank != null && <span class="dj-card-rank">{String(rank).padStart(2, '0')}</span>}
+    </header>
+  ) : (
+    <time class="dj-card-date" datetime={entry.data.pubDate.toISOString()}>{dateStr}</time>
+  )}
+
+  <h2 class="dj-card-title">
+    <a href={href}>{entry.data.title}</a>
+  </h2>
+  <p class="dj-card-excerpt">{excerpt(entry, isFeatured ? 140 : 200)}</p>
+
+  {!isFeed && (
+    <a href={catHref} class="dj-card-tag">{categoryLabel(cat, locale)}</a>
+  )}
+
+  {isFeed && (
+    <footer class="dj-card-post-foot">
+      <span class:list={['dj-card-chip', isPapers ? 'dj-card-chip-papers' : 'dj-card-chip-insights']}>{signal}</span>
+      <a href={href} class:list={['dj-card-read', isPapers && 'dj-card-read-papers']}>{tr.card.read}</a>
+    </footer>
+  )}
+</article>

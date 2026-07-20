@@ -1,0 +1,27 @@
+---
+interface Props {
+  size?: 'hero' | 'brand' | 'author' | 'feed';
+  withRing?: boolean;
+}
+
+const { size = 'hero', withRing = size === 'hero' } = Astro.props;
+const w = size === 'brand' ? 36 : size === 'author' ? 88 : size === 'feed' ? 40 : 96;
+---
+
+<div class={`dj-avatar-wrap dj-avatar-${size} ${withRing ? 'dj-avatar-ring' : ''}`}>
+  {withRing && (
+    <>
+      <span class="dj-avatar-glow" aria-hidden="true"></span>
+      <span class="dj-avatar-orbit" aria-hidden="true"></span>
+    </>
+  )}
+  <img
+    src="/themes/drjingle-mirror/avatar-real-crop.jpg?v=2"
+    alt="Dr.Jingle"
+    class="dj-avatar-img"
+    width={w}
+    height={w}
+    loading={size === 'hero' ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+</div>

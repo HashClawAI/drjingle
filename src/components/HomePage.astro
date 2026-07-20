@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import ArticleCard from '@/components/ArticleCard.astro';
+import Avatar from '@/components/mirror/Avatar.astro';
+import HeroTitles from '@/components/mirror/HeroTitles.astro';
+import ArticleCard from '@/components/mirror/ArticleCard.astro';
+import Newsletter from '@/components/mirror/Newsletter.astro';
 import type { Locale } from '@/lib/i18n';
-import { t } from '@/lib/i18n';
+import { t, localePath } from '@/lib/i18n';
 import { getArticlesByCategory } from '@/lib/articles';
+import { getFeaturedArticles } from '@/lib/featured';
 import seriesData from '@/data/series.json';
 
 interface Props {
@@ -12,116 +16,142 @@ interface Props {
 
 const { locale } = Astro.props;
 const tr = t(locale);
-const insights = (await getArticlesByCategory('insights', locale)).slice(0, 6);
-const research = (await getArticlesByCategory('research', locale)).slice(0, 4);
+const latestInsights = (await getArticlesByCategory('insights', locale)).slice(0, 3);
+const latestResearch = (await getArticlesByCategory('research', locale)).slice(0, 3);
+const featured = await getFeaturedArticles(locale);
 const seriesEntries = Object.entries(seriesData);
 ---
 
 <BaseLayout locale={locale} title={tr.siteName} description={tr.siteDesc} navCurrent="home">
-  <section class="dj-hero">
-    <p class="dj-kicker">{tr.home.kicker}</p>
-    <h1 class="dj-hero-title">{tr.author.name}</h1>
-    <p class="dj-hero-bio">{tr.author.bio}</p>
-  </section>
+  <div class="dj-shell">
+    <section class="dj-hero">
+      <div class="dj-hero-inner">
+        <div class="dj-hero-content">
+          <div class="dj-hero-kicker">
+            <span class="dj-live-dot"></span>
+            {tr.home.kicker}
+          </div>
+          <h1 class="dj-hero-title">
+            <span class="dj-hero-legal-name">{tr.brand.legalName}</span>
+            {locale !== 'en' ? (
+              <span class="dj-hero-cn">
+                <span class="dj-hero-aka">aka</span>
+                <span class="dj-hero-cn-label">{tr.brand.cnName}</span>
+                <span class="dj-hero-brand">Dr.Jingle<sup class="dj-mark">™</sup></span>
+              </span>
+            ) : (
+              <span class="dj-hero-cn dj-hero-cn-compact">
+                <span class="dj-hero-aka">aka</span>
+                <span class="dj-hero-brand">Dr.Jingle<sup class="dj-mark">™</sup></span>
+              </span>
+            )}
+          </h1>
 
-  {insights.length > 0 && (
-    <section class="dj-section">
-      <div class="dj-section-head">
-        <h2>{tr.home.insightsTitle}</h2>
-        <a href={locale === 'zh' ? '/category/insights' : '/en/category/insights'}>{tr.home.moreInsights}</a>
-      </div>
-      <div class="dj-card-grid">
-        {insights.map((entry) => (
-          <ArticleCard entry={entry} locale={locale} />
-        ))}
+          <HeroTitles />
+
+          <p class="dj-hero-tagline">{tr.home.tagline}</p>
+          <p class="dj-hero-bio">{tr.home.bio}</p>
+
+          <div class="dj-hero-stats">
+            <div class="dj-stat">
+              <span class="dj-stat-num">{tr.home.builder}</span>
+              <span class="dj-stat-label">{tr.home.builderSub}</span>
+            </div>
+            <div class="dj-stat">
+              <span class="dj-stat-num">{tr.home.frontier}</span>
+              <span class="dj-stat-label">{tr.home.frontierSub}</span>
+            </div>
+          </div>
+
+          <div class="dj-hero-links">
+            <a href="https://x.com/drjingle" class="dj-btn dj-btn-primary" target="_blank" rel="noopener noreferrer">{tr.home.followX}</a>
+            <a href="https://paragraph.com/fahayek.eth" class="dj-btn dj-btn-wormhole" target="_blank" rel="noopener noreferrer">{tr.home.paragraph}</a>
+          </div>
+        </div>
+
+        <aside class="dj-hero-panel" aria-label="Dr.Jingle signal panel">
+          <div class="dj-avatar-stage">
+            <Avatar size="hero" withRing={true} />
+            <div class="dj-signal-ring dj-signal-ring-a"></div>
+            <div class="dj-signal-ring dj-signal-ring-b"></div>
+          </div>
+          <div class="dj-orbit-label dj-orbit-label-a">AI Agent</div>
+          <div class="dj-orbit-label dj-orbit-label-b">RWA</div>
+          <div class="dj-orbit-label dj-orbit-label-c">Canton</div>
+          <div class="dj-orbit-label dj-orbit-label-d">BTC</div>
+          <div class="dj-orbit-label dj-orbit-label-e">Canpay</div>
+          <div class="dj-orbit-label dj-orbit-label-f">DAO</div>
+        </aside>
       </div>
     </section>
-  )}
 
-  {research.length > 0 && (
-    <section class="dj-section">
-      <div class="dj-section-head">
-        <h2>{tr.home.researchTitle}</h2>
-        <a href={locale === 'zh' ? '/category/research' : '/en/category/research'}>{tr.home.moreResearch}</a>
-      </div>
-      <div class="dj-card-grid">
-        {research.map((entry) => (
-          <ArticleCard entry={entry} locale={locale} />
-        ))}
-      </div>
-    </section>
-  )}
+    {latestInsights.length > 0 && (
+      <section class="dj-section dj-reveal">
+        <div class="dj-section-head">
+          <p class="dj-section-eyebrow">{tr.home.insightsEyebrow}</p>
+          <h2 class="dj-section-title"><span class="dj-section-dot"></span> {tr.home.insightsTitle}</h2>
+        </div>
+        <div class="dj-feed dj-feed-editorial dj-feed-insights">
+          {latestInsights.map((entry, index) => (
+            <ArticleCard entry={entry} locale={locale} variant="feed" rank={index + 1} />
+          ))}
+        </div>
+        <div class="dj-latest-more">
+          <a href={localePath(locale, '/category/insights')}>{tr.home.insightsMore}</a>
+        </div>
+      </section>
+    )}
 
-  <section class="dj-section">
-    <h2>{tr.home.seriesTitle}</h2>
-    <div class="dj-series-grid">
-      {seriesEntries.map(([slug, meta]) => (
-        <a
-          class="dj-series-card"
-          href={locale === 'zh' ? `/series/${slug}` : `/en/series/${slug}`}
-        >
-          <h3>{locale === 'zh' ? meta.title_zh : meta.title_en}</h3>
-          <p>{locale === 'zh' ? meta.desc_zh : meta.desc_en}</p>
-        </a>
-      ))}
-    </div>
-  </section>
+    {featured.length > 0 && (
+      <section class="dj-section dj-reveal">
+        <div class="dj-section-head">
+          <p class="dj-section-eyebrow">{tr.home.picksEyebrow}</p>
+          <h2 class="dj-section-title"><span class="dj-section-dot"></span> {tr.home.picksTitle}</h2>
+        </div>
+        <div class="dj-card-grid dj-card-grid-editorial">
+          {featured.map((entry, index) => (
+            <ArticleCard entry={entry} locale={locale} variant="featured" rank={index + 1} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {latestResearch.length > 0 && (
+      <section class="dj-section dj-reveal">
+        <div class="dj-section-head">
+          <p class="dj-section-eyebrow dj-section-eyebrow-papers">{tr.home.researchEyebrow}</p>
+          <h2 class="dj-section-title"><span class="dj-section-dot dj-section-dot-papers"></span> {tr.home.researchTitle}</h2>
+        </div>
+        <div class="dj-feed dj-feed-editorial dj-feed-papers">
+          {latestResearch.map((entry, index) => (
+            <ArticleCard entry={entry} locale={locale} variant="feed" rank={index + 1} />
+          ))}
+        </div>
+        <div class="dj-latest-more">
+          <a href={localePath(locale, '/category/research')}>{tr.home.researchMore}</a>
+        </div>
+      </section>
+    )}
+
+    {seriesEntries.length > 0 && (
+      <section class="dj-section dj-series-home dj-reveal">
+        <div class="dj-section-head">
+          <p class="dj-section-eyebrow">{tr.home.seriesEyebrow}</p>
+          <h2 class="dj-section-title"><span class="dj-section-dot"></span> {tr.home.seriesTitle}</h2>
+        </div>
+        <div class="dj-series-card-grid">
+          {seriesEntries.map(([slug, meta]) => (
+            <a href={localePath(locale, `/series/${slug}`)} class="dj-series-card">
+              <span class="dj-series-card-count">{tr.series.parts(meta.articles.length)}</span>
+              <h3 class="dj-series-card-title">{locale === 'zh' ? meta.title_zh : meta.title_en}</h3>
+              <p class="dj-series-card-desc">{locale === 'zh' ? meta.desc_zh : meta.desc_en}</p>
+              <span class="dj-series-card-cta">{tr.series.readSeries} →</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <Newsletter locale={locale} />
+  </div>
 </BaseLayout>
-
-<style>
-  .dj-hero {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--dj-line);
-  }
-  .dj-kicker {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--dj-cyan);
-    margin: 0 0 0.75rem;
-  }
-  .dj-hero-title {
-    font-size: clamp(1.85rem, 4vw, 2.75rem);
-    margin: 0 0 0.75rem;
-  }
-  .dj-hero-bio {
-    color: var(--dj-text-soft);
-    max-width: 40rem;
-    margin: 0;
-  }
-  .dj-section {
-    margin-bottom: 2.5rem;
-  }
-  .dj-section-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  .dj-section-head a {
-    font-size: 0.88rem;
-    color: var(--dj-cyan);
-  }
-  .dj-series-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
-  .dj-series-card {
-    padding: 1.25rem;
-    border: 1px solid var(--dj-line);
-    border-radius: var(--dj-radius);
-    background: var(--dj-panel);
-  }
-  .dj-series-card h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1rem;
-  }
-  .dj-series-card p {
-    margin: 0;
-    font-size: 0.88rem;
-    color: var(--dj-text-soft);
-  }
-</style>
