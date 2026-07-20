@@ -9,7 +9,7 @@ const zh = {
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: 'Home', events: '活动', insights: '洞察', research: '研究', ecosystem: '生态', primary: '主导航' },
   home: {
-    kicker: 'GEO Flow · AI / RWA / Web3 知识流',
+    kicker: 'AI / RWA / Web3',
     tagline: '超级个体进化中',
     bio: '区块链协议与 AI 智能体研究',
     picksEyebrow: 'Dr.Jingle Picks',
