@@ -831,7 +831,7 @@ html {
 
 .dj-titles-zh { color: #d7deeb; }
 
-html[lang="zh-CN"] .dj-titles-en,
+html[lang="zh-Hans"] .dj-titles-en,
 html[lang="zh-CN"] .dj-titles-en { display: none; }
 
 html[lang="en"] .dj-titles-zh { display: none; }
