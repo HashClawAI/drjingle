@@ -7,7 +7,7 @@ const zh = {
   siteDesc: '区块链协议与 AI 智能体研究 · GEO 知识流',
   siteKeywords: 'Dr.Jingle, 金狗博士, AI, RWA, Web3, Canton',
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
-  nav: { home: 'Home', events: '活动', insights: '洞察', research: '研究', ecosystem: '生态', primary: '主导航' },
+  nav: { home: '首页', events: '活动', insights: '洞察', research: '研究', ecosystem: '生态', primary: '主导航' },
   home: {
     kicker: 'AI / RWA / Web3',
     tagline: '超级个体进化中',
@@ -43,7 +43,7 @@ const zh = {
     eventsCount: (n: number) => `${n} 场活动`,
     ecosystemVisit: '访问站点',
     emptyTitle: '暂无内容',
-    emptyHome: '返回 Home',
+    emptyHome: '返回首页',
     paginationLabel: '栏目分页',
     paginationPrev: '向后',
     paginationNext: '向前',
