@@ -1,6 +1,6 @@
 # drjingle.com · GitHub Pages
 
-Dr.Jingle 个人品牌主站（Astro 静态站）。替代本地 GEOFlow + Cloudflare Tunnel，**关电脑仍可访问**。
+Dr.Jingle 个人品牌主站
 
 - 线上：https://drjingle.com
 - 仓库：[HashClawAI/drjingle](https://github.com/HashClawAI/drjingle)（独立 repo）
