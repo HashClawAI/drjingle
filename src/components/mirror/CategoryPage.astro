@@ -1,0 +1,83 @@
+---
+import ArticleCard from '@/components/mirror/ArticleCard.astro';
+import EcosystemGrid from '@/components/mirror/EcosystemGrid.astro';
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '@/lib/i18n';
+import { t, localePath } from '@/lib/i18n';
+
+type CategorySlug = 'insights' | 'research' | 'events' | 'ecosystem';
+
+interface Props {
+  locale: Locale;
+  slug: CategorySlug;
+  items: CollectionEntry<'articles'>[];
+}
+
+const { locale, slug, items } = Astro.props;
+const tr = t(locale);
+
+const isEcosystem = slug === 'ecosystem';
+const isPapers = slug === 'research';
+const isInsights = slug === 'insights';
+const isEvents = slug === 'events';
+
+let kicker = tr.category.insightsKicker;
+let pageTitle = tr.nav.insights;
+let pageDesc = tr.category.insightsDesc;
+let countLabel = tr.category.insightsCount(items.length);
+
+if (isEvents) {
+  kicker = tr.category.eventsKicker;
+  pageTitle = tr.nav.events;
+  pageDesc = tr.category.eventsDesc;
+  countLabel = tr.category.eventsCount(items.length);
+} else if (isPapers) {
+  kicker = tr.category.researchKicker;
+  pageTitle = tr.nav.research;
+  pageDesc = tr.category.researchDesc;
+  countLabel = tr.category.researchCount(items.length);
+} else if (isEcosystem) {
+  kicker = tr.category.ecosystemKicker;
+  pageTitle = tr.nav.ecosystem;
+  pageDesc = tr.category.ecosystemDesc;
+}
+---
+
+<div class:list={['dj-shell', isPapers && 'dj-shell-papers', isEcosystem && 'dj-shell-sites']}>
+  <section
+    class:list={[
+      'dj-page-head',
+      'dj-feed-head',
+      'dj-reveal',
+      isPapers && 'dj-page-head-papers',
+      isEcosystem && 'dj-page-head-sites',
+      isInsights && 'dj-page-head-insights',
+    ]}
+  >
+    <div class="dj-feed-head-row">
+      <div>
+        <p class="dj-hero-kicker"><span class="dj-live-dot"></span> {kicker}</p>
+        <h1 class="dj-page-title">{pageTitle}</h1>
+        <p class="dj-page-desc">{pageDesc}</p>
+      </div>
+      {!isEcosystem && <span class="dj-feed-count">{countLabel}</span>}
+    </div>
+  </section>
+
+  <section class="dj-section">
+    {isEcosystem ? (
+      <EcosystemGrid locale={locale} />
+    ) : items.length === 0 ? (
+      <div class="dj-empty-state">
+        <p class="dj-empty-title">{tr.category.emptyTitle}</p>
+        <p class="dj-empty-desc"><a href={localePath(locale, '/')}>{tr.category.emptyHome}</a></p>
+      </div>
+    ) : (
+      <div class:list={['dj-feed', 'dj-feed-editorial', isPapers ? 'dj-feed-papers' : 'dj-feed-insights']}>
+        {items.map((entry, index) => (
+          <ArticleCard entry={entry} locale={locale} variant="feed" rank={index + 1} />
+        ))}
+      </div>
+    )}
+  </section>
+</div>

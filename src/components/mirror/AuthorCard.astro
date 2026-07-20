@@ -1,0 +1,30 @@
+---
+import Avatar from '@/components/mirror/Avatar.astro';
+import HeroTitles from '@/components/mirror/HeroTitles.astro';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+---
+
+<section class="dj-author-card" aria-label="About the author">
+  <Avatar size="author" withRing={false} />
+  <div class="dj-author-body">
+    <div class="dj-author-kicker">{tr.author.kicker}</div>
+    <h2 class="dj-author-name">{tr.author.displayName}</h2>
+    <HeroTitles />
+    <p class="dj-author-tagline">{tr.author.tagline}</p>
+    <p class="dj-author-bio">{tr.author.bio}</p>
+    <div class="dj-author-links">
+      <a href="https://x.com/drjingle" target="_blank" rel="noopener noreferrer">X @drjingle</a>
+      <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://t.me/Y2049" target="_blank" rel="noopener noreferrer">TG @Y2049</a>
+      <a href="https://paragraph.com/fahayek.eth" target="_blank" rel="noopener noreferrer">paragraph.com/fahayek.eth</a>
+    </div>
+  </div>
+</section>

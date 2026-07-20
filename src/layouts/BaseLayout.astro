@@ -1,5 +1,4 @@
 ---
-import '@/styles/theme.css';
 import SiteHeader from '@/components/SiteHeader.astro';
 import SiteFooter from '@/components/SiteFooter.astro';
 import type { Locale } from '@/lib/i18n';
@@ -10,13 +9,15 @@ interface Props {
   title: string;
   description: string;
   navCurrent?: 'home' | 'events' | 'insights' | 'research' | 'ecosystem';
+  showFooterNewsletter?: boolean;
 }
 
-const { locale, title, description, navCurrent = 'home' } = Astro.props;
+const { locale, title, description, navCurrent = 'home', showFooterNewsletter = false } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
 const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+const year = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -31,52 +32,29 @@ const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
     <meta property="og:type" content="website" />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/avatar.jpg', siteOrigin).href} />
+    <meta property="og:image" content={new URL('/themes/drjingle-mirror/avatar-real-crop.jpg', siteOrigin).href} />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs index" />
+    <link rel="stylesheet" href="/themes/drjingle-mirror/theme.css?v=31" />
     <title>{siteTitle}</title>
   </head>
   <body class="dj-body">
     <div class="dj-cosmos-bg" aria-hidden="true">
+      <canvas id="dj-cosmos" class="dj-cosmos-canvas"></canvas>
       <div class="dj-aurora dj-aurora-a"></div>
       <div class="dj-aurora dj-aurora-b"></div>
       <div class="dj-grid-plane"></div>
+      <div class="dj-orbital dj-orbital-a"></div>
+      <div class="dj-orbital dj-orbital-b"></div>
     </div>
-    <div class="dj-shell">
-      <SiteHeader locale={locale} navCurrent={navCurrent} />
-      <main class="dj-main">
-        <slot />
-      </main>
-      <SiteFooter locale={locale} />
-    </div>
+    <div class="dj-grain" aria-hidden="true"></div>
+    <div id="dj-read-progress" class="dj-read-progress" role="presentation"></div>
+
+    <SiteHeader locale={locale} navCurrent={navCurrent} pathname={Astro.url.pathname} />
+    <main class="dj-main">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} year={year} showNewsletter={showFooterNewsletter} />
+
+    <script src="/themes/drjingle-mirror/theme.js?v=24" defer></script>
   </body>
 </html>
-
-<style is:global>
-  .dj-shell {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .dj-main {
-    flex: 1;
-    width: min(var(--dj-max), calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 2rem 0 4rem;
-  }
-  .dj-page-title {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin: 0 0 0.5rem;
-    letter-spacing: -0.02em;
-  }
-  .dj-page-intro {
-    color: var(--dj-text-soft);
-    max-width: 42rem;
-    margin: 0 0 2rem;
-  }
-  .dj-card-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-</style>

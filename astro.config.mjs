@@ -27,5 +27,7 @@ export default defineConfig({
   },
   redirects: {
     '/category/sites': '/category/ecosystem',
+    '/category/papers': '/category/research',
+    '/en/category/papers': '/en/category/research',
   },
 });

@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { articleHref, formatDate, excerpt } from '@/lib/articles';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  desc: string;
+  items: CollectionEntry<'articles'>[];
+}
+
+const { locale, title, desc, items } = Astro.props;
+const tr = t(locale);
+---
+
+<div class="dj-shell dj-series-shell">
+  <header class="dj-page-head dj-reveal">
+    <p class="dj-section-eyebrow">{tr.series.pageEyebrow}</p>
+    <h1 class="dj-page-title">{title}</h1>
+    {desc && <p class="dj-page-desc">{desc}</p>}
+    <p class="dj-series-count">{tr.series.articleCount(items.length)}</p>
+  </header>
+
+  <ol class="dj-series-list dj-reveal">
+    {items.map((entry, index) => (
+      <li class="dj-series-item">
+        <span class="dj-series-index">{String(index + 1).padStart(2, '0')}</span>
+        <div class="dj-series-item-body">
+          <a href={articleHref(entry.slug, locale)} class="dj-series-item-title">{entry.data.title}</a>
+          <p class="dj-series-item-desc">{excerpt(entry, 120)}</p>
+          <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate, locale)}</time>
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>

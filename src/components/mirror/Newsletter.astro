@@ -1,0 +1,33 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const externalUrl = import.meta.env.PUBLIC_NEWSLETTER_URL || '';
+---
+
+<section class="dj-newsletter dj-reveal" aria-labelledby="dj-newsletter-title">
+  <div class="dj-newsletter-inner">
+    <div class="dj-newsletter-copy">
+      <p class="dj-newsletter-eyebrow">{tr.newsletter.eyebrow}</p>
+      <h2 id="dj-newsletter-title" class="dj-newsletter-title">{tr.newsletter.title}</h2>
+      <p class="dj-newsletter-desc">{tr.newsletter.desc}</p>
+    </div>
+    <div class="dj-newsletter-form-wrap">
+      {externalUrl ? (
+        <a href={externalUrl} class="dj-btn dj-btn-primary dj-newsletter-external" target="_blank" rel="noopener noreferrer">
+          {tr.newsletter.ctaExternal}
+        </a>
+      ) : (
+        <a href="https://paragraph.com/fahayek.eth" class="dj-btn dj-btn-primary dj-newsletter-external" target="_blank" rel="noopener noreferrer">
+          Paragraph →
+        </a>
+      )}
+    </div>
+  </div>
+</section>
