@@ -9,11 +9,11 @@ export function getStaticPaths() {
   return ['insights', 'research', 'events', 'ecosystem'].map((slug) => ({ params: { slug } }));
 }
 
-const locale: Locale = 'en';
+const locale: Locale = 'zh';
 const { slug } = Astro.params;
 const valid = ['insights', 'research', 'events', 'ecosystem'] as const;
 if (!slug || !valid.includes(slug as (typeof valid)[number])) {
-  return Astro.redirect('/en/');
+  return Astro.redirect('/zh/');
 }
 
 const cat = slug as (typeof valid)[number];
@@ -21,6 +21,7 @@ const tr = t(locale);
 const items = cat === 'ecosystem' ? [] : await getArticlesByCategory(cat, locale);
 
 const navCurrent: NavKey = cat;
+
 const pageTitle = tr.nav[cat];
 const pageDesc =
   cat === 'insights'

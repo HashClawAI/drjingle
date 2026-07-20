@@ -9,7 +9,7 @@ export function getStaticPaths() {
   return ['insights', 'research', 'events', 'ecosystem'].map((slug) => ({ params: { slug } }));
 }
 
-const locale: Locale = 'zh';
+const locale: Locale = 'en';
 const { slug } = Astro.params;
 const valid = ['insights', 'research', 'events', 'ecosystem'] as const;
 if (!slug || !valid.includes(slug as (typeof valid)[number])) {

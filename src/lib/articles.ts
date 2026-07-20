@@ -3,11 +3,13 @@ import type { Locale } from '@/lib/i18n';
 
 export type ArticleEntry = CollectionEntry<'articles'>;
 
-export async function getPublishedArticles(locale: Locale = 'zh'): Promise<ArticleEntry[]> {
+export async function getPublishedArticles(locale: Locale = 'en'): Promise<ArticleEntry[]> {
   const all = await getCollection('articles');
-  return all
-    .filter((a) => !a.data.draft && a.data.locale === locale)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  let items = all.filter((a) => !a.data.draft && a.data.locale === locale);
+  if (items.length === 0 && locale === 'en') {
+    items = all.filter((a) => !a.data.draft && a.data.locale === 'zh');
+  }
+  return items.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 }
 
 export async function getArticlesByCategory(
@@ -20,12 +22,12 @@ export async function getArticlesByCategory(
 
 export function articleHref(slug: string, locale: Locale): string {
   const base = `/article/${slug}`;
-  return locale === 'en' ? `/en${base}` : base;
+  return locale === 'zh' ? `/zh${base}` : base;
 }
 
 export function categoryHref(slug: string, locale: Locale): string {
   const base = `/category/${slug}`;
-  return locale === 'en' ? `/en${base}` : base;
+  return locale === 'zh' ? `/zh${base}` : base;
 }
 
 export function formatDate(date: Date, locale: Locale): string {

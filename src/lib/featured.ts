@@ -10,7 +10,7 @@ export const FEATURED_SLUGS = [
   '我是怎么既当董事长又当总经理的',
 ] as const;
 
-export async function getFeaturedArticles(locale: Locale = 'zh') {
+export async function getFeaturedArticles(locale: Locale = 'en') {
   const all = await getPublishedArticles(locale);
   const bySlug = new Map(all.map((a) => [a.slug, a]));
   return FEATURED_SLUGS.map((slug) => bySlug.get(slug)).filter(

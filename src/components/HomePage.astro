@@ -3,7 +3,6 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Avatar from '@/components/mirror/Avatar.astro';
 import HeroTitles from '@/components/mirror/HeroTitles.astro';
 import ArticleCard from '@/components/mirror/ArticleCard.astro';
-import Newsletter from '@/components/mirror/Newsletter.astro';
 import type { Locale } from '@/lib/i18n';
 import { t, localePath } from '@/lib/i18n';
 import { getArticlesByCategory } from '@/lib/articles';
@@ -151,7 +150,5 @@ const seriesEntries = Object.entries(seriesData);
         </div>
       </section>
     )}
-
-    <Newsletter locale={locale} />
   </div>
 </BaseLayout>
