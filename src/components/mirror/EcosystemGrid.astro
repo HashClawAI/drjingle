@@ -9,7 +9,7 @@ interface Props {
 const { locale } = Astro.props;
 const tr = t(locale);
 const sites = [
-  { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc, accent: 'cyan', current: true, logo: '/themes/drjingle-mirror/avatar-real-crop.jpg?v=2' },
+  { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc, accent: 'cyan', current: true, logo: '/themes/drjingle-mirror/drjingle-logo-icon.png?v=2', logoGlass: true },
   { name: 'hashclaw.ai', url: 'https://hashclaw.ai', tag: tr.ecosystem.hashclaw.tag, desc: tr.ecosystem.hashclaw.desc, accent: 'gold', logo: '/themes/drjingle-mirror/hashclaw-logo.jpeg' },
   { name: 'ccprivacy.club', url: 'https://ccprivacy.club', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc, accent: 'violet', mark: 'CC' },
 ];
@@ -25,7 +25,13 @@ const sites = [
     >
       <div class="dj-site-card-head">
         {site.logo ? (
-          <img src={site.logo} alt="" class="dj-site-card-logo" loading="lazy" decoding="async" />
+          site.logoGlass ? (
+            <span class="dj-brand-mark dj-brand-mark-card" aria-hidden="true">
+              <img src={site.logo} alt="" class="dj-site-logo dj-site-logo-icon" loading="lazy" decoding="async" />
+            </span>
+          ) : (
+            <img src={site.logo} alt="" class="dj-site-card-logo" loading="lazy" decoding="async" />
+          )
         ) : site.mark ? (
           <span class="dj-site-card-mark" aria-hidden="true">{site.mark}</span>
         ) : null}
