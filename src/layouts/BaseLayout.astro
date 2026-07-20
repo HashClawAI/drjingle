@@ -1,0 +1,82 @@
+---
+import '@/styles/theme.css';
+import SiteHeader from '@/components/SiteHeader.astro';
+import SiteFooter from '@/components/SiteFooter.astro';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  navCurrent?: 'home' | 'events' | 'insights' | 'research' | 'ecosystem';
+}
+
+const { locale, title, description, navCurrent = 'home' } = Astro.props;
+const tr = t(locale);
+const siteTitle = `${title} · ${tr.siteName}`;
+const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+---
+
+<!doctype html>
+<html lang={locale === 'zh' ? 'zh-Hans' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={tr.siteKeywords} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/avatar.jpg', siteOrigin).href} />
+    <title>{siteTitle}</title>
+  </head>
+  <body class="dj-body">
+    <div class="dj-cosmos-bg" aria-hidden="true">
+      <div class="dj-aurora dj-aurora-a"></div>
+      <div class="dj-aurora dj-aurora-b"></div>
+      <div class="dj-grid-plane"></div>
+    </div>
+    <div class="dj-shell">
+      <SiteHeader locale={locale} navCurrent={navCurrent} />
+      <main class="dj-main">
+        <slot />
+      </main>
+      <SiteFooter locale={locale} />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  .dj-shell {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .dj-main {
+    flex: 1;
+    width: min(var(--dj-max), calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+  }
+  .dj-page-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .dj-page-intro {
+    color: var(--dj-text-soft);
+    max-width: 42rem;
+    margin: 0 0 2rem;
+  }
+  .dj-card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+</style>

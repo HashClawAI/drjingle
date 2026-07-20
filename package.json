@@ -1,0 +1,18 @@
+{
+  "name": "drjingledotcom",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/generate-geo-files.mjs && astro build",
+    "preview": "astro preview",
+    "geo:generate": "node scripts/generate-geo-files.mjs",
+    "export:geoflow": "node scripts/export-from-geoflow.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.2.0"
+  }
+}

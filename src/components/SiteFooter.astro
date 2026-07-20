@@ -1,0 +1,62 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="dj-footer">
+  <div class="dj-footer-inner">
+    <div>
+      <strong>{tr.footer.brand}</strong>
+      <p>{tr.footer.desc}</p>
+    </div>
+    <div class="dj-footer-links">
+      <a href="https://x.com/drjingle" target="_blank" rel="noopener noreferrer">X @drjingle</a>
+      <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://ccprivacy.club/" target="_blank" rel="noopener noreferrer">Canton Edu</a>
+    </div>
+  </div>
+  <p class="dj-footer-copy">{tr.footer.copy.replace(':year', String(year))}</p>
+</footer>
+
+<style>
+  .dj-footer {
+    border-top: 1px solid var(--dj-line);
+    padding: 2rem 0 2.5rem;
+    margin-top: auto;
+    color: var(--dj-text-muted);
+    font-size: 0.88rem;
+  }
+  .dj-footer-inner {
+    width: min(var(--dj-max), calc(100% - 2rem));
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .dj-footer-inner p {
+    margin: 0.35rem 0 0;
+    max-width: 28rem;
+  }
+  .dj-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .dj-footer-links a:hover {
+    color: var(--dj-cyan);
+  }
+  .dj-footer-copy {
+    width: min(var(--dj-max), calc(100% - 2rem));
+    margin: 0 auto;
+    font-size: 0.78rem;
+  }
+</style>

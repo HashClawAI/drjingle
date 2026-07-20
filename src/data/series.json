@@ -1,0 +1,26 @@
+{
+  "ai-agent-pitfalls": {
+    "title_zh": "AI Agent 避坑系列",
+    "title_en": "AI Agent Pitfalls",
+    "desc_zh": "从 Demo 自嗨到 PMF：Agent 创业、记忆架构与岗位替代的真实陷阱。",
+    "desc_en": "From demo hype to PMF: real traps in Agent startups, memory design, and job displacement.",
+    "articles": [
+      "ai-1-0-2-0-3-0-是什么-用-web-1-0-3-0-框架理解-agent-economy-的三次跃迁",
+      "ai-agent玩家的自嗨陷阱-95-的项目没赚到钱",
+      "ai-agent-玩家-正在掉进一种新的自嗨陷阱",
+      "ai-agent-才是加密的终极用户",
+      "让-agent-学会忘记-为什么比让它记住更难"
+    ]
+  },
+  "stablecoin-2026": {
+    "title_zh": "2026 稳定币大战",
+    "title_en": "Stablecoin Wars 2026",
+    "desc_zh": "Open USD、USDC/Arc、CLARITY 与华尔街链上美元结算层的格局变化。",
+    "desc_en": "Open USD, USDC/Arc, CLARITY, and the race for on-chain dollar settlement.",
+    "articles": [
+      "140-家巨头联手-open-usd-visa-入局的-共享稳定币-是什么",
+      "web2-5春秋-usdc下场做arc-rwa公链群雄逐鹿",
+      "clarity-act-美国终于要给加密行业立交通规则了"
+    ]
+  }
+}

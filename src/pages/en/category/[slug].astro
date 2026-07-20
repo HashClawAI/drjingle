@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { getArticlesByCategory } from '@/lib/articles';
+
+const locale: Locale = 'en';
+const { slug } = Astro.params;
+const valid = ['insights', 'research', 'events', 'ecosystem'] as const;
+if (!slug || !valid.includes(slug as (typeof valid)[number])) {
+  return Astro.redirect('/en/');
+}
+
+const tr = t(locale);
+const isEcosystem = slug === 'ecosystem';
+
+const sites = [
+  { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc },
+  { name: 'HashClaw AI', url: 'https://github.com/HashClawAI', tag: tr.ecosystem.hashclaw.tag, desc: tr.ecosystem.hashclaw.desc },
+  { name: 'Canton Edu', url: 'https://ccprivacy.club/', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc },
+];
+
+let pageTitle = tr.nav.ecosystem;
+let pageDesc = tr.category.ecosystemDesc;
+let navCurrent: 'insights' | 'research' | 'events' | 'ecosystem' = 'ecosystem';
+let items: Awaited<ReturnType<typeof getArticlesByCategory>> = [];
+
+if (!isEcosystem) {
+  const navMap = { insights: 'insights', research: 'research', events: 'events' } as const;
+  navCurrent = slug as 'insights' | 'research' | 'events';
+  pageTitle = tr.nav[navMap[slug as keyof typeof navMap]];
+  pageDesc =
+    slug === 'insights'
+      ? tr.category.insightsDesc
+      : slug === 'research'
+        ? tr.category.researchDesc
+        : tr.category.eventsDesc;
+  items = await getArticlesByCategory(slug as 'insights' | 'research' | 'events', locale);
+}
+---
+
+<BaseLayout locale={locale} title={pageTitle} description={pageDesc} navCurrent={navCurrent}>
+  <h1 class="dj-page-title">{pageTitle}</h1>
+  <p class="dj-page-intro">{pageDesc}</p>
+
+  {isEcosystem ? (
+    <div class="dj-eco-grid">
+      {sites.map((s) => (
+        <a class="dj-eco-card" href={s.url} target="_blank" rel="noopener noreferrer">
+          <span class="dj-eco-tag">{s.tag}</span>
+          <h3>{s.name}</h3>
+          <p>{s.desc}</p>
+          <span>{tr.ecosystem.visit} →</span>
+        </a>
+      ))}
+    </div>
+  ) : items.length === 0 ? (
+    <p>{tr.category.empty}</p>
+  ) : (
+    <div class="dj-card-grid">
+      {items.map((entry) => (
+        <ArticleCard entry={entry} locale={locale} />
+      ))}
+    </div>
+  )}
+</BaseLayout>
+
+<style>
+  .dj-eco-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .dj-eco-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--dj-line);
+    border-radius: var(--dj-radius);
+    background: var(--dj-panel);
+  }
+  .dj-eco-tag {
+    font-size: 0.72rem;
+    color: var(--dj-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .dj-eco-card h3 {
+    margin: 0.5rem 0;
+  }
+  .dj-eco-card p {
+    color: var(--dj-text-soft);
+    font-size: 0.9rem;
+  }
+</style>

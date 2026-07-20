@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { getPublishedArticles } from '@/lib/articles';
+import seriesData from '@/data/series.json';
+
+export function getStaticPaths() {
+  return Object.keys(seriesData).map((slug) => ({ params: { slug } }));
+}
+
+const locale: Locale = 'zh';
+const { slug } = Astro.params;
+const meta = seriesData[slug as keyof typeof seriesData];
+if (!meta) return Astro.redirect('/');
+
+const tr = t(locale);
+const all = await getPublishedArticles(locale);
+const slugOrder = meta.articles;
+const items = slugOrder
+  .map((s) => all.find((a) => a.slug === s))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+---
+
+<BaseLayout locale={locale} title={meta.title_zh} description={meta.desc_zh} navCurrent="insights">
+  <h1 class="dj-page-title">{meta.title_zh}</h1>
+  <p class="dj-page-intro">{meta.desc_zh}</p>
+  <div class="dj-card-grid">
+    {items.map((entry) => (
+      <ArticleCard entry={entry} locale={locale} />
+    ))}
+  </div>
+</BaseLayout>

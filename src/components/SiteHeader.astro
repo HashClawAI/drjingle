@@ -1,0 +1,116 @@
+---
+import type { Locale, NavKey } from '@/lib/i18n';
+import { t, localePath } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+  navCurrent?: NavKey;
+}
+
+const { locale, navCurrent = 'home' } = Astro.props;
+const tr = t(locale);
+const otherLocale: Locale = locale === 'zh' ? 'en' : 'zh';
+const switchHref = locale === 'zh' ? '/en/' : '/';
+
+const links: { key: NavKey; href: string }[] = [
+  { key: 'home', href: localePath(locale, '/') },
+  { key: 'events', href: localePath(locale, '/category/events') },
+  { key: 'insights', href: localePath(locale, '/category/insights') },
+  { key: 'research', href: localePath(locale, '/category/research') },
+  { key: 'ecosystem', href: localePath(locale, '/category/ecosystem') },
+];
+---
+
+<header class="dj-header">
+  <div class="dj-header-inner">
+    <a class="dj-brand" href={localePath(locale, '/')}>
+      <img src="/avatar.jpg" alt="" width="40" height="40" class="dj-brand-avatar" />
+      <span class="dj-brand-text">
+        <span class="dj-brand-name">{tr.siteName}</span>
+        <span class="dj-brand-sub">{tr.siteTagline}</span>
+      </span>
+    </a>
+    <nav class="dj-nav" aria-label={locale === 'zh' ? '主导航' : 'Main'}>
+      {links.map(({ key, href }) => (
+        <a href={href} class:list={['dj-nav-link', navCurrent === key && 'is-active']}>
+          {tr.nav[key]}
+        </a>
+      ))}
+    </nav>
+    <div class="dj-header-actions">
+      <a href={switchHref} class="dj-locale" aria-label={tr.localeSwitch.aria}>
+        {locale === 'zh' ? tr.localeSwitch.toEn : tr.localeSwitch.toZh}
+      </a>
+      <a href="https://x.com/drjingle" class="dj-link-out" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .dj-header {
+    border-bottom: 1px solid var(--dj-line);
+    backdrop-filter: blur(12px);
+    background: rgba(5, 7, 11, 0.72);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .dj-header-inner {
+    width: min(var(--dj-max), calc(100% - 2rem));
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    flex-wrap: wrap;
+  }
+  .dj-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-right: auto;
+  }
+  .dj-brand-avatar {
+    border-radius: 50%;
+    border: 1px solid var(--dj-line-strong);
+  }
+  .dj-brand-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .dj-brand-sub {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--dj-text-muted);
+  }
+  .dj-nav {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+  .dj-nav-link {
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--dj-radius);
+    font-size: 0.88rem;
+    color: var(--dj-text-soft);
+  }
+  .dj-nav-link:hover,
+  .dj-nav-link.is-active {
+    color: var(--dj-cyan);
+    background: rgba(103, 232, 249, 0.08);
+  }
+  .dj-header-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .dj-locale,
+  .dj-link-out {
+    font-size: 0.82rem;
+    color: var(--dj-text-muted);
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--dj-line);
+    border-radius: var(--dj-radius);
+  }
+</style>

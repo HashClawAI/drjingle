@@ -1,0 +1,127 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { getArticlesByCategory } from '@/lib/articles';
+import seriesData from '@/data/series.json';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const insights = (await getArticlesByCategory('insights', locale)).slice(0, 6);
+const research = (await getArticlesByCategory('research', locale)).slice(0, 4);
+const seriesEntries = Object.entries(seriesData);
+---
+
+<BaseLayout locale={locale} title={tr.siteName} description={tr.siteDesc} navCurrent="home">
+  <section class="dj-hero">
+    <p class="dj-kicker">{tr.home.kicker}</p>
+    <h1 class="dj-hero-title">{tr.author.name}</h1>
+    <p class="dj-hero-bio">{tr.author.bio}</p>
+  </section>
+
+  {insights.length > 0 && (
+    <section class="dj-section">
+      <div class="dj-section-head">
+        <h2>{tr.home.insightsTitle}</h2>
+        <a href={locale === 'zh' ? '/category/insights' : '/en/category/insights'}>{tr.home.moreInsights}</a>
+      </div>
+      <div class="dj-card-grid">
+        {insights.map((entry) => (
+          <ArticleCard entry={entry} locale={locale} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  {research.length > 0 && (
+    <section class="dj-section">
+      <div class="dj-section-head">
+        <h2>{tr.home.researchTitle}</h2>
+        <a href={locale === 'zh' ? '/category/research' : '/en/category/research'}>{tr.home.moreResearch}</a>
+      </div>
+      <div class="dj-card-grid">
+        {research.map((entry) => (
+          <ArticleCard entry={entry} locale={locale} />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="dj-section">
+    <h2>{tr.home.seriesTitle}</h2>
+    <div class="dj-series-grid">
+      {seriesEntries.map(([slug, meta]) => (
+        <a
+          class="dj-series-card"
+          href={locale === 'zh' ? `/series/${slug}` : `/en/series/${slug}`}
+        >
+          <h3>{locale === 'zh' ? meta.title_zh : meta.title_en}</h3>
+          <p>{locale === 'zh' ? meta.desc_zh : meta.desc_en}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .dj-hero {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--dj-line);
+  }
+  .dj-kicker {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--dj-cyan);
+    margin: 0 0 0.75rem;
+  }
+  .dj-hero-title {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    margin: 0 0 0.75rem;
+  }
+  .dj-hero-bio {
+    color: var(--dj-text-soft);
+    max-width: 40rem;
+    margin: 0;
+  }
+  .dj-section {
+    margin-bottom: 2.5rem;
+  }
+  .dj-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .dj-section-head a {
+    font-size: 0.88rem;
+    color: var(--dj-cyan);
+  }
+  .dj-series-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .dj-series-card {
+    padding: 1.25rem;
+    border: 1px solid var(--dj-line);
+    border-radius: var(--dj-radius);
+    background: var(--dj-panel);
+  }
+  .dj-series-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+  .dj-series-card p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--dj-text-soft);
+  }
+</style>

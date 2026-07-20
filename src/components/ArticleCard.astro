@@ -1,0 +1,62 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { articleHref, formatDate, excerpt } from '@/lib/articles';
+
+interface Props {
+  entry: CollectionEntry<'articles'>;
+  locale: Locale;
+}
+
+const { entry, locale } = Astro.props;
+const tr = t(locale);
+const href = articleHref(entry.slug, locale);
+---
+
+<article class="dj-card">
+  <a href={href} class="dj-card-link">
+    <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate, locale)}</time>
+    <h3>{entry.data.title}</h3>
+    <p>{excerpt(entry)}</p>
+    <span class="dj-card-cta">{tr.card.read}</span>
+  </a>
+</article>
+
+<style>
+  .dj-card {
+    background: var(--dj-panel);
+    border: 1px solid var(--dj-line);
+    border-radius: var(--dj-radius);
+    transition: border-color 0.2s;
+  }
+  .dj-card:hover {
+    border-color: var(--dj-line-strong);
+  }
+  .dj-card-link {
+    display: block;
+    padding: 1.15rem 1.25rem;
+  }
+  .dj-card time {
+    font-size: 0.75rem;
+    color: var(--dj-text-muted);
+    font-family: var(--dj-mono);
+  }
+  .dj-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+  .dj-card p {
+    margin: 0;
+    color: var(--dj-text-soft);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .dj-card-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--dj-cyan);
+  }
+</style>
