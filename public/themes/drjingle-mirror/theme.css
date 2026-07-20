@@ -899,7 +899,46 @@ html[lang="en"] .dj-titles-zh { display: none; }
 .dj-hero-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+}
+
+.dj-hero-links .dj-btn {
+    padding: 0 22px;
+    justify-content: center;
+}
+
+.dj-hero-links .dj-btn-primary {
+    color: #f8fafc;
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.dj-hero-links .dj-btn-primary:hover {
+    color: #fff;
+    border-color: rgba(103, 232, 249, 0.58);
+    box-shadow:
+        0 16px 40px rgba(103, 232, 249, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.dj-hero-links .dj-btn-wormhole {
+    color: #042f2e;
+    background: linear-gradient(135deg, #99f6e4 0%, #2dd4bf 46%, #0d9488 100%);
+    border: 1px solid rgba(153, 246, 228, 0.72);
+    box-shadow:
+        0 14px 36px rgba(13, 148, 136, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.dj-hero-links .dj-btn-wormhole:hover {
+    color: #022c22;
+    border-color: rgba(204, 251, 241, 0.9);
+    box-shadow:
+        0 18px 44px rgba(45, 212, 191, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.42);
 }
 
 .dj-btn {
