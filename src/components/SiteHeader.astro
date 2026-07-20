@@ -1,5 +1,4 @@
 ---
-import Avatar from '@/components/mirror/Avatar.astro';
 import type { Locale, NavKey } from '@/lib/i18n';
 import { t, localePath, localeSwitchPath } from '@/lib/i18n';
 
@@ -25,10 +24,15 @@ const navItems: { key: NavKey; href: string; icon: string }[] = [
 <header class="dj-header dj-header-linkedin">
   <div class="dj-shell dj-header-row">
     <a href={localePath(locale, '/')} class="dj-brand" aria-label={tr.siteName}>
-      <Avatar size="brand" withRing={false} />
-      <span class="dj-brand-text">
-        <strong>Dr.Jingle<sup class="dj-mark">™</sup></strong>
-        {locale !== 'en' && <em>{tr.brand.cnName}</em>}
+      <span class="dj-brand-mark" aria-hidden="true">
+        <img
+          src="/themes/drjingle-mirror/drjingle-logo-icon.png?v=2"
+          alt=""
+          class="dj-site-logo dj-site-logo-icon"
+          width="353"
+          height="300"
+          decoding="async"
+        />
       </span>
     </a>
 
