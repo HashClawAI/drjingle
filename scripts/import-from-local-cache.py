@@ -113,7 +113,31 @@ def write_article(
     body = strip_geo_scoring(content)
     body = strip_leading_h1(body, title)
     body = normalize_markdown_assets(body)
+    try:
+        import importlib.util
+
+        lint_path = ROOT / "scripts/lint-article-markdown.py"
+        spec = importlib.util.spec_from_file_location("lint_articles", lint_path)
+        if spec and spec.loader:
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            catalog = mod.collect_mmbiz_urls(OUT_DIR, CACHE_DIR)
+            body = mod.sanitize_body(body, catalog)
+    except Exception as exc:  # noqa: BLE001 — import must not fail on lint helper
+        print(f"WARNING: article lint skipped: {exc}")
     desc = (excerpt or body.replace("#", "").strip()[:160]).replace("\n", " ")
+    try:
+        import importlib.util
+
+        lint_path = ROOT / "scripts/lint-article-markdown.py"
+        spec = importlib.util.spec_from_file_location("lint_articles", lint_path)
+        if spec and spec.loader:
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            catalog = mod.collect_mmbiz_urls(OUT_DIR, CACHE_DIR)
+            desc = mod.clean_description(desc, catalog)
+    except Exception:
+        pass
     fm = [
         "---",
         f'title: "{yaml_escape(title)}"',

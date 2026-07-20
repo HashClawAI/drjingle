@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "geo:generate": "node scripts/generate-geo-files.mjs",
     "export:geoflow": "node scripts/export-from-geoflow.mjs",
-    "import:cache": "python3 scripts/import-from-local-cache.py"
+    "import:cache": "python3 scripts/import-from-local-cache.py",
+    "lint:articles": "python3 scripts/lint-article-markdown.py --write --refresh-description"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
