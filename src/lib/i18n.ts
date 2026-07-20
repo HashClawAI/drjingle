@@ -44,6 +44,11 @@ const zh = {
     ecosystemVisit: '访问站点',
     emptyTitle: '暂无内容',
     emptyHome: '返回 Home',
+    paginationLabel: '栏目分页',
+    paginationPrev: '向后',
+    paginationNext: '向前',
+    paginationPage: (n: number, total: number) => `第 ${n} 页，共 ${total} 页`,
+    paginationStatus: (current: number, total: number) => `第 ${current} / ${total} 页`,
   },
   article: {
     overline: 'Dr.Jingle Intelligence Note',
@@ -129,6 +134,11 @@ const en: typeof zh = {
     ecosystemVisit: 'Visit',
     emptyTitle: 'Nothing here yet',
     emptyHome: 'Back to Home',
+    paginationLabel: 'Category pagination',
+    paginationPrev: 'Previous',
+    paginationNext: 'Next',
+    paginationPage: (n: number, total: number) => `Page ${n} of ${total}`,
+    paginationStatus: (current: number, total: number) => `Page ${current} of ${total}`,
   },
   article: {
     overline: 'Dr.Jingle Intelligence Note',

@@ -1,9 +1,11 @@
 ---
 import ArticleCard from '@/components/mirror/ArticleCard.astro';
+import CategoryPagination from '@/components/mirror/CategoryPagination.astro';
 import EcosystemGrid from '@/components/mirror/EcosystemGrid.astro';
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '@/lib/i18n';
 import { t, localePath } from '@/lib/i18n';
+import { CATEGORY_PAGE_SIZE } from '@/lib/pagination';
 
 type CategorySlug = 'insights' | 'research' | 'events' | 'ecosystem';
 
@@ -11,9 +13,12 @@ interface Props {
   locale: Locale;
   slug: CategorySlug;
   items: CollectionEntry<'articles'>[];
+  totalItems: number;
+  currentPage?: number;
+  totalPages?: number;
 }
 
-const { locale, slug, items } = Astro.props;
+const { locale, slug, items, totalItems, currentPage = 1, totalPages = 1 } = Astro.props;
 const tr = t(locale);
 
 const isEcosystem = slug === 'ecosystem';
@@ -24,18 +29,18 @@ const isEvents = slug === 'events';
 let kicker = tr.category.insightsKicker;
 let pageTitle = tr.nav.insights;
 let pageDesc = tr.category.insightsDesc;
-let countLabel = tr.category.insightsCount(items.length);
+let countLabel = tr.category.insightsCount(totalItems);
 
 if (isEvents) {
   kicker = tr.category.eventsKicker;
   pageTitle = tr.nav.events;
   pageDesc = tr.category.eventsDesc;
-  countLabel = tr.category.eventsCount(items.length);
+  countLabel = tr.category.eventsCount(totalItems);
 } else if (isPapers) {
   kicker = tr.category.researchKicker;
   pageTitle = tr.nav.research;
   pageDesc = tr.category.researchDesc;
-  countLabel = tr.category.researchCount(items.length);
+  countLabel = tr.category.researchCount(totalItems);
 } else if (isEcosystem) {
   kicker = tr.category.ecosystemKicker;
   pageTitle = tr.nav.ecosystem;
@@ -75,9 +80,15 @@ if (isEvents) {
     ) : (
       <div class:list={['dj-feed', 'dj-feed-editorial', isPapers ? 'dj-feed-papers' : 'dj-feed-insights']}>
         {items.map((entry, index) => (
-          <ArticleCard entry={entry} locale={locale} variant="feed" rank={index + 1} />
+          <ArticleCard
+            entry={entry}
+            locale={locale}
+            variant="feed"
+            rank={(currentPage - 1) * CATEGORY_PAGE_SIZE + index + 1}
+          />
         ))}
       </div>
+      <CategoryPagination locale={locale} slug={slug} currentPage={currentPage} totalPages={totalPages} />
     )}
   </section>
 </div>

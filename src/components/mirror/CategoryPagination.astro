@@ -1,0 +1,78 @@
+---
+import type { Locale } from '@/lib/i18n';
+import { t } from '@/lib/i18n';
+import { categoryPageHref, type CategorySlug } from '@/lib/categoryPage';
+
+interface Props {
+  locale: Locale;
+  slug: CategorySlug;
+  currentPage: number;
+  totalPages: number;
+}
+
+const { locale, slug, currentPage, totalPages } = Astro.props;
+if (totalPages <= 1) {
+  return null;
+}
+
+const tr = t(locale);
+const prevHref = categoryPageHref(slug, currentPage - 1, locale);
+const nextHref = categoryPageHref(slug, currentPage + 1, locale);
+const hasPrev = currentPage > 1;
+const hasNext = currentPage < totalPages;
+
+const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+
+<div class="dj-pagination">
+  <nav aria-label={tr.category.paginationLabel}>
+    <div></div>
+    <div>
+      <div></div>
+      <div>
+        <span>
+          {hasPrev ? (
+            <a href={prevHref} rel="prev" aria-label={tr.category.paginationPrev}>
+              {tr.category.paginationPrev}
+            </a>
+          ) : (
+            <span aria-disabled="true">
+              <span>{tr.category.paginationPrev}</span>
+            </span>
+          )}
+          {pageNumbers.map((n) =>
+            n === currentPage ? (
+              <span aria-current="page">
+                <span>{n}</span>
+              </span>
+            ) : (
+              <a href={categoryPageHref(slug, n, locale)} aria-label={tr.category.paginationPage(n, totalPages)}>
+                {n}
+              </a>
+            ),
+          )}
+          {hasNext ? (
+            <a href={nextHref} rel="next" aria-label={tr.category.paginationNext}>
+              {tr.category.paginationNext}
+            </a>
+          ) : (
+            <span aria-disabled="true">
+              <span>{tr.category.paginationNext}</span>
+            </span>
+          )}
+        </span>
+      </div>
+    </div>
+  </nav>
+  <p class="dj-pagination-meta">{tr.category.paginationStatus(currentPage, totalPages)}</p>
+</div>
+
+<style>
+  .dj-pagination-meta {
+    margin: 12px 0 0;
+    text-align: center;
+    color: var(--dj-text-muted);
+    font-family: var(--dj-mono);
+    font-size: 12px;
+  }
+</style>
