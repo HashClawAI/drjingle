@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '@/lib/i18n';
 import { t } from '@/lib/i18n';
-import { articleHref, formatDate, excerpt } from '@/lib/articles';
+import { articleHref, formatDate, excerpt, articleSlug } from '@/lib/articles';
 
 interface Props {
   locale: Locale;
@@ -28,7 +28,7 @@ const tr = t(locale);
       <li class="dj-series-item">
         <span class="dj-series-index">{String(index + 1).padStart(2, '0')}</span>
         <div class="dj-series-item-body">
-          <a href={articleHref(entry.slug, locale)} class="dj-series-item-title">{entry.data.title}</a>
+          <a href={articleHref(articleSlug(entry), locale)} class="dj-series-item-title">{entry.data.title}</a>
           <p class="dj-series-item-desc">{excerpt(entry, 120)}</p>
           <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate, locale)}</time>
         </div>

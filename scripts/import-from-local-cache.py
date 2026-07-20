@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
 CACHE_DIR = WORKSPACE / "wechat-mp-auto-publish/artifacts/geoflow-en-export"
+EN_CACHE_DIR = WORKSPACE / "wechat-mp-auto-publish/artifacts/geoflow-en-cache"
 SITEMAP = WORKSPACE / "vendor/GEOFlow/public/sitemap.xml"
 SERIES_JSON = ROOT / "src/data/series.json"
 OUT_DIR = ROOT / "src/content/articles"
@@ -24,6 +25,7 @@ EXTRA_SOURCES = [
         "title": "未来网站：每人打开页面都不一样",
         "pubDate": "2026-07-06",
         "category": "insights",
+        "en_cache_id": 91,
     },
 ]
 
@@ -84,6 +86,18 @@ def yaml_escape(value: str) -> str:
     return value.replace('"', '\\"')
 
 
+def normalize_markdown_assets(markdown: str) -> str:
+    """Map legacy relative article assets to public/images/articles/."""
+
+    def repl(match: re.Match[str]) -> str:
+        alt, path = match.group(1), match.group(2)
+        if path.startswith(("http://", "https://", "/", "images/")):
+            return match.group(0)
+        return f"![{alt}](/images/articles/{path})"
+
+    return re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", repl, markdown)
+
+
 def write_article(
     slug: str,
     title: str,
@@ -91,11 +105,13 @@ def write_article(
     excerpt: str,
     pub_date: str,
     category: str,
+    locale: str = "zh",
     series: str | None = None,
     series_order: int | None = None,
 ) -> None:
     body = strip_geo_scoring(content)
     body = strip_leading_h1(body, title)
+    body = normalize_markdown_assets(body)
     desc = (excerpt or body.replace("#", "").strip()[:160]).replace("\n", " ")
     fm = [
         "---",
@@ -108,33 +124,86 @@ def write_article(
         fm.append(f"series: {series}")
     if series_order:
         fm.append(f"seriesOrder: {series_order}")
-    fm += ["locale: zh", "draft: false", "---", ""]
+    if locale == "en":
+        fm.append(f'articleSlug: "{yaml_escape(slug)}"')
+    fm += [f"locale: {locale}", "draft: false", "---", ""]
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    path = OUT_DIR / f"{slug}.md"
+    if locale == "en":
+        en_dir = OUT_DIR / "en"
+        en_dir.mkdir(parents=True, exist_ok=True)
+        path = en_dir / f"{slug}.md"
+    else:
+        path = OUT_DIR / f"{slug}.md"
     path.write_text("\n".join(fm) + body, encoding="utf-8")
+
+
+def load_en_cache(article_id: int) -> dict | None:
+    path = EN_CACHE_DIR / f"{article_id}.json"
+    if not path.exists():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    content = (data.get("content_en") or "").strip()
+    if len(content) < 200:
+        return None
+    return {
+        "title": (data.get("title_en") or "").strip(),
+        "excerpt": (data.get("excerpt_en") or "").strip(),
+        "content": content,
+    }
+
+
+def write_en_from_cache(
+    slug: str,
+    article_id: int,
+    pub_date: str,
+    category: str,
+    series: str | None = None,
+    series_order: int | None = None,
+) -> bool:
+    en = load_en_cache(article_id)
+    if not en or not en["title"]:
+        return False
+    write_article(
+        slug=slug,
+        title=en["title"],
+        content=en["content"],
+        excerpt=en["excerpt"],
+        pub_date=pub_date,
+        category=category,
+        locale="en",
+        series=series,
+        series_order=series_order,
+    )
+    return True
 
 
 def main() -> None:
     dates = load_sitemap_dates()
     series_index = load_series_index()
     written: set[str] = set()
+    en_written = 0
 
     for path in sorted(CACHE_DIR.glob("*.zh.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
         slug = data["slug"]
+        article_id = int(data["id"])
         title = data["title"]
         category = "research" if slug in RESEARCH_SLUGS else "insights"
         series, order = series_index.get(slug, (None, None))
+        pub_date = dates.get(slug, "2026-01-01")
         write_article(
             slug=slug,
             title=title,
             content=data.get("content") or "",
             excerpt=data.get("excerpt") or "",
-            pub_date=dates.get(slug, "2026-01-01"),
+            pub_date=pub_date,
             category=category,
+            locale="zh",
             series=series,
             series_order=order,
         )
+        if write_en_from_cache(slug, article_id, pub_date, category, series, order):
+            en_written += 1
         written.add(slug)
 
     for extra in EXTRA_SOURCES:
@@ -147,16 +216,22 @@ def main() -> None:
             raw = parts[2] if len(parts) > 2 else raw
         slug = extra["slug"]
         series, order = series_index.get(slug, (None, None))
+        pub_date = extra.get("pubDate") or dates.get(slug, "2026-01-01")
+        category = extra.get("category", "insights")
         write_article(
             slug=slug,
             title=extra["title"],
             content=raw,
             excerpt="",
-            pub_date=extra.get("pubDate") or dates.get(slug, "2026-01-01"),
-            category=extra.get("category", "insights"),
+            pub_date=pub_date,
+            category=category,
+            locale="zh",
             series=series,
             series_order=order,
         )
+        en_id = extra.get("en_cache_id")
+        if en_id and write_en_from_cache(slug, int(en_id), pub_date, category, series, order):
+            en_written += 1
         written.add(slug)
 
     welcome = OUT_DIR / "welcome-github-pages.md"
@@ -166,7 +241,7 @@ def main() -> None:
     missing = set(dates) - written
     if missing:
         print("WARNING: sitemap slugs still missing:", ", ".join(sorted(missing)))
-    print(f"Imported {len(written)} articles → {OUT_DIR}")
+    print(f"Imported {len(written)} zh + {en_written} en articles → {OUT_DIR}")
 
 
 if __name__ == "__main__":

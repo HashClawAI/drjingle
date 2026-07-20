@@ -5,11 +5,14 @@ export type ArticleEntry = CollectionEntry<'articles'>;
 
 export async function getPublishedArticles(locale: Locale = 'en'): Promise<ArticleEntry[]> {
   const all = await getCollection('articles');
-  let items = all.filter((a) => !a.data.draft && a.data.locale === locale);
-  if (items.length === 0 && locale === 'en') {
-    items = all.filter((a) => !a.data.draft && a.data.locale === 'zh');
-  }
-  return items.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return all
+    .filter((a) => !a.data.draft && a.data.locale === locale)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+}
+
+/** URL slug shared by zh/en pairs (en files live under content/articles/en/). */
+export function articleSlug(entry: ArticleEntry): string {
+  return entry.data.articleSlug ?? entry.slug.replace(/^en\//, '');
 }
 
 export async function getArticlesByCategory(
