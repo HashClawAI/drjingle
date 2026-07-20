@@ -9,10 +9,9 @@ interface Props {
   title: string;
   description: string;
   navCurrent?: 'home' | 'events' | 'insights' | 'research' | 'ecosystem';
-  showFooterNewsletter?: boolean;
 }
 
-const { locale, title, description, navCurrent = 'home', showFooterNewsletter = false } = Astro.props;
+const { locale, title, description, navCurrent = 'home' } = Astro.props;
 const tr = t(locale);
 const siteTitle = `${title} · ${tr.siteName}`;
 const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
@@ -53,7 +52,7 @@ const year = new Date().getFullYear();
     <main class="dj-main">
       <slot />
     </main>
-    <SiteFooter locale={locale} year={year} showNewsletter={showFooterNewsletter} />
+    <SiteFooter locale={locale} year={year} />
 
     <script src="/themes/drjingle-mirror/theme.js?v=24" defer></script>
   </body>

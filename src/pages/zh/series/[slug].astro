@@ -9,13 +9,13 @@ export function getStaticPaths() {
   return Object.keys(seriesData).map((slug) => ({ params: { slug } }));
 }
 
-const locale: Locale = 'en';
+const locale: Locale = 'zh';
 const { slug } = Astro.params;
 const meta = seriesData[slug as keyof typeof seriesData];
-if (!meta) return Astro.redirect('/en/');
+if (!meta) return Astro.redirect('/zh/');
 
-const title = meta.title_en;
-const desc = meta.desc_en;
+const title = meta.title_zh;
+const desc = meta.desc_zh;
 const all = await getPublishedArticles(locale);
 const items = meta.articles.map((s) => all.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
 ---

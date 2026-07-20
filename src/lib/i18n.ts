@@ -8,7 +8,6 @@ const zh = {
   siteKeywords: 'Dr.Jingle, 金狗博士, AI, RWA, Web3, Canton',
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: 'Home', events: '活动', insights: '洞察', research: '研究', ecosystem: '生态', primary: '主导航' },
-  search: { placeholder: '搜索内容…', aria: '搜索' },
   home: {
     kicker: 'GEO Flow · AI / RWA / Web3 知识流',
     tagline: '超级个体进化中',
@@ -68,12 +67,6 @@ const zh = {
     copy: '复制链接',
     copied: '链接已复制',
   },
-  newsletter: {
-    eyebrow: 'Dr.Jingle Weekly',
-    title: '每周精选，直达邮箱',
-    desc: '每周 5 篇 AI、稳定币与 builder 经济精选 — 少噪音，多判断。',
-    ctaExternal: '前往订阅页',
-  },
   series: {
     parts: (n: number) => `${n} 篇`,
     readSeries: '开始阅读',
@@ -100,7 +93,6 @@ const en: typeof zh = {
   siteKeywords: 'Dr.Jingle, AI, RWA, Web3, Canton',
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: 'Home', events: 'Events', insights: 'Insights', research: 'Research', ecosystem: 'Ecosystem', primary: 'Main' },
-  search: { placeholder: 'Search…', aria: 'Search' },
   home: {
     kicker: 'GEO Flow · AI / RWA / Web3',
     tagline: 'Evolving as a super individual',
@@ -160,12 +152,6 @@ const en: typeof zh = {
     copy: 'Copy link',
     copied: 'Link copied',
   },
-  newsletter: {
-    eyebrow: 'Dr.Jingle Weekly',
-    title: 'Weekly picks in your inbox',
-    desc: 'Five curated reads on AI, stablecoins, and builder economics.',
-    ctaExternal: 'Subscribe',
-  },
   series: {
     parts: (n: number) => `${n} parts`,
     readSeries: 'Start reading',
@@ -192,12 +178,12 @@ export function t(locale: Locale) {
 
 export function localePath(locale: Locale, path: string) {
   const p = path.startsWith('/') ? path : `/${path}`;
-  if (locale === 'zh') return p === '/' ? '/' : p;
-  return p === '/' ? '/en/' : `/en${p}`;
+  if (locale === 'en') return p === '/' ? '/' : p;
+  return p === '/' ? '/zh/' : `/zh${p}`;
 }
 
 export function localeSwitchPath(locale: Locale, pathname: string): string {
-  const p = pathname.replace(/^\/en/, '') || '/';
-  if (locale === 'zh') return p === '/' ? '/en/' : `/en${p}`;
-  return p;
+  const p = pathname.replace(/^\/zh(?=\/|$)/, '') || '/';
+  if (locale === 'en') return p === '/' ? '/zh/' : `/zh${p}`;
+  return p === '/' ? '/' : p;
 }

@@ -58,10 +58,6 @@ const navItems: { key: NavKey; href: string; icon: string }[] = [
     </nav>
 
     <div class="dj-header-actions">
-      <form method="get" action={localePath(locale, '/')} class="dj-search" role="search">
-        <span aria-hidden="true">⌘</span>
-        <input type="search" name="search" placeholder={tr.search.placeholder} aria-label={tr.search.aria} />
-      </form>
       <a href={switchHref} class="dj-locale-switch" aria-label={tr.localeSwitch.aria}>
         {locale === 'en' ? tr.localeSwitch.toZh : tr.localeSwitch.toEn}
       </a>

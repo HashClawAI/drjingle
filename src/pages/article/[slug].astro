@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   return articles.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
-const locale: Locale = 'zh';
+const locale: Locale = 'en';
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const all = await getPublishedArticles(locale);

@@ -7,11 +7,11 @@ import { getPublishedArticles } from '@/lib/articles';
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const articles = await getCollection('articles', ({ data }) => !data.draft && data.locale === 'en');
+  const articles = await getCollection('articles', ({ data }) => !data.draft && data.locale === 'zh');
   return articles.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
 }
 
-const locale: Locale = 'en';
+const locale: Locale = 'zh';
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const all = await getPublishedArticles(locale);
