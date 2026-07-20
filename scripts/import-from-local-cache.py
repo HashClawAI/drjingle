@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
 CACHE_DIR = WORKSPACE / "wechat-mp-auto-publish/artifacts/geoflow-en-export"
 EN_CACHE_DIR = WORKSPACE / "wechat-mp-auto-publish/artifacts/geoflow-en-cache"
+PILLAR_EN_JSON = WORKSPACE / "wechat-mp-auto-publish/scripts/data/pillar-en.json"
 SITEMAP = WORKSPACE / "vendor/GEOFlow/public/sitemap.xml"
 SERIES_JSON = ROOT / "src/data/series.json"
 OUT_DIR = ROOT / "src/content/articles"
@@ -137,6 +138,24 @@ def write_article(
     path.write_text("\n".join(fm) + body, encoding="utf-8")
 
 
+def load_pillar_en(slug: str) -> dict | None:
+    if not PILLAR_EN_JSON.exists():
+        return None
+    data = json.loads(PILLAR_EN_JSON.read_text(encoding="utf-8"))
+    row = data.get(slug)
+    if not row:
+        return None
+    content = (row.get("content_en") or "").strip()
+    title = (row.get("title_en") or "").strip()
+    if len(content) < 200 or not title:
+        return None
+    return {
+        "title": title,
+        "excerpt": (row.get("excerpt_en") or "").strip(),
+        "content": content,
+    }
+
+
 def load_en_cache(article_id: int) -> dict | None:
     path = EN_CACHE_DIR / f"{article_id}.json"
     if not path.exists():
@@ -160,7 +179,7 @@ def write_en_from_cache(
     series: str | None = None,
     series_order: int | None = None,
 ) -> bool:
-    en = load_en_cache(article_id)
+    en = load_en_cache(article_id) or load_pillar_en(slug)
     if not en or not en["title"]:
         return False
     write_article(
