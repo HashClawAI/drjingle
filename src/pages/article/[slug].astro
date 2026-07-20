@@ -3,19 +3,22 @@ import { render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticlePage from '@/components/mirror/ArticlePage.astro';
 import type { Locale } from '@/lib/i18n';
-import { getPublishedArticles } from '@/lib/articles';
+import { getPublishedArticles, articleSlug } from '@/lib/articles';
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
-  const articles = await getCollection('articles', ({ data }) => !data.draft && data.locale === 'zh');
-  return articles.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+  const articles = await getCollection('articles', ({ data }) => !data.draft && data.locale === 'en');
+  return articles.map((entry) => ({ params: { slug: articleSlug(entry) }, props: { entry } }));
 }
 
 const locale: Locale = 'en';
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const all = await getPublishedArticles(locale);
-const related = all.filter((a) => a.slug !== entry.slug && a.data.category === entry.data.category).slice(0, 5);
+const slug = articleSlug(entry);
+const related = all
+  .filter((a) => articleSlug(a) !== slug && a.data.category === entry.data.category)
+  .slice(0, 5);
 const navCurrent =
   entry.data.category === 'research' ? 'research' : entry.data.category === 'events' ? 'events' : 'insights';
 ---

@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 import type { Locale } from '@/lib/i18n';
-import { getPublishedArticles } from '@/lib/articles';
+import { getPublishedArticles, articleSlug } from '@/lib/articles';
 
 export const FEATURED_SLUGS = [
   'ai-agent玩家的自嗨陷阱-95-的项目没赚到钱',
@@ -12,7 +12,7 @@ export const FEATURED_SLUGS = [
 
 export async function getFeaturedArticles(locale: Locale = 'en') {
   const all = await getPublishedArticles(locale);
-  const bySlug = new Map(all.map((a) => [a.slug, a]));
+  const bySlug = new Map(all.map((a) => [articleSlug(a), a]));
   return FEATURED_SLUGS.map((slug) => bySlug.get(slug)).filter(
     (a): a is CollectionEntry<'articles'> => Boolean(a),
   );
