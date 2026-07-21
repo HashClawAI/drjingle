@@ -147,7 +147,7 @@ A: It explores the US–Iran Persian Gulf two-month evolution, narrative trends,
 
 A: See the section "Low-Intensity Probing Phase (Weeks 1–3)"; based on source material; not investment or legal advice.
 
-**Escalation and Parallel Mediation Phase (Weeks 4–6)—key points?**
+Escalation and Parallel Mediation Phase (Weeks 4–6)—key points?
 
 A: See the section "Escalation and Parallel Mediation Phase (Weeks 4–6)"; based on source material; not investment or legal advice.
 

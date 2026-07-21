@@ -86,19 +86,19 @@ The AI wave brought a flood of products wearing the AI badge. Which are truly AI
 
 A: It covers "The Soul of AI Native Products: AI Is Reshaping the Product Paradigm," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "I. How the AI Native Concept Evolved"?**
+What are the key points of "I. How the AI Native Concept Evolved"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "II. AI Native Can Create Exponential Gaps in Value Speed and Cost"?**
+What are the key points of "II. AI Native Can Create Exponential Gaps in Value Speed and Cost"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "III. Four Distinctions Between AI Enabled and AI Native"?**
+What are the key points of "III. Four Distinctions Between AI Enabled and AI Native"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "1. Cognitive Logic Defines IQ, Trust, and Risk"?**
+What are the key points of "1. Cognitive Logic Defines IQ, Trust, and Risk"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

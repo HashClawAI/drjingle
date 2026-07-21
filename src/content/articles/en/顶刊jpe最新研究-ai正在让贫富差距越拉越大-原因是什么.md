@@ -40,7 +40,7 @@ The team collected macro data from 50 countries, 2005–2025, including AI capit
 *Source: Journal of Political Economy, April 2026, Vol. 134, No. 4, "AI Capital and the Labor Share: Global Evidence"*
 ### Core Findings
 
-**1. Over the past 15 years, AI capital reduced global labor income share by 4.2 percentage points**
+1. Over the past 15 years, AI capital reduced global labor income share by 4.2 percentage points
 Controlling for other factors, every 10% increase in AI capital stock cuts labor income share by 0.8 points. From 2010–2025, global AI capital stock grew 525%, corresponding to a 4.2-point drop in labor share.
 What does that mean? With 2025 global GDP at $120 trillion, 4.2 points equals $5.04 trillion—roughly $5 trillion less to global workers each year, or about $1,200 less per worker on average.
 Where did it go? Mostly to capital returns: average annual return on AI capital reached 18%, 11 points above traditional capital—AI investors earn far more than factory or real-estate investors once did.
@@ -57,7 +57,7 @@ Many still believe "work hard and earn well." This research suggests relying on 
 Zen teaching says: "The noble person seeks the Way, not mere food; they worry about the Way, not poverty." The question is not "how to do my job better for more wages" but "how to hold capital and share in AI's excess returns."
 Two suggestions for ordinary people:
 1. **Don't rely solely on labor income**: While working hard, allocate assets—quality stocks, property, credible AI ventures—so money works for you.
-2. **If labor is your only option, aim for high-paying AI sectors**: AI R&D, products, operations—sectors still growing fast where wages can temporarily keep pace with capital returns.
+2. If labor is your only option, aim for high-paying AI sectors: AI R&D, products, operations—sectors still growing fast where wages can temporarily keep pace with capital returns.
 Like the temple monks: if you only work for wages, your share shrinks; if you also fund AI machines and become a donor, you receive dividends and income can rise.
 ### Discussion
 
@@ -73,11 +73,11 @@ In the old days, a temple split its income 80% to working monks and 20% to publi
 
 A: It covers "New JPE Study: AI Is Widening the Wealth Gap—Why?," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "The Temple's Splitting Rules"?**
+What are the key points of "The Temple's Splitting Rules"?
 
 A: See the "The Temple's Splitting Rules" section; based on source materials, not investment or legal advice.
 
-**What are the key points of "How Did the Study Reach Its Conclusions?"?**
+What are the key points of "How Did the Study Reach Its Conclusions?"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

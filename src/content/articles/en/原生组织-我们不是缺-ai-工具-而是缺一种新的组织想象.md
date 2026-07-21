@@ -46,7 +46,7 @@ Roles use AI ≠ the organization runs like AI.
 ## The Book Pulls AI from a "Tech Problem" to an "Org Problem"
 
 Many AI books start with model capability: reasoning, tool use, multimodal interaction. *Native Organization* takes another path.
-It reminds readers: **AI native is not a tech stack choice—it is organizational logic.**
+It reminds readers: AI native is not a tech stack choice—it is organizational logic.
 In many firms AI transformation lands in IT: pick models, build platforms, knowledge bases, systems. Important—but if AI is only an IT project, it stays at the tool layer.
 The hard part is not "which model" but: which tasks should AI start by default? which decisions can agents simulate first? which nodes require human review? which roles split into task flows? which middle-management functions are just information relay? which processes have huge wait never recorded as cost?
 These are not pure tech questions—they touch structure, power, performance, talent standards, culture. Hence a sharp judgment: **this is a battle the CEO must lead personally.**
@@ -57,7 +57,7 @@ One of my favorite concepts is the rewrite of organizational syntax.
 For a century+, modern companies default to **role × human**: define roles, fill with people. Sales, ops, support, finance—org charts are roles and reporting lines.
 AI loosens this because work no longer maps cleanly to whole roles—it splits into task units.
 A "customer service manager" might split into basic Q&A, ticket triage, sentiment detection, history retrieval, complex escalation, relationship maintenance—some to agents, some to humans, some hybrid.
-The design unit shifts from "role" to "task." The book's phrase: **from "role × human" to "task × Agent + human."**
+The design unit shifts from "role" to "task." The book's phrase: from "role × human" to "task × Agent + human."
 04
 ## The Underestimated Cost Is "Wait"
 
@@ -71,7 +71,7 @@ That shocks org design. Once AI can keep pushing tasks, middle roles built on re
 05
 ## CAO May Not Be Called CAO—But Someone Must Own It
 
-The book proposes CAO—Chief Agent Officer. The acronym may conflict (CAO exists elsewhere). The point: **when a company has dozens or hundreds of agents, who manages their relationships?**
+The book proposes CAO—Chief Agent Officer. The acronym may conflict (CAO exists elsewhere). The point: when a company has dozens or hundreds of agents, who manages their relationships?
 CTO owns infra; business owners own results; PMs own product roadmaps. But agent networks' objective functions, permission boundaries, interface protocols, escalation rules, audit mechanisms span departments.
 Without an owner, more agents → more chaos—each department automates separately; internally, semi-automated systems that don't understand each other. Short term buzz; long term a city with no traffic rules.
 CAO represents a new organizational capability: **orchestration**.
@@ -79,7 +79,7 @@ CAO represents a new organizational capability: **orchestration**.
 ## What to Watch—Also Why It's Worth Reading
 
 Frankly, *Native Organization* is not rigorous academic work. It has historical analogies, entrepreneur interviews, trend calls, some predictions. Don't treat every number as law or every case as copy-paste template.
-That doesn't reduce value. The useful part is not "the future will look exactly like this" but forcing admission: **if AI is general-purpose technology, organizations cannot stay the same.**
+That doesn't reduce value. The useful part is not "the future will look exactly like this" but forcing admission: if AI is general-purpose technology, organizations cannot stay the same.
 Like early internet—no one predicted today's mobile pay, short video, live commerce, cloud, global collaboration in order. But companies that insisted "internet is just a marketing channel" after 1995 mostly paid a price.
 07
 ## Why I Recommend It
@@ -101,7 +101,7 @@ Best read: one chapter, one concept, test in the company.
 Draw a wait map for a core flow; split a role into tasks and see what agents vs. humans own; have the CEO do their most important daily work with AI—not just hear reports.
 Close the book; go work.
 Business books say that often—it sounds motivational. Here it isn't empty. The author means: AI native is not reading comprehension—it is organizational practice.
-**If your company uses AI but isn't faster, lighter, or smarter, put *Native Organization* on the executive reading list.**
+If your company uses AI but isn't faster, lighter, or smarter, put *Native Organization* on the executive reading list.
 It may not comfort you—but it makes self-deception harder. For companies in AI transition, that may matter more than comfort.
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/ibu320hOC23KKwAicKFlOK1IF8ib4XHVibVH3Of3WheHHeqNTW2pVzFbPxvb6Tr5NSp5zRXMYFXqb4OFmQ8IKxNgtoZkpufeHauEoRU7fUia8jv0/640?wx_fmt=jpeg)
 Title: *Native Organization: The Fourth Organizational Revolution in the AI Era*
@@ -117,19 +117,19 @@ Company-wide AI adoption does not mean the organization has entered the AI era.
 
 A: It covers "Native Organization — We Don't Lack AI Tools, We Lack a New Organizational Imagination," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "Many AI Transformations Stop at Buzz"?**
+What are the key points of "Many AI Transformations Stop at Buzz"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "The Book Pulls AI from a Tech Problem to an Org Problem"?**
+What are the key points of "The Book Pulls AI from a Tech Problem to an Org Problem"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "Task × Agent + Human Is a New Management Grammar"?**
+What are the key points of "Task × Agent + Human Is a New Management Grammar"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "The Underestimated Cost Is Wait"?**
+What are the key points of "The Underestimated Cost Is Wait"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

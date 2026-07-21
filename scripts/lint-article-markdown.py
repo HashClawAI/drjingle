@@ -60,6 +60,129 @@ def h2_title(line: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
+def _bold_marker_indices(line: str) -> list[int]:
+    idx: list[int] = []
+    pos = 0
+    while True:
+        pos = line.find("**", pos)
+        if pos < 0:
+            break
+        idx.append(pos)
+        pos += 2
+    return idx
+
+
+def is_broken_bold_line(line: str) -> bool:
+    idx = _bold_marker_indices(line)
+    if not idx:
+        return False
+    if len(idx) % 2 != 0:
+        return True
+    if len(idx) >= 8:
+        return True
+
+    long_pairs = 0
+    for i in range(0, len(idx), 2):
+        inner = line[idx[i] + 2 : idx[i + 1]]
+        t = inner.strip()
+        if len(t) > 55:
+            return True
+        if len(t) <= 2:
+            return True
+        if len(t) > 40:
+            long_pairs += 1
+        if (";" in inner or "；" in inner) and len(inner) > 20:
+            return True
+        if inner.endswith(" ") and len(inner) > 15:
+            return True
+
+    if len(idx) >= 6 and long_pairs >= 1:
+        return True
+    return False
+
+
+def clean_stray_bold(text: str) -> tuple[str, list[str]]:
+    """Remove WeChat / GEO stray ** that render literally in HTML."""
+    if not text:
+        return text, []
+
+    notes: list[str] = []
+    s = text
+
+    s = re.sub(r"\[\*\*[^\]]*\*\*\]", "", s)
+    s = re.sub(r"\[\*\*[^\]]*\]", "", s)
+    s = re.sub(r"\*\* \*\*", "", s)
+
+    before = s
+    s = re.sub(r"^\s*-?\s*\*\*\s*$", "", s, flags=re.MULTILINE)
+    if s != before:
+        notes.append("removed empty ** lines")
+
+    quote_chars = '"\u300c\u300e\u201c\u201d\u300d\u300f'
+
+    def fix_quotes(m: re.Match[str]) -> str:
+        return m.group(1)
+
+    s = re.sub(r"\*\*([" + re.escape(quote_chars) + r"])\*\*", fix_quotes, s)
+    s = re.sub(r"\*\*([" + re.escape(quote_chars) + r"])", fix_quotes, s)
+    s = re.sub(r"([" + re.escape(quote_chars) + r"])\*\*", fix_quotes, s)
+
+    fixed_lines: list[str] = []
+    for line in s.split("\n"):
+        count = line.count("**")
+        if count == 0 or count % 2 == 0:
+            fixed_lines.append(line)
+            continue
+
+        new_line = line
+        if re.match(r"^\s*\*\*", line) and line.count("**") == 1:
+            new_line = re.sub(r"^\s*\*\*", lambda m: m.group(0).replace("**", ""), line, count=1)
+        elif re.search(r"\*\*\s*$", line):
+            new_line = re.sub(r"\*\*\s*$", "", line)
+        elif re.search(r"\*\*(?=[.,;:!?」』\"'\\s])", line):
+            new_line = re.sub(r"\*\*(?=[.,;:!?」』\"'\\s])", "", line)
+        else:
+            pos = line.rfind("**")
+            if pos >= 0:
+                new_line = line[:pos] + line[pos + 2 :]
+        if new_line != line:
+            notes.append("fixed odd ** count")
+        fixed_lines.append(new_line)
+    s = "\n".join(fixed_lines)
+
+    s = re.sub(r"\n{3,}", "\n\n", s)
+    s = re.sub(r"\*\*~(\$)", r"**\1", s)
+
+    fixed_lines = []
+    for line in s.split("\n"):
+        if line.count("**") % 2 == 1:
+            fixed_lines.append(line.replace("**", ""))
+            notes.append("stripped odd ** line")
+        else:
+            fixed_lines.append(line)
+    s = "\n".join(fixed_lines)
+
+    fixed_lines = []
+    for line in s.split("\n"):
+        if is_broken_bold_line(line):
+            fixed_lines.append(line.replace("**", ""))
+            notes.append("stripped broken bold line")
+            continue
+        probe = line
+        prev = None
+        while probe != prev:
+            prev = probe
+            probe = re.sub(r"\*\*([^*\n]+?)\*\*", r"\1", probe)
+        if "**" in probe:
+            fixed_lines.append(line.replace("**", ""))
+            notes.append("stripped leftover **")
+        else:
+            fixed_lines.append(line)
+    s = "\n".join(fixed_lines)
+
+    return s, notes
+
+
 def fix_markdown_block_structure(body: str) -> tuple[str, list[str]]:
     """Prevent setext headings from `---` and normalize GEO tail / FAQ spacing."""
     notes: list[str] = []
@@ -345,6 +468,8 @@ def clean_markdown(text: str, catalog: list[str], refresh_description: bool) -> 
     body_out = "\n".join(out_lines)
     body_out, block_notes = fix_markdown_block_structure(body_out)
     notes.extend(block_notes)
+    body_out, bold_notes = clean_stray_bold(body_out)
+    notes.extend(bold_notes)
 
     if body_out and not body_out.endswith("\n"):
         body_out += "\n"

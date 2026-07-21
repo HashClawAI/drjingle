@@ -28,7 +28,7 @@ The CLARITY Act advanced in the Senate Banking Committee—the Digital Asset Mar
 > Not a "crypto get-out-of-jail card"—America trying to move digital asset markets from gray zones into a ruled road system.
 **A significant milestone for US crypto.**
 The **CLARITY Act** advanced in the Senate Banking Committee—the "Digital Asset Market Clarity Act." Dry name, plain problems:
-**Who regulates crypto? How do exchanges comply? Can developers be treated as financial intermediaries for writing code?**
+Who regulates crypto? How do exchanges comply? Can developers be treated as financial intermediaries for writing code?
 Key fact: not enacted law—committee stage. Reported **15–9** vote. Full Senate, reconciliation, House, signature still required.
 Still a major signal: for years the biggest problem wasn't strict regulation—it was **unclear** regulation.
 ## I. Why CLARITY? Because the Market Was Too Unclear
@@ -66,7 +66,7 @@ One line: markets aren't banning cars—they're checking licenses, inspecting ve
 Among the most watched provisions.
 CLARITY distinguishes two roles.
 **Centralized intermediaries**: exchanges, brokers, custodians—serve users, match trades, hold assets—more compliance obligations.
-**Software developers, non-custodial wallets, nodes, open-source protocols, peer-to-peer activity**: writing code, publishing tools, users controlling assets—tend toward certain protections.
+Software developers, non-custodial wallets, nodes, open-source protocols, peer-to-peer activity: writing code, publishing tools, users controlling assets—tend toward certain protections.
 Critical: treating all coders as financial intermediaries would strangle DeFi. An AMM developer ≠ running an exchange.
 But if every platform claims "decentralized" to evade AML, consumer protection, and anti-fraud—regulation fails too.
 CLARITY's hard problem: protect open-source innovation without "decentralization" as a shield for illegal activity.
@@ -92,7 +92,7 @@ If CLARITY becomes law, three shifts possible:
 Easy to misread.
 Yesterday was Senate Banking Committee—not final Congress passage or presidential signature.
 Full Senate vote, reconciliation with other committee and House versions remain. US legislative process can amend, delay, stall.
-More accurate: **CLARITY took a critical step toward US digital asset market structure legislation—but isn't law yet.**
+More accurate: CLARITY took a critical step toward US digital asset market structure legislation—but isn't law yet.
 ## VIII. One-Line Summary
 
 CLARITY doesn't ask "is crypto good?" It asks practical questions:

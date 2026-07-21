@@ -47,7 +47,7 @@ Simply: Canton is not "everyone sees everything" but "interoperate where needed,
 Three layers of meaning:
 **First, the cap table itself is validation.**
 Investors include a16z crypto, Coinbase Ventures, Polychain—and Citadel Securities, Optiver, Tradeweb, BNP Paribas, HSBC, S&P Global, CME Ventures. Not crypto cheering crypto, but market infrastructure, trading firms, banks, and crypto capital betting together.
-**Second, narrative shifts from "technically feasible" to "ecosystem expansion."**
+Second, narrative shifts from "technically feasible" to "ecosystem expansion."
 Institutional on-chain often stopped at PoCs—one pilot, one report, one trade. Digital Asset now emphasizes more assets, applications, participants, and regulated workflows. Funding focus: not "we proved it works" but "we're migrating real financial processes."
 **Third, it refocuses RWA competition on infrastructure.**
 RWA is not just mapping assets to tokens. The hard part is lifecycle, permissions, settlement, collateral, audit, compliance, inter-institution coordination. Who handles these gets closer to real market needs.

@@ -15,7 +15,7 @@ draft: false
 - Last cycle's L1 wars fought DeFi, NFTs, memes, attention. **RWA chains** look more like **financial infrastructure's Warring States**.
 - This time the fight isn't loudest slogan or highest TPS—it's who can move treasuries, funds, credit, securities, trade finance, stablecoin settlement **safely, compliantly, programmably on-chain**.
 - RWA chains aren't a Web3 side branch—they're Web2.5's signature base layer: Web2 compliance, accounts, custody, KYC, institutional rails + Web3 settlement, tokenization, composability, verifiability.
-- One line: **Web2.5 is the bridge; RWA chains are the piers.**
+- One line: Web2.5 is the bridge; RWA chains are the piers.
 - Today, start with Circle's Arc Network.
 ## One-Line Summary
 
@@ -30,11 +30,11 @@ RWA chain rise resembles financial infrastructure's Warring States—not last cy
 Last cycle's L1 wars fought DeFi, NFTs, memes, attention. **RWA chains** look more like **financial infrastructure's Warring States**.
 This time: treasuries, funds, credit, securities, trade finance, stablecoin settlement—**safely, compliantly, programmably on-chain**.
 RWA chains aren't a Web3 side branch—they're Web2.5's signature base layer: Web2 compliance, accounts, custody, KYC, institutional entry + Web3 on-chain settlement, asset tokenization, composability, verifiability.
-One line: **Web2.5 is the bridge; RWA chains are the piers.**
+One line: Web2.5 is the bridge; RWA chains are the piers.
 ## I. Arc First: USDC Issuer Builds Its Own L1
 
 Start with Circle's **Arc Network**.
-Reason: stablecoin issuers were **asset suppliers** on chains—not L1 competitors. USDC circulates on Ethereum, Solana, Base, Arbitrum—Circle like a supply caravan for warring states. **Arc** means Circle now **builds roads, sets checkpoints, founds cities**.
+Reason: stablecoin issuers were asset suppliers on chains—not L1 competitors. USDC circulates on Ethereum, Solana, Base, Arbitrum—Circle like a supply caravan for warring states. Arc means Circle now builds roads, sets checkpoints, founds cities.
 Arc: open L1 for **stablecoin finance**—not entertainment crypto, but payments, FX, capital markets, RWA settlement, enterprise finance. Strategic pillars:
 **First, USDC as native gas.** Critical for institutions. Enterprises dislike volatile native tokens for fees or unexplained crypto on balance sheets. USDC gas = dollar-denominated fees—budget, reconciliation, risk fit enterprise workflows.
 **Second, sub-second deterministic finality.** Circle emphasizes institutional workflows need low latency, deterministic settlement—not long confirmations or reorg risk. For payments, FX, treasury, capital markets settlement, finality is business requirement, not vanity metric.
@@ -60,7 +60,7 @@ Arc's outcome depends on balancing **institutional trust** and **public chain op
 If Arc = issuer building L1, **Canton Network** = another route: from large institutions' real workflows—privacy, permissions, complex financial contracts.
 Canton's temperament differs from most L1s. Many assume "all transactions public"; Canton admits **real finance doesn't work that way**.
 Banks, brokers, asset managers, clearing houses—contracts, positions, collateral, cash flows can't all go public to strangers. They need verifiability without global visibility; shared state among relevant parties only; on-chain sync without sacrificing commercial secrets.
-Canton's cut: **configurable privacy, permissioned participation, Daml smart contracts, institutional-grade sync**.
+Canton's cut: configurable privacy, permissioned participation, Daml smart contracts, institutional-grade sync.
 In Canton narrative, RWA isn't mint token, dump in DeFi pool—it's **lifecycle of real financial contracts**: issuance, custody, transfer, collateral, settlement, redemption, audit, compliance—on one synchronizable infrastructure.
 Canton = road deep into finance interior—not loudest retail community or best memes—strong for inter-institution assets, bonds, repos, fund shares, collateral, complex settlement.
 If Arc keyword is **USDC settlement**, Canton's is **institutional privacy**.
@@ -71,9 +71,9 @@ Web2.5 isn't a strict standard—it's transitional architecture.
 Keeps Web2: familiar accounts, low-friction UX, centralized compliance, KYC/AML, custody, support, enterprise risk, regulatory interfaces.
 Adds Web3: on-chain assets, programmable settlement, public verifiability, cross-platform composability, true ownership, shared ledger without repeated reconciliation.
 Typical Web2.5 apps stay at application layer—loyalty points, custodial wallets, NFT membership, on-chain credentials. **RWA chains go to infrastructure layer**.
-They solve not "can user buy one on-chain asset" but how traditional assets are **issued, custodied, transferred, settled, audited, connected to secondary markets**.
+They solve not "can user buy one on-chain asset" but how traditional assets are issued, custodied, transferred, settled, audited, connected to secondary markets.
 Harder than average Web2.5 apps: must know chain **and** financial regulation; performance **and** compliance boundaries; developer openness **and** institutional/regulator confidence.
-So: **RWA chains aren't Web2.5 accessories—they're Web2.5 expressed at L1 infrastructure.**
+So: RWA chains aren't Web2.5 accessories—they're Web2.5 expressed at L1 infrastructure.
 ## V. Other Players: Asset, Region, Compliance, Liquidity Routes
 
 Beyond Arc and Canton:
@@ -110,13 +110,13 @@ Don't judge by TVL alone, fundraising, or ecosystem slogans. Four legs matter:
 Arc strong on cash; Canton on compliance and institutional collaboration; Ondo on securities entry; Plume on liquidity narrative; Provenance on incumbent assets; Polymesh on securities rules; MANTRA on regional compliance—capabilities can coexist and interconnect.
 ## VIII. Next Five Years: RWA Chains as TradFi's Front Door to Web3
 
-Biggest shift may be **"more real assets"** not "more chains."
-Last cycle: on-chain value often from narrative, liquidity, speculation. RWA chains connect **real-world cash flows, credit, fund shares, securities claims, trade relationships**—must interface with legal, custody, accounting, regulatory systems.
+Biggest shift may be "more real assets" not "more chains."
+Last cycle: on-chain value often from narrative, liquidity, speculation. RWA chains connect real-world cash flows, credit, fund shares, securities claims, trade relationships—must interface with legal, custody, accounting, regulatory systems.
 Slower than memes and pure DeFi—but once infrastructure stickiness forms, migration cost rises.
 Likely pattern: institutions enter **Web2.5 first**—custodial accounts, KYC, permissioned markets, stablecoin settlement, compliant frontends; then some assets open to broader on-chain composition and secondary markets.
 RWA chains don't overnight pure-Web3 finance—they **build a bridge tradfi accepts**.
 One end: banks, brokers, funds, payments, regulation. Other end: smart contracts, stablecoins, DeFi, on-chain identity, global liquidity.
-**Closing: Heaven Sword and Dragon Saber—the fight isn't only the blade.**
+Closing: Heaven Sword and Dragon Saber—the fight isn't only the blade.
 In Jin Yong, what matters isn't the weapons but **order reconstruction** behind them.
 Same for RWA chains.
 Surface: Arc, Canton, Ondo, Plume, MANTRA, Polymesh, Provenance, XDC, Centrifuge, Converge fight chains, assets, developers, TVL. Deeper: **position in future financial infrastructure**—who holds cash, assets, compliance, liquidity.

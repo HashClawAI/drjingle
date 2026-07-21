@@ -11,7 +11,7 @@ draft: false
 
 - Over the past few days I ran four "acceptance test" experiments with Fable 5: an Interstellar-style Gargantua black hole render, a wormhole that crosses into another universe, a web Red Alert vertical slice, and a browser-run Minecraft-style voxel world.
 - These look like show-off demos but expose real model capability—they are not single-point coding tasks but mixed jobs: aesthetics, physics intuition, real-time rendering, interaction systems, game loops, performance trade-offs, and delivery format must all hold together.
-- After running the set, my takeaway is direct: **Fable 5 doesn't just write code—it compresses a fuzzy idea into something runnable, viewable, playable, even publishable.**
+- After running the set, my takeaway is direct: Fable 5 doesn't just write code—it compresses a fuzzy idea into something runnable, viewable, playable, even publishable.
 - !video:Fable 5 black hole render video—58-second subtitled Gargantua flythrough
 - Interstellar-style Gargantua WebGL2 real-time rendering with full video and subtitles.
 - The black hole project is not a texture or CSS glow ring—it is a WebGL2 + GLSL real-time render page.
@@ -25,7 +25,7 @@ Over the past few days I ran four "acceptance test" experiments with Fable 5: an
 
 Over the past few days I ran four "acceptance test" experiments with Fable 5: an Interstellar-style Gargantua black hole render, a wormhole that crosses into another universe, a web Red Alert vertical slice, and a browser-run Minecraft-style voxel world.
 These look like show-off demos but expose real model capability—they are not single-point coding tasks but mixed jobs: aesthetics, physics intuition, real-time rendering, interaction systems, game loops, performance trade-offs, and delivery format must all hold together.
-After running the set, my takeaway is direct: **Fable 5 doesn't just write code—it compresses a fuzzy idea into something runnable, viewable, playable, even publishable.**
+After running the set, my takeaway is direct: Fable 5 doesn't just write code—it compresses a fuzzy idea into something runnable, viewable, playable, even publishable.
 ## Black Hole: Not a Circle—Spatial Physics
 
 ![video:Fable 5 black hole render video—58-second subtitled Gargantua flythrough](/images/articles/fable-5/blackhole.wechat.mp4)
@@ -81,12 +81,12 @@ Evaluating Fable 5 can't rely on benchmarks alone. GitHub issue fixes show one t
 
 Fable 5 is strong, not magic. Black holes, wormholes, Minecraft, RTS are high-corpus domains—strength partly from absorbing paradigms and recombining.
 It doesn't replace real engineering review. Red Alert as product needs file splits, tests, balance, pathfinding; Minecraft needs save formats, memory, mobile; black hole/wormhole for serious science need physics calibration.
-More accurate: **Fable 5 excels at pushing "ideas" to "experiential works"—from work to product still needs human direction, polish, and quality gates.**
+More accurate: Fable 5 excels at pushing "ideas" to "experiential works"—from work to product still needs human direction, polish, and quality gates.
 ## Closing
 
 For ordinary Q&A, short scripts, small functions, Fable 5 may not beat cheaper models on cost. But if the goal is "make a thing"—hours of continuous work across systems with aesthetic and product intuition—advantages are obvious.
 Black hole proves visual/spatial sense; wormhole proves abstract geometry as experience; Red Alert proves system building; Minecraft proves real-time 3D prototype density.
-Together, more than any single benchmark: **Fable 5's real strength is the middle ground between complex ideas and experiential works.**
+Together, more than any single benchmark: Fable 5's real strength is the middle ground between complex ideas and experiential works.
 Local test project code and interaction effects— not product recommendation or procurement advice.
 ## Conclusion
 
