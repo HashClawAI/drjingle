@@ -8,14 +8,18 @@ locale: en
 draft: false
 ---
 ## Key Takeaways
+
 - MICHAEL SAYLOR
 - ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8KOtUCplia5lLuaZ75vFWN8QOCrT6HMtjleMzRdfZQaibSexMoLnYXLWIwqaNLWW61THDgT5TDBVO7g/640?wx_fmt=jpeg&from=appmsg)
 - [Digital Gold Rush ]
 - In a recent interview, Saylor discussed the "digital gold rush":
 - "From 2025 to 2035, this will be the decade of the digital gold rush. Countless new business models, products, services, and thousands of companies will emerge. Like the late-19th-century oil industry—think the 1870s, when people first explored crude oil applications, from kerosene to diesel…"
 ## One-Line Definition
+
 ---
+
 ## Body
+
 > WeChat original: https://mp.weixin.qq.com/s/7U4oONcBjs8qemWQm7m5OA
 **MICHAEL SAYLOR**
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8KOtUCplia5lLuaZ75vFWN8QOCrT6HMtjleMzRdfZQaibSexMoLnYXLWIwqaNLWW61THDgT5TDBVO7g/640?wx_fmt=jpeg&from=appmsg)
@@ -30,15 +34,24 @@ If you do not act now, by 2035 it may be too late."
 > *[Video embed—see WeChat original]*
 -END-
 ## Conclusion
+
 ## FAQ
+
 **What is this article mainly about?**
+
 A: It explores "Michael Saylor: The Next Decade Is a Digital Gold Rush," covering background, key developments, and the author's core views.
+
 **Does this article constitute investment advice?**
+
 A: No. This is informational commentary and opinion. Decisions should rely on primary sources and professional advice.
+
 ---
+
 **Last updated**: 2026-06-30
 **Author**: Dr.Jingle (X [@drjingle](https://x.com/drjingle))
 **Evidence boundary**: Structural GEO adaptation; facts and opinions are from the original text; no unverified data added.
 *This article reflects the author's views and information synthesis. It does not constitute investment, legal, or medical advice.*
+
 ---
+
 **WeChat original**: https://mp.weixin.qq.com/s/7U4oONcBjs8qemWQm7m5OA

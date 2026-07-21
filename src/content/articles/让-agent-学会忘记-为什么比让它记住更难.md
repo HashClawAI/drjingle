@@ -9,6 +9,7 @@ locale: zh
 draft: false
 ---
 ## 导读
+
 - 大家这两年都在拼命给 AI 加长记忆。但这篇论文反过来问了一个更像现实世界的问题：当 autonomous agent 不可能永远保存所有历史时，它该忘掉什么，才能不在后续任务里一点点偏航？
 - 周一早上九点零七分，客服系统里弹出第 38 个对话框。
 - 一个 autonomous agent 刚刚接手夜班留下来的所有上下文：用户上周投诉过什么，昨晚改过哪一版方案，谁答应过今天早上给出补偿，哪条备注只是猜测，哪条才是正式承诺。
@@ -16,9 +17,13 @@ draft: false
 - 这几年，大模型行业几乎把一件事说成了共识：记忆越长越好，上下文越大越强。窗口从 32k 一路卷到 128k、256k，像是在给系统不停扩仓。默认叙事很简单：只要记得更多，agent 就会更可靠。
 - 但《Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance and Efficiency》这篇 2026 年论文，偏偏不顺着这条…
 ## 一句话定义
+
 大家这两年都在拼命给 AI 加长记忆。但这篇论文反过来问了一个更像现实世界的问题：当 autonomous agent 不可能永远保存所有历史时，它该忘掉什么，才能不在后续任务里一点点偏航？
+
 ---
+
 ## 正文
+
 > 微信公众号原文：https://mp.weixin.qq.com/s/Omakl2KfP2J9CNXUTa6koQ
 *大家这两年都在拼命给 AI 加长记忆。但这篇论文反过来问了一个更像现实世界的问题：当 autonomous agent 不可能永远保存所有历史时，它该忘掉什么，才能不在后续任务里一点点偏航？*
 *
@@ -52,24 +57,36 @@ draft: false
 所以，看这篇论文时，最值得警惕的并不是“AI 终于学会遗忘”这种听起来很新鲜的标题，而是另一个更冷的事实：未来真正进入流程、后台和组织系统里的 agent，未必会死在不知道答案上，它更可能死在删掉了正确答案之后，还继续一本正经地执行。
 从这个角度说，长上下文也许根本不是终点。真正决定 agent 能不能进入现实世界的，可能不是它能装下多少记忆，而是它在必须丢掉一部分记忆的时候，能不能仍然保持判断、连续性和自我一致。
 ### 参考资料
+
 1. Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance and Efficiency, arXiv:2604.02280, 2026
 2. Experimental setup benchmarks: LOCOMO, LOCCO, MultiWOZ 2.4
 3. Reported benchmark figures in paper/source: LOCCO memory decline 0.455 -> 0.05; ChatGLM3-6B retained about 48.25% memory
 4. Reported MultiWOZ figures: 78.2% accuracy, 6.8% false memory rate
 5. Paper result summary: >93.3%, >91.2%, F1 >0.643, reduced false memory rate, lower context usage under constrained memory
 ## 结论
+
 大家这两年都在拼命给 AI 加长记忆。但这篇论文反过来问了一个更像现实世界的问题：当 autonomous agent 不可能永远保存所有历史时，它该忘掉什么，才能不在后续任务里一点点偏航？
 ## FAQ
+
 **这篇文章主要讨论什么？**
+
 A: 围绕「让 Agent 学会忘记，为什么比让它记住更难」展开，梳理背景、关键变化与作者的核心判断。
+
 **参考资料——要点是什么？**
+
 A: 详见正文「参考资料」一节；该部分基于原文材料整理，不构成投资或法律建议。
+
 **本文是否构成投资建议？**
+
 A: 否。本文为信息整理与观点评论，具体决策请结合一手来源与专业意见。
+
 ---
+
 **内容更新时间**：2026-06-30
 **作者**：Dr.Jingle（X [@drjingle](https://x.com/drjingle)）
 **证据边界**：结构层 GEO 改造；事实与观点均来自原文，未新增未核验数据。
 *本文为作者观点与信息整理，不构成投资建议、法律意见或医疗建议。*
+
 ---
+
 **微信公众号原文**：https://mp.weixin.qq.com/s/Omakl2KfP2J9CNXUTa6koQ

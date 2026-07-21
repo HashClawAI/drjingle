@@ -33,6 +33,107 @@ BOILERPLATE_SUFFIX_RE = re.compile(
 GEO_LABEL_BULLET_RE = re.compile(r"^(-\s*)\*\*([^*]{1,14})\*\*[：:]\s*(.+)$")
 GEO_LABEL_INLINE_RE = re.compile(r"\*\*([^*]{1,14})\*\*[：:]\s*")
 SUMMARY_HEADING = "## 核心要点摘要"
+THEMATIC_BREAK = re.compile(r"^---\s*$")
+ATX_HEADING = re.compile(r"^#{1,6}\s+")
+FAQ_QUESTION = re.compile(r"^\*\*.+\*\*\s*$")
+TAIL_SECTION_H2 = frozenset(
+    {
+        "Who should buy this book",
+        "这本书最值得买给谁",
+    }
+)
+
+
+def is_plain_content_line(line: str) -> bool:
+    s = line.strip()
+    if not s or s == "---":
+        return False
+    if ATX_HEADING.match(s):
+        return False
+    if s.startswith(("- ", "* ", "> ", "![")):
+        return False
+    return True
+
+
+def h2_title(line: str) -> str | None:
+    m = re.match(r"^##\s+(.+?)\s*$", line.strip())
+    return m.group(1).strip() if m else None
+
+
+def fix_markdown_block_structure(body: str) -> tuple[str, list[str]]:
+    """Prevent setext headings from `---` and normalize GEO tail / FAQ spacing."""
+    notes: list[str] = []
+    lines = body.splitlines()
+    out: list[str] = []
+    need_blank = False
+    in_faq = False
+    in_tail = False
+
+    for line in lines:
+        stripped = line.strip()
+        title = h2_title(line) if stripped.startswith("## ") else None
+
+        if title == "FAQ":
+            in_faq = True
+            in_tail = False
+        elif title is not None:
+            in_faq = False
+            in_tail = title in TAIL_SECTION_H2
+
+        if THEMATIC_BREAK.match(stripped):
+            in_faq = False
+            in_tail = False
+
+        if need_blank:
+            if stripped == "":
+                need_blank = False
+            else:
+                out.append("")
+                need_blank = False
+
+        if THEMATIC_BREAK.match(stripped):
+            if out and out[-1].strip() != "":
+                out.append("")
+            out.append("---")
+            need_blank = True
+            notes.append("thematic break spacing")
+            continue
+
+        if ATX_HEADING.match(stripped):
+            out.append(line)
+            need_blank = True
+            continue
+
+        if in_faq and FAQ_QUESTION.match(stripped):
+            if out and (out[-1].strip().startswith("A:") or out[-1].strip().startswith("A：")):
+                out.append("")
+
+        if in_faq and (stripped.startswith("A:") or stripped.startswith("A：")):
+            if out and FAQ_QUESTION.match(out[-1].strip()):
+                out.append("")
+
+        if (in_faq or in_tail) and is_plain_content_line(line):
+            if out and is_plain_content_line(out[-1]):
+                out.append("")
+                notes.append("split dense paragraph")
+
+        out.append(line)
+
+    collapsed: list[str] = []
+    blank_run = 0
+    for line in out:
+        if line.strip() == "":
+            blank_run += 1
+            if blank_run <= 1:
+                collapsed.append("")
+            continue
+        blank_run = 0
+        collapsed.append(line)
+
+    body_out = "\n".join(collapsed)
+    if body_out and not body_out.endswith("\n"):
+        body_out += "\n"
+    return body_out, notes
 
 
 def collect_mmbiz_urls(*sources: Path) -> list[str]:
@@ -242,6 +343,9 @@ def clean_markdown(text: str, catalog: list[str], refresh_description: bool) -> 
         i += 1
 
     body_out = "\n".join(out_lines)
+    body_out, block_notes = fix_markdown_block_structure(body_out)
+    notes.extend(block_notes)
+
     if body_out and not body_out.endswith("\n"):
         body_out += "\n"
 

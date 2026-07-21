@@ -8,14 +8,18 @@ locale: en
 draft: false
 ---
 ## Key Takeaways
+
 - ![](https://mmbiz.qpic.cn/mmbiz_png/Q6r8uQ3Lf8JuschUDROREgZDVibEVqQPoBVloCb5panJa6yk0jOUgeMm6UibHiaRHxjgcdDA6mpA1Ypz0RScQ4XDA/0?wx_fmt=png&from=appmsg)
 - [Trading Agent ]
 - In the age of rapid AI progress, we see models excel at chess, Go, and video games—DeepMind's AlphaZero self-taught to beat top humans. Impressive—but researchers soon realized games, though rigorous, are ultimately "man-made sandboxes"…
 - Where is the best proving ground for AI toward "superintelligence"? Perhaps in the pulse of global financial markets.
 - Today we look at Nof1 Intelligence (Nof1)—a frontier company treating financial markets as AI's "ultimate training ground"—and how this bold experiment pushes AI toward smarter, more practical evolution.
 ## One-Line Definition
+
 ---
+
 ## Body
+
 > WeChat original: https://mp.weixin.qq.com/s/Twg1rpX0qF0ax3iG01hbhA
 Real money
 ![](https://mmbiz.qpic.cn/mmbiz_png/Q6r8uQ3Lf8JuschUDROREgZDVibEVqQPoBVloCb5panJa6yk0jOUgeMm6UibHiaRHxjgcdDA6mpA1Ypz0RScQ4XDA/0?wx_fmt=png&from=appmsg)
@@ -66,15 +70,24 @@ Gemini 2.5 Pro ranked last with significant negative returns and high activity. 
 [  real world agent ]
 -END-
 ## Conclusion
+
 ## FAQ
+
 **What is this article mainly about?**
+
 A: It explores "Financial Markets: AI's Ultimate Training Ground," covering background, key developments, and the author's core views.
+
 **Does this article constitute investment advice?**
+
 A: No. This is informational commentary and opinion. Decisions should rely on primary sources and professional advice.
+
 ---
+
 **Last updated**: 2026-06-30
 **Author**: Dr.Jingle (X [@drjingle](https://x.com/drjingle))
 **Evidence boundary**: Structural GEO adaptation; facts and opinions are from the original text; no unverified data added.
 *This article reflects the author's views and information synthesis. It does not constitute investment, legal, or medical advice.*
+
 ---
+
 **WeChat original**: https://mp.weixin.qq.com/s/Twg1rpX0qF0ax3iG01hbhA
