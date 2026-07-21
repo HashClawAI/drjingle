@@ -1,6 +1,6 @@
 ---
 title: "Alibaba Cloud RWA & Stablecoin Summit VIP Dinner Keynote"
-description: "A ~10-minute CXO briefing on \\\\\\\\\\\\\\\\\\\\\\\"Cloud Rises, All Things Grow\\\\\\\\\\\\\\\\\\\\\\\": U.S. strategic moves, RWA and stablecoin scale, and how Alibaba Cloud can ride the everything-on-chain wave. For e…"
+description: "A ~10-minute CXO briefing on \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"Cloud Rises, All Things Grow\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\": U.S. strategic moves, RWA and stablecoin scale, and how Alibaba Cloud can ride the everyth…"
 pubDate: 2026-07-05
 category: insights
 articleSlug: "阿里云rwa与稳定币峰会vip晚宴主题演讲"
@@ -8,6 +8,7 @@ locale: en
 draft: false
 ---
 ## Key Takeaways
+
 - Good evening, distinguished CXOs!
 - When I got this PPT template from Johnny, I couldn't help but laugh—in crypto we treat "CXO" as a meme: Chief X Officer, or jokingly "Chief eXecutive Officer." Our cloud ecosystem gatherings have that meme DNA. I'll spend about ten minutes giving you CXOs a CX report on what's happening in crypto.
 - Today's theme: **"Cloud Rises, All Things Grow."** I'll share perspectives on the U.S. strategic "open playbook," the massive potential of RWA and stablecoins, and how the Alibaba Cloud ecosystem can catch the everything-on-chain wave. Everything here is for entertainment only—not investment advice.
@@ -15,9 +16,13 @@ draft: false
 - Part I: The Future Is Here—America's "Open Playbook"
 - Stretch the time horizon and we may be standing at a historical inflection point. Bitcoin—once dismissed as a fringe asset destined to be "a pipe dream"—is being incorporated into U.S. national strategy as "digital gold." Hong Kong will host a major Bitcoin Asia conference at month-end, drawing participants worldwide…
 ## One-Sentence Definition
+
 When I got this PPT template from Johnny, I couldn't help but laugh—in crypto we treat "CXO" as a meme: Chief eXecutive Officer. Our cloud ecosystem gatherings have that meme DNA. I'll spend about ten minutes giving you CXOs a CX report on what's happening in crypto.
+
 ---
+
 ## Body
+
 > Original WeChat article: https://mp.weixin.qq.com/s/Z4lv0MV1z7ddZejR5utSoA
 Good evening, distinguished CXOs!
 When I got this PPT template from Johnny, I couldn't help but laugh—in crypto we treat "CXO" as a meme: Chief eXecutive Officer. Our cloud ecosystem gatherings have that meme DNA. I'll spend about ten minutes giving you CXOs a CX report on what's happening in crypto.
@@ -55,16 +60,25 @@ Distinguished CXOs—everything on-chain, cloud dancing in the wind, the future 
 Thank you for listening!
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8LiaNFBiaNLpnUhh1hRBxBC5f9PSrRyZvyibhXrwTZbpbUrz9hicXheSrv3GALvZ68pbbyzJXSicmW1JQg/640?wx_fmt=jpeg)
 ## Conclusion
+
 When I got this PPT template from Johnny, I couldn't help but laugh—in crypto we treat "CXO" as a meme. I'll spend about ten minutes giving you CXOs a CX report on what's happening in crypto.
 ## FAQ
+
 **What is this article mainly about?**
+
 A: It covers the Alibaba Cloud RWA & Stablecoin Summit VIP dinner keynote—background, key changes, and the author's core views.
+
 **Does this constitute investment advice?**
+
 A: No. This is information synthesis and commentary. Consult primary sources and professionals for decisions.
+
 ---
+
 **Last updated**: 2026-06-30
 **Author**: Dr.Jingle (X [@drjingle](https://x.com/drjingle))
 **Evidence boundary**: Structural GEO adaptation; facts and views from the original text only.
 *Author views and information synthesis only—not investment, legal, or medical advice.*
+
 ---
+
 **Original WeChat article**: https://mp.weixin.qq.com/s/Z4lv0MV1z7ddZejR5utSoA

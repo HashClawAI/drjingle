@@ -7,14 +7,18 @@ locale: zh
 draft: false
 ---
 ## 导读
+
 - MICHAEL SAYLOR
 - ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8KOtUCplia5lLuaZ75vFWN8QOCrT6HMtjleMzRdfZQaibSexMoLnYXLWIwqaNLWW61THDgT5TDBVO7g/640?wx_fmt=jpeg&from=appmsg)
 - [Digital Gold Rush ]
 - Saylor 在最近的一起采访中讨论了“数字黄金热潮”（digital gold rush）：
 - “从 2025 年到 2035 年，这将是数字黄金热潮的十年。这段时间将涌现出无数新的商业模式、产品和服务，以及成千上万的公司。就像 19 世纪晚期的石油工业一样——想想 1870 年代，那时人们刚刚开始探索原油的应用，从煤油到柴油、…
 ## 一句话定义
+
 ---
+
 ## 正文
+
 > 微信公众号原文：https://mp.weixin.qq.com/s/7U4oONcBjs8qemWQm7m5OA
 **MICHAEL SAYLOR**
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/Q6r8uQ3Lf8KOtUCplia5lLuaZ75vFWN8QOCrT6HMtjleMzRdfZQaibSexMoLnYXLWIwqaNLWW61THDgT5TDBVO7g/640?wx_fmt=jpeg&from=appmsg)
@@ -29,14 +33,22 @@ Saylor 在最近的一起采访中讨论了“数字黄金热潮”（digital go
 > *[视频嵌入，请见微信公众号原文]*
 -END-
 ## FAQ
+
 **这篇文章主要讨论什么？**
+
 A: 围绕「Michael Saylor: 未来十年是数字黄金热潮（digital gold rush）」展开，梳理背景、关键变化与作者的核心判断。
+
 **本文是否构成投资建议？**
+
 A: 否。本文为信息整理与观点评论，具体决策请结合一手来源与专业意见。
+
 ---
+
 **内容更新时间**：2026-06-30
 **作者**：Dr.Jingle（X [@drjingle](https://x.com/drjingle)）
 **证据边界**：结构层 GEO 改造；事实与观点均来自原文，未新增未核验数据。
 *本文为作者观点与信息整理，不构成投资建议、法律意见或医疗建议。*
+
 ---
+
 **微信公众号原文**：https://mp.weixin.qq.com/s/7U4oONcBjs8qemWQm7m5OA
