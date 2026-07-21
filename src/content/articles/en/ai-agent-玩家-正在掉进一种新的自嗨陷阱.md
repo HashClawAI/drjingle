@@ -1,6 +1,6 @@
 ---
 title: "AI Agent Builders Are Falling Into a New Kind of Vanity Trap"
-description: "MIT NANDA finds 95% of enterprise GenAI spend shows no measurable ROI. Agent demos look like digital employees—but mistaking \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"I can build it\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" for \\\\\\\\\\…"
+description: "MIT NANDA finds 95% of enterprise GenAI spend shows no measurable ROI. Agent demos look like digital employees—but mistaking \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"I can build it\\\\\\\\\\\\\\\\\\\\…"
 pubDate: 2026-07-05
 category: insights
 series: ai-agent-pitfalls
@@ -30,11 +30,11 @@ They try new models, frameworks, plugins, workflows every day.
 Browser automation today, MCP tomorrow, then Notion, Feishu, GitHub, email, databases all wired up. An Agent that researches, writes reports, makes slides, sends email looks one step from a "digital employee."
 But many sense something is off.
 Lots of workflows built; few used daily. Tutorials saved; still copy-paste manually. Weekly-report Agent built—but the company still holds the same meetings. Lead-finding Agent built—but nobody pays for those leads.
-This isn't not knowing AI—it's knowing AI too well and falling into a new trap: **mistaking "I can build it" for "it's valuable," "the flow runs" for "the business will pay."**
+This isn't not knowing AI—it's knowing AI too well and falling into a new trap: mistaking "I can build it" for "it's valuable," "the flow runs" for "the business will pay."
 That's the Agent builder vanity trap.
 MIT Project NANDA's 2025 *The GenAI Divide: State of AI in Business 2025* offers sober data: enterprises spent **$300–400B** on generative AI, but **95% of organizations saw no measurable financial return**. ~60% evaluated enterprise AI; ~20% piloted; only ~5% reached production with sustained P&L impact.
 That doesn't mean 95% of AI tech is useless or 95% of people use AI wrong. More precisely: most projects never moved from "looks useful" to "produces measurable business outcomes."
-This article is not how to build Agents—it's a prior question: **why do many Agents look stronger yet easier to become advanced vanity?**
+This article is not how to build Agents—it's a prior question: why do many Agents look stronger yet easier to become advanced vanity?
 
 ---
 
@@ -76,7 +76,7 @@ Business owners care about risk; procurement about budget; IT about security; fr
 **Layer three: economics.**  
 P&L recognizes: cost down, revenue up, risk down, efficiency quantified. Not "looks smart" or "lead likes the direction."
 Agent projects often fail not from lacking layer one—but having **only** layer one. Demo scores narrative; org has no sponsor; economics has no budget line.
-Full vanity loop: **the more complete the story, the easier it hides empty validation.**
+Full vanity loop: the more complete the story, the easier it hides empty validation.
 
 ---
 
@@ -107,7 +107,7 @@ Personal tools need no accountability.
 Enterprise systems need permissions, audit, compliance, delivery liability.
 Personal use tolerates occasional errors.  
 Production needs stability, traceability, recovery.
-Explains the paradox: **AI works widely at individual level, hard to cash at enterprise level.**
+Explains the paradox: AI works widely at individual level, hard to cash at enterprise level.
 Agent founders' real competitor is often not the Agent startup next door—it's the employee's $20/month personal ChatGPT.
 If you can't explain vs. personal tools: extra value, why procurement, system integration, risk, annual fee—you won't move from "nice to use" to "buyable."
 
@@ -207,7 +207,7 @@ Many Agents stuck not from bad UX—but nobody will sign. Enterprises don't disl
 **Q3: Does it get better with use—or restart every time?**
 Three months in, still re-entering context, no preference memory, same mistakes— not a growing system; expensive chat window.
 Valuable Agent should feel like a veteran employee: knows how this company works, this client's temperament, which answers cause trouble.
-Three questions → one judgment: **Agent must enter value, responsibility, learning—not just the UI.**
+Three questions → one judgment: Agent must enter value, responsibility, learning—not just the UI.
 
 ---
 
@@ -226,7 +226,7 @@ They're not selling Agent—they're helping customer change a process segment. A
 
 ## X. Three Lines for Agent Builders
 
-**Line 1: Your real competitor isn't the startup next door—it's the user's personal ChatGPT.**
+Line 1: Your real competitor isn't the startup next door—it's the user's personal ChatGPT.
 If you can't beat personal tools on integration, memory, permissions, audit, accountability, measurable outcomes—users bypass you for $20/month. Today's most realistic competitive line.
 **Line 2: Win back office before front-office stories.**
 Front spreads; back renews. Demo for spread; survival needs customers paying for boring back-office flows.
@@ -260,19 +260,19 @@ Many Agent builders today are in a subtle state. See sections above for detail.
 
 A: It covers "AI Agent Builders Are Falling Into a New Kind of Vanity Trap," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "I. Agent Builders Today: Everyone Builds Systems, Few Collect Money"?**
+What are the key points of "I. Agent Builders Today: Everyone Builds Systems, Few Collect Money"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "II. Vanity Trap Is Not Mindset—It's Three Broken Layers"?**
+What are the key points of "II. Vanity Trap Is Not Mindset—It's Three Broken Layers"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "III. Mini Case: Why a Sales Agent Dies Before Procurement"?**
+What are the key points of "III. Mini Case: Why a Sales Agent Dies Before Procurement"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "IV. GenAI Divide Paradox: Employees Use It, Company Doesn't Earn"?**
+What are the key points of "IV. GenAI Divide Paradox: Employees Use It, Company Doesn't Earn"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

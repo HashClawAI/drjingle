@@ -26,7 +26,7 @@ Open USD（OUSD）：由 Open Standard 治理、Visa/Stripe/140+ 机构联合背
 
 2026 年 6 月 30 日，Visa 加密业务负责人 **Cuy Sheffield** 在 X 发文：
 > Visa is joining Open Standard… with the mission of issuing Open USD, a shared stablecoin designed for the global financial system.
-同帖点名初始伙伴：**Stripe、Coinbase、Mastercard、American Express、BlackRock、U.S. Bank、BBVA、Standard Chartered**，以及 **100+** 其他机构。
+同帖点名初始伙伴：Stripe、Coinbase、Mastercard、American Express、BlackRock、U.S. Bank、BBVA、Standard Chartered，以及 100+ 其他机构。
 这不是某家 crypto 公司的单打独斗——而是 **支付网络、银行、资管、科技、交易所** 在同一套稳定币基础设施上 **集体背书** 的信号。
 ### Open Standard 是什么？
 
@@ -36,18 +36,18 @@ Open USD（OUSD）：由 Open Standard 治理、Visa/Stripe/140+ 机构联合背
 |------|------|
 | **开放治理** | 参与伙伴组成 **董事会** 共同决策 |
 | **共享激励** | 储备（通常为短期美债等）产生的 **大部分收益**，扣除小额管理费后 **分配给伙伴** |
-| **定位** | **全球支付与结算** 的金融基础设施，而非仅 crypto 交易媒介 |
-据 **The Block、American Banker** 等报道， interim CEO 为 **Zach Abrams**（Stripe 约 **11 亿美元** 收购的稳定币基础设施公司 **Bridge** 联合创始人）。
+| 定位 | 全球支付与结算 的金融基础设施，而非仅 crypto 交易媒介 |
+据 The Block、American Banker 等报道， interim CEO 为 Zach Abrams（Stripe 约 11 亿美元 收购的稳定币基础设施公司 Bridge 联合创始人）。
 ### Open USD（OUSD）公开要点
 
 **Open USD** 是 Open Standard 计划发行的 **美元锚定稳定币**，符号常写作 **OUSD**。
 | 维度 | 说明（据公告与媒体报道） |
 |------|--------------------------|
-| **锚定** | 1 OUSD ≈ 1 美元 |
-| **上线** | **2026 年内** 晚些时候（尚未发行） |
+| 锚定 | 1 OUSD ≈ 1 美元 |
+| 上线 | 2026 年内 晚些时候（尚未发行） |
 | **铸造/赎回** | 面向企业 **免手续费、无交易量上限**（以官方最终条款为准） |
 | **储备收益** | **大部分归伙伴**；Open Standard 收取 **小额管理费** |
-| **链部署** | 据称 **多链**：Base、Ethereum、Solana、**Tempo** 等 |
+| 链部署 | 据称 多链：Base、Ethereum、Solana、Tempo 等 |
 | **Stripe** | OUSD 将成为 Stripe 平台 **企业默认稳定币** |
 | **Tempo** | 称 OUSD 将 **自首日原生发行** 于 Tempo 网络 |
 ### 谁加入了？跨界联盟名单
@@ -69,21 +69,21 @@ Open USD（OUSD）：由 Open Standard 治理、Visa/Stripe/140+ 机构联合背
 - 公告强调企业 **免费 mint/redeem**（最终费率以官方为准）。
 **4. 市场反应**
 - 据 **Unchained** 等，消息后 **Circle 股价** 承压；Circle CEO Jeremy Allaire 公开表示 **欢迎竞争与创新**。
-OUSD **尚未上线**，能否挑战 USDC/USDT 的 **流动性、合规深度与网络效应** 仍待观察——但 **140+ 机构同台**，已是稳定币 **「基建化」** 的里程碑信号。
+OUSD **尚未上线**，能否挑战 USDC/USDT 的 **流动性、合规深度与网络效应** 仍待观察——但 **140+ 机构同台**，已是稳定币 「基建化」 的里程碑信号。
 ### 为什么是现在？监管与产业背景
 
-**2025 年 7 月**，美国 **GENIUS Act** 等稳定币监管框架落地，为 **合规美元稳定币** 打开更大制度空间（据 **SiliconANGLE、American Banker** 梳理）。
-同期产业动态包括：KlarnaUSD、Amazon/Walmart 探索自有代币、JPMorgan 牵头 **链上存款网络**、Paxos **USDG** 联盟模式等——**Open Standard / Open USD** 是其中 **阵容最「全栈」** 的一次：**卡组织 + 银行 + Stripe + Coinbase 同屏**。
-Visa 入局的意义：全球最大支付网络之一，把 **「共享稳定币」** 写进战略叙事——与 Mastercard 产品负责人 Jorn Lambert 所称 **「shared, interoperable infrastructure」** 同调。
+2025 年 7 月，美国 GENIUS Act 等稳定币监管框架落地，为 合规美元稳定币 打开更大制度空间（据 SiliconANGLE、American Banker 梳理）。
+同期产业动态包括：KlarnaUSD、Amazon/Walmart 探索自有代币、JPMorgan 牵头 链上存款网络、Paxos USDG 联盟模式等——Open Standard / Open USD 是其中 阵容最「全栈」 的一次：卡组织 + 银行 + Stripe + Coinbase 同屏。
+Visa 入局的意义：全球最大支付网络之一，把 「共享稳定币」 写进战略叙事——与 Mastercard 产品负责人 Jorn Lambert 所称 「shared, interoperable infrastructure」 同调。
 ### 对不同读者的含义
 
 **支付与跨境：** 多一条 TradFi 与 Fintech 共同背书的美元稳定币通道，可能加速 **链上结算、B2B 支付、平台内美元流动性** 标准化。
-**Crypto：** 竞争从 **「谁发行」** 转向 **「谁治理、谁分润、谁默认接入」**；Stripe 默认 OUSD、Tempo 原生发行等将影响 **开发者与企业默认选项**。
+**Crypto：** 竞争从 「谁发行」 转向 「谁治理、谁分润、谁默认接入」；Stripe 默认 OUSD、Tempo 原生发行等将影响 **开发者与企业默认选项**。
 **投资视角：** 这是 **基础设施层** 变动，不是喊单 OUSD；**上线时间、储备托管方、各链流动性、监管细节** 仍有关键信息未完全披露。
 ## 结论
 
 Cuy Sheffield 把 Visa 放进一条清晰句式：**Open Standard → Open USD → global financial system**。
-「**Shared stablecoin（共享稳定币）**」——共享的不只是技术接口，还有 **储备收益与治理席位**。140 家机构同时出现，说明 industry 判断正在变硬：**美元稳定币是支付、银行与平台经济的公共层**——问题变成这层由谁发行、谁分钱、谁定规则。
+「Shared stablecoin（共享稳定币）」——共享的不只是技术接口，还有 **储备收益与治理席位**。140 家机构同时出现，说明 industry 判断正在变硬：**美元稳定币是支付、银行与平台经济的公共层**——问题变成这层由谁发行、谁分钱、谁定规则。
 Open USD 给出一种答案：**联盟制、分润制、多链部署、企业友好**。能否成为 **默认美元**？**2026 年内** 正式上线将是第一个检验。
 ## FAQ
 

@@ -13,17 +13,17 @@ draft: false
 
 In 2017, the Transformer paper landed. In 2022, ChatGPT put large models on every desktop.
 If you only watch model leaderboards, AI looks like software that ships a new version every few months. Zoom out — **using the Web 1.0, 2.0, and 3.0 arc as a lens** — and a structural line appears:
-**Technology breakthrough → new infrastructure → new property and governance rules.**
+Technology breakthrough → new infrastructure → new property and governance rules.
 ## The recurring pattern
 
 After a general-purpose technology is invented, what reshapes society is rarely the invention itself. It is the **infrastructure** built around it and the **institutions** that allocate returns and assign liability.
 - **Steam** → **railways** → **modern joint-stock companies**
-- **Electricity** → **grids** → **utility regulation and industrial management**
+- Electricity → grids → utility regulation and industrial management
 - **TCP/IP & the web** → **platforms** → **attention markets and data rent**
 AI is on the same path. The difference: infrastructure now carries increasingly **autonomous agents**, not just bits.
 ## AI 1.0 (≈2017–2022): Machines can work
 
-**Signature:** capability explosion — models can **understand** and **generate**; most users are **consumers** (prompt in, answer out).
+Signature: capability explosion — models can understand and generate; most users are consumers (prompt in, answer out).
 **Core question:** Can machines work? **Answer:** Yes.
 | Dimension | Web 1.0 | AI 1.0 |
 |-----------|---------|--------|
@@ -51,7 +51,7 @@ That requires inventions Web 2.0 never needed:
 - **Liability allocation** when autonomous chains fail
 ## One-line definition
 
-**AI 1.0** proved intelligence can be engineered; **AI 2.0** fights over platforms and compute upstream; **AI 3.0** must invent **property and governance for agents**.
+AI 1.0 proved intelligence can be engineered; AI 2.0 fights over platforms and compute upstream; AI 3.0 must invent property and governance for agents.
 ## FAQ
 
 **Q1: Is this just hype?**

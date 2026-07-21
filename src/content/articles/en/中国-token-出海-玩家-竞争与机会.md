@@ -81,11 +81,11 @@ A: It covers "China's Token Go-Global: Players, Competition, and Opportunity," s
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "Go-Global Player Map by Layer"?**
+What are the key points of "Go-Global Player Map by Layer"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "OpenRouter Weekly Token Consumption (Feb 2026)"?**
+What are the key points of "OpenRouter Weekly Token Consumption (Feb 2026)"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

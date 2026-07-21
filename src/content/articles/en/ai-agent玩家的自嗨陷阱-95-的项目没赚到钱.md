@@ -20,7 +20,7 @@ An agent writes code, calls tools, runs workflows — the demo **wows**. Then as
 Teams go vague. That's the trap.
 ## Evidence stack
 
-**MIT Project NANDA — *The GenAI Divide: State of AI in Business 2025*** highlights a **GenAI divide**: pilots everywhere, **scaled ROI rare**. Agent projects amplify the pattern because infra costs and failure modes are hidden in demos.
+MIT Project NANDA — *The GenAI Divide: State of AI in Business 2025* highlights a GenAI divide: pilots everywhere, scaled ROI rare. Agent projects amplify the pattern because infra costs and failure modes are hidden in demos.
 ## Three self-deception modes
 
 1. **Toolchain tourism** — new framework weekly, no recurring user

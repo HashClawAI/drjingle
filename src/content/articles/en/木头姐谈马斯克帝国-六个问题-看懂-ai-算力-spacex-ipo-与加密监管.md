@@ -38,7 +38,7 @@ How to view Musk linkage across SpaceX, Tesla, xAI? What does his "next era" loo
 Wood told Bloomberg podcast (~May 2026): **In the new world, companies must vertically integrate.** Musk told her ~six months ago business fusion exceeded even his expectations.
 Wood cites Tesla: self-built supply chain cost structure, in her view, significantly beats external procurement rivals—she estimates Alphabet's Waymo unit cost may be **~50% higher than Tesla's by 2030**. ARK watches whether "platform + vertical integration" can chain rockets, AI, EVs, satellites, and data centers.
 **Variables to watch**
-Terafab is a **15-year** capacity bet, not next-quarter earnings. Tesla earnings calls note deployment details still being finalized; initial large-scale build may be SpaceX-led. Key question: **Can self-made compute become cost and scheduling advantage—not a capex black hole?**
+Terafab is a 15-year capacity bet, not next-quarter earnings. Tesla earnings calls note deployment details still being finalized; initial large-scale build may be SpaceX-led. Key question: Can self-made compute become cost and scheduling advantage—not a capex black hole?
 
 ---
 
@@ -60,11 +60,11 @@ Wood leans take-all but admits **deployment pace** depends on regulation, safety
 ## III. SpaceX IPO: "Voracious" Demand—Tesla-Style Roller Coaster?
 
 **Background**
-SpaceX IPO widely seen as among **largest ever**. Reports: ~**$1.75T** valuation, ~**$750B** stock sale; ARK Venture Fund held ~**13.76%** (public filing, end April 2026).
+SpaceX IPO widely seen as among largest ever. Reports: ~$1.75T valuation, ~$750B stock sale; ARK Venture Fund held ~13.76% (public filing, end April 2026).
 **Core question**
 With such pre-IPO heat, will listing swing like Tesla—crash then surge?
 **Wood's known stance**
-Two words: demand is **"voracious"**; debut will be **"volatile."**
+Two words: demand is "voracious"; debut will be "volatile."
 Long narrative (Starlink, launch, AI, orbital infrastructure) attracts long-term capital; **float limited**—short-term supply/demand imbalance almost inevitable. Wood thinks SpaceX rekindled public space imagination, amplifying subscription enthusiasm.
 **For readers**
 - Can't access IPO directly? Wood mentions **space-themed ETFs** for indirect exposure (assess fees, holdings, risk yourself).
@@ -90,15 +90,15 @@ She **doesn't** see pure hype—views it as **real infrastructure pivot**: orbit
 ## V. AI Chips: After GPU Surge, Does CPU Take Over?
 
 **Background**
-Around the interview, AMD strong earnings, stock up—**rotation from Nvidia to AMD** narrative; AI workloads split **training (GPU-heavy)** vs. **inference, orchestration, databases (CPU also key)**.
+Around the interview, AMD strong earnings, stock up—rotation from Nvidia to AMD narrative; AI workloads split training (GPU-heavy) vs. inference, orchestration, databases (CPU also key).
 **Core question**
 After GPU rally, more focus on CPU? Both or shift?
 **Wood / ARK framework**
-ARK tracks **full AI hardware stack**: GPU core for training/large inference; **CPU, network, storage, custom ASIC** benefit as workloads diverge. AMD strength reflects **second supplier** and **value** narrative—not GPU story ending.
+ARK tracks full AI hardware stack: GPU core for training/large inference; CPU, network, storage, custom ASIC benefit as workloads diverge. AMD strength reflects second supplier and value narrative—not GPU story ending.
 Practical view:
 - **Training clusters**: GPU/high-end accelerators still lead.
 - **Inference/mixed**: CPU + GPU synergy, dedicated chips rising.
-- If Terafab lands, debate extends from "whose GPU" to **"can they self-design + self-manufacture the whole stack."**
+- If Terafab lands, debate extends from "whose GPU" to "can they self-design + self-manufacture the whole stack."
 
 ---
 
@@ -115,8 +115,8 @@ Google, Microsoft reportedly agreed to **U.S. government pre-review** of AI mode
 - opaque standards slow innovation; disadvantage smaller model companies.
 - likely **tiered regulation**—foundation models, gov-enterprise cooperation, critical infrastructure different rules—not all pass or all ban.
 **Stablecoins**
-- U.S. debate: **bank-style regulation, transparent reserves, interest allowed, CBDC division**.
-- If federal framework clarifies **compliant issuers + auditable reserves + clear TradFi interfaces**, USDC etc. may expand **payment/settlement**—separate from **speculative trading**.
+- U.S. debate: bank-style regulation, transparent reserves, interest allowed, CBDC division.
+- If federal framework clarifies compliant issuers + auditable reserves + clear TradFi interfaces, USDC etc. may expand payment/settlement—separate from speculative trading.
 - Wood as ARK founder long tracks **Bitcoin and crypto infrastructure**; public statements emphasize **innovation-regulation boundary** more than single-coin short-term moves. Policy details await final congressional/regulator text.
 
 ---
@@ -124,7 +124,7 @@ Google, Microsoft reportedly agreed to **U.S. government pre-review** of AI mode
 ## Closing: Six Questions, One Chain
 
 Surface: six topics. Underneath: one logic chain:
-**Vertical integration (Terafab) → lower-cost compute and manufacturing → Robotaxi and AI product commercialization → SpaceX IPO finances the chain → orbital data centers open long-term imagination → GPU/CPU and regulation set how fast and who rides.**
+Vertical integration (Terafab) → lower-cost compute and manufacturing → Robotaxi and AI product commercialization → SpaceX IPO finances the chain → orbital data centers open long-term imagination → GPU/CPU and regulation set how fast and who rides.
 Wood publicly **optimistic**—especially SpaceX demand, orbital data centers, Musk ecosystem synergy; she also flags IPO **volatility**, Terafab **long engineering**.
 For readers, more important than "believe Cathie Wood" is separating three layers:
 1. **Facts happened** (Waymo on road, Terafab filings, SpaceX IPO filing)

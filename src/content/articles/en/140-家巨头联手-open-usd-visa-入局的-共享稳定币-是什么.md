@@ -13,7 +13,7 @@ draft: false
 
 ## What happened
 
-**June 30, 2026** — Visa crypto lead **Cuy Sheffield** announced Visa is joining **Open Standard** to participate in **Open USD (OUSD)**, described as a **shared stablecoin** designed for the global financial stack.
+June 30, 2026 — Visa crypto lead Cuy Sheffield announced Visa is joining Open Standard to participate in Open USD (OUSD), described as a shared stablecoin designed for the global financial stack.
 **Line-up cited:** Stripe, Coinbase, Mastercard, AmEx, BlackRock, and dozens more — **140+ institutions** in the coalition narrative.
 ## One-line definition
 

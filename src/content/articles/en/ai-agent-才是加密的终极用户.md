@@ -85,7 +85,7 @@ A: It covers "Are AI Agents Crypto's Ultimate Users?"—background, key changes,
 
 A: See "The Empty Temple"; based on source materials, not investment or legal advice.
 
-**Why AI Agents and Crypto Are a Natural Fit—what are the key points?**
+Why AI Agents and Crypto Are a Natural Fit—what are the key points?
 
 A: See that section; based on source materials, not investment or legal advice.
 
@@ -93,7 +93,7 @@ A: See that section; based on source materials, not investment or legal advice.
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**Advice for Retail Crypto Investors—what are the key points?**
+Advice for Retail Crypto Investors—what are the key points?
 
 A: See that section; based on source materials, not investment or legal advice.
 

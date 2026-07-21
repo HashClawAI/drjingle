@@ -67,9 +67,9 @@ Contrast: Apple ~$680K (112B ÷ ~164K); Microsoft ~$450K; JPMorgan ~$180K; Berks
 
 Including privates requires a separate table:
 **Tether (USDT issuer)**
-2025 attestation: **net profit over $10B** (down from ~$13B in 2024, still elevated). ~300 employees → **~$33.3M net profit per head** (rough). Profit mainly from reserve investments (Treasuries etc.)—not a headcount game.
+2025 attestation: **net profit over $10B** (down from ~$13B in 2024, still elevated). ~300 employees → **$33.3M net profit per head** (rough). Profit mainly from reserve investments (Treasuries etc.)—not a headcount game.
 **Jane Street (quant market maker)**
-2025 trading revenue ~$39.6B, adjusted EBITDA ~$31.2B; ~3,500 staff → **~$8.91M/head on EBITDA** (not GAAP net income—mind the metric). 2025 comp pool ~$9.4B, doubled from 2024.
+2025 trading revenue ~$39.6B, adjusted EBITDA ~$31.2B; ~3,500 staff → **$8.91M/head on EBITDA** (not GAAP net income—mind the metric). 2025 comp pool ~$9.4B, doubled from 2024.
 **Citadel Securities** and peers sit in the same tier—far above traditional banks. Renaissance, Jump barely disclose—no precise ranking.
 ## V. Why Total and Per-Capita Are Different Answers
 
@@ -83,7 +83,7 @@ Including privates requires a separate table:
 
 **Global net profit TOP 10 (FY2025)**
 Alphabet · NVIDIA · Apple · Microsoft · Saudi Aramco · Amazon · Berkshire · Meta · JPMorgan · TSMC
-**Per-employee net profit TOP 10 (incl. private estimates)**
+Per-employee net profit TOP 10 (incl. private estimates)
 Tether · Jane Street · Citadel Securities · NVIDIA · Altria · Saudi Aramco · Prologis · AppLovin · CME Group · PDD / Meta / CNOOC
 FY2025 profit gravity further concentrated in US tech and AI: Alphabet tops totals; NVIDIA leads on both total and per-capita—the clearest line in today's business map.
 Data from Alphabet, NVIDIA, Apple, Microsoft, Amazon, Meta, Berkshire, JPMorgan, TSMC, Aramco FY2025 reports; Tether 2025 attestation; Bloomberg on Jane Street; Fortune Global 500 (2025), CEOWORLD per-capita studies. Not investment advice.

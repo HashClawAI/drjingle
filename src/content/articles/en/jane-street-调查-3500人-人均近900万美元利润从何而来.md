@@ -50,7 +50,7 @@ Jane Street did not publish 2025 total comp pool. [eFinancialCareers](https://ww
 Vs. investment bank filings: Jane Street "net trading revenue" includes large proprietary risk—not the same as client-service IB trading desks. [IFR](https://www.ifre.com/bonds/2246615/jane-street-thrives-amid-record-trading-bonanza) and analysts warn structural differences vs. Goldman, JPMorgan comparisons.
 ## III. Business Model: Market Making, ETF, Volatility
 
-Jane Street's bond materials define it as **always ready to buy and sell large volumes, providing market liquidity**. Revenue mainly from bid-ask spread, inventory risk premium, cross-market/asset arbitrage—not fund management fees.
+Jane Street's bond materials define it as always ready to buy and sell large volumes, providing market liquidity. Revenue mainly from bid-ask spread, inventory risk premium, cross-market/asset arbitrage—not fund management fees.
 ### ETF: twenty-year main lane
 
 ETFs need Authorized Participants (APs) bridging fund companies, secondary market, and basket assets. Jane Street is among the world's most active APs.
@@ -69,11 +69,11 @@ ETFs need Authorized Participants (APs) bridging fund companies, secondary marke
 ### India: regulation meets profit
 
 July 3, 2025 India SEBI [interim order](https://www.sebi.gov.in/enforcement/orders/jul-2025/interim-order-in-the-matter-of-index-manipulation-by-jane-street-group_95040.html) alleged four Jane Street affiliates coordinated trades on 18 derivative expiry days (Jan 2023–Mar 2025) affecting Bank Nifty etc. to serve large options positions.
-SEBI required deposit ~**₹484.357B** (~$550M) suspected illegal gains and temporarily banned Indian trading. Jane Street deposited funds and appealed; [CNBC](https://www.cnbc.com/2025/07/08/jane-street-to-challenge-india-ban-says-it-engaged-in-basic-arbitrage.html) reported defense as **"basic index arbitrage."** Partial restrictions lifted after July 21; case not final.
+SEBI required deposit ~**₹484.357B** (~$550M) suspected illegal gains and temporarily banned Indian trading. Jane Street deposited funds and appealed; [CNBC](https://www.cnbc.com/2025/07/08/jane-street-to-challenge-india-ban-says-it-engaged-in-basic-arbitrage.html) reported defense as "basic index arbitrage." Partial restrictions lifted after July 21; case not final.
 Shows high profit partly from deep EM derivatives microstructure—and stricter regulatory scrutiny. Manipulation finding pending judicial/regulatory process.
 ## IV. Compute Layout: Low-Latency Engineering, Not AI Training Clusters
 
-Outsiders often equate quant "compute" with GPU farms. Jane Street public materials point elsewhere: **deterministic latency, FPGA acceleration, dedicated networks, OCaml full-stack engineering**.
+Outsiders often equate quant "compute" with GPU farms. Jane Street public materials point elsewhere: deterministic latency, FPGA acceleration, dedicated networks, OCaml full-stack engineering.
 ### 4.1 OCaml as unified dev language
 
 Since early 2000s Jane Street uses [OCaml](https://www.janestreet.com/tech-talks/ocaml-all-the-way-down/) core language—research, trading, risk, tooling, even hardware description. Yaron Minsky et al. aimed to unify type systems, reduce cross-language errors, build reusable libraries over long iteration.
@@ -86,15 +86,15 @@ Andy Ray's **Hardcaml** embeds hardware DSL in OCaml, [open source](https://hard
 
 March 2018 Jane Street minority investment in **[McKay Brothers](https://mckay-brothers.com/media)**—Chicago–NYC **microwave links**; EM in air faster than fiber—sub-millisecond latency (route/year dependent).
 Jane Street did not disclose own datacenter scale or GPU training clusters. Infrastructure sketch:
-**Exchange co-lo → microwave/dedicated lines (McKay etc.) → FPGA preprocess (Hardcaml) → OCaml strategy/risk (host) → global research office network**
+Exchange co-lo → microwave/dedicated lines (McKay etc.) → FPGA preprocess (Hardcaml) → OCaml strategy/risk (host) → global research office network
 Different from AI lab compute: core metrics **latency determinism, online risk, capital turnover**—not training throughput.
 ### 4.4 Tech talk excerpt (embedded in article video)
 
-Official talk **"OCaml All The Way Down"** (Andy Ray, ~62 min) is rare public primary material. Article embeds ~7.5 min excerpt on **FPGA basics, Hardcaml flow, low-latency hardware path** (from ~9:40 in original).
+Official talk "OCaml All The Way Down" (Andy Ray, ~62 min) is rare public primary material. Article embeds ~7.5 min excerpt on **FPGA basics, Hardcaml flow, low-latency hardware path** (from ~9:40 in original).
 Original video and materials:
 - Site: https://www.janestreet.com/tech-talks/ocaml-all-the-way-down/
 - Podcast Programmable Hardware: https://signalsandthreads.com/programmable-hardware/
-Opening clarifies "OCaml all the way down" is not zero vendor dependence—FPGA place/route still uses Xilinx etc.; some soft-core CPUs from vendor IP. Edge is **research, hardware, drivers, tests closed loop in one language ecosystem**.
+Opening clarifies "OCaml all the way down" is not zero vendor dependence—FPGA place/route still uses Xilinx etc.; some soft-core CPUs from vendor IP. Edge is research, hardware, drivers, tests closed loop in one language ecosystem.
 ### 4.5 Machine learning: public posture vs. execution layer
 
 Site recently says "deep learning is the future of quantitative trading" but no model scale, training compute, or whether execution uses neural nets disclosed. Industry view: execution still on ultra-low-latency infra; ML more likely research signals and risk—not replacing FPGA/co-lo.
@@ -117,12 +117,12 @@ Long recruits from MIT, Cambridge etc.—math, physics, CS; interviews famous fo
 - **Hudson River Trading**: ~$12.3B
 ## VI. Conclusion: Three Layers Behind ~$9M per Person
 
-Jane Street 2025 exceptional profit = **structural position + cyclical volatility + engineering moat** stacked.
+Jane Street 2025 exceptional profit = structural position + cyclical volatility + engineering moat stacked.
 **Structural**: global ETF expansion twenty years; AP and market-making hub; volume growth and spread income.
 **Cyclical**: 2024–2025 tariffs, AI stocks, geopolitics lifted volatility—market making and arb opportunities amplified; annualizing 2025 per-head profit must consider cycle peak.
 **Firm-specific**: OCaml full stack, Hardcaml FPGA, microwave investment, proprietary risk appetite, deep India etc. markets—latter also brings SEBI probe and legal uncertainty.
 "~$9M per person" is **company profit ÷ headcount** narrative—not salary; sustainability depends on ETF structural tailwind, volatility mean reversion, regulatory boundaries, and whether low-latency moat erodes.
-For Jane Street, compute is not a showroom GPU wall—it is **the filter already done in FPGA before each microsecond of market data arrives**.
+For Jane Street, compute is not a showroom GPU wall—it is the filter already done in FPGA before each microsecond of market data arrives.
 **References**
 - Bloomberg: [Jane Street Tops JPMorgan With Record $39.6 Billion Trading Haul in 2025](https://www.bloomberg.com/news/articles/2026-04-24/jane-street-snatches-wall-street-crown-with-record-39-6-billion-trading-haul)
 - IFR: [Jane Street thrives amid record trading bonanza](https://www.ifre.com/bonds/2246615/jane-street-thrives-amid-record-trading-bonanza)
@@ -146,11 +146,11 @@ In 2025 a private trading firm with under 4,000 employees reported ~$39.6B net t
 
 A: It covers "Jane Street Investigation: 3,500 People, ~$9M Profit Each—Where Does It Come From?," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "I. Four Who Left Susquehanna"?**
+What are the key points of "I. Four Who Left Susquehanna"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "II. Financial Numbers: 2024 Doubling and 2025 Leap"?**
+What are the key points of "II. Financial Numbers: 2024 Doubling and 2025 Leap"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
@@ -158,7 +158,7 @@ A: See that section; based on source materials, not investment or legal advice.
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "What ~$9M per person means"?**
+What are the key points of "What ~$9M per person means"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

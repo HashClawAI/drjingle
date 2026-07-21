@@ -109,19 +109,19 @@ WorldClaw's most eye-catching line is WorldRouter at ~30% off for 300+ models. S
 
 A: It covers "Trump Family WLFI Ecosystem Enters AI? WorldClaw Offers 300+ Models at ~30% Off," summarizing background, key shifts, and the author's core views.
 
-**What are the key points of "I. What ~30% Off Models Means"?**
+What are the key points of "I. What ~30% Off Models Means"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "II. WorldRouter: One Gateway to 300+ Models"?**
+What are the key points of "II. WorldRouter: One Gateway to 300+ Models"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "III. World Product Map on WorldClaw's Site"?**
+What are the key points of "III. World Product Map on WorldClaw's Site"?
 
 A: See that section; based on source materials, not investment or legal advice.
 
-**What are the key points of "IV. USD1: Why Model Calls Use Stablecoin Settlement"?**
+What are the key points of "IV. USD1: Why Model Calls Use Stablecoin Settlement"?
 
 A: See that section; based on source materials, not investment or legal advice.
 

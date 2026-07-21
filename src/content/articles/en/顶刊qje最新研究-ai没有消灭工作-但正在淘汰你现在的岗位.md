@@ -9,7 +9,7 @@ draft: false
 ---
 ## One-line takeaway
 
-**Headline employment can stay flat while your specific job description gets automated.** The pain concentrates in **middle-skill, routine cognitive work** — not at the aggregate "jobs destroyed" level politicians debate.
+Headline employment can stay flat while your specific job description gets automated. The pain concentrates in middle-skill, routine cognitive work — not at the aggregate "jobs destroyed" level politicians debate.
 ## The temple analogy
 
 Ten years ago, the most sought-after roles in a temple were **middle-skill monks**: the registrar who kept accounts, the scribe who drafted documents, the ritual coordinator.

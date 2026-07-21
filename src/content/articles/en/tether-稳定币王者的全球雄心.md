@@ -26,7 +26,7 @@ Tether CEO Paolo Ardoino sat for a Bankless video interview. This article summar
 > Original WeChat article: https://mp.weixin.qq.com/s/p90KBpu53ATVKrDQgyUZcQ
 Tether CEO Paolo Ardoino recently sat for a Bankless video interview packed with information. This article summarizes Tether's success formula, future strategy, and impact on the U.S. and crypto industry—with lessons for HKD and RMB stablecoins.
 In the digital finance wave, Tether's USDT leads stablecoins. Ardoino shared 2024's $13.7B profit and expects 2025 to exceed it—showcasing commercial strength and Tether's role in global finance, especially as the U.S. GENIUS Act nears passage.
-**01 — Staggering Financials: From $13.7B to Potential Trillion-Dollar Valuation**
+01 — Staggering Financials: From $13.7B to Potential Trillion-Dollar Valuation
 $13.7B profit (reportedly under 100 staff) from $155B assets at ~5% rates plus gold and Bitcoin. Paolo expects 2025 to beat 2024 with Fed rates high and gold/Bitcoin gains. At Circle's P/E, Tether could theoretically hit $13.7T valuation—above Microsoft and Apple—speculative but stunning.
 Reserves: $125B Treasuries (18th-largest holder), 105% liquid reserves vs. banks' ~10%, $176B group equity. Answers transparency doubts and positions Tether for U.S. regulation.
 **02 — Stablecoin King: 450M-User Global Network**
@@ -35,7 +35,7 @@ Distribution from African solar kiosks to South American grocery stores—3B unb
 **03 — Compliance and New Opportunity: GENIUS Act**
 U.S. GENIUS Act is an industry milestone—~80% pass probability on Polymarket. Sets high AML, compliance, and reserve standards aligning with Tether practice. Paolo plans USDT compliance as foreign issuer and may launch U.S.-domestic stablecoin.
 GENIUS may become global template. Europe's MiCA requires 60% uninsured bank deposits—Silicon Valley Bank 2023 showed risk. GENIUS's 100%/90% Treasury reserves may push Europe and others toward U.S.-comparable rules.
-**04 — Tether's Strategic Value to America: Dollar Hegemony Guardian**
+04 — Tether's Strategic Value to America: Dollar Hegemony Guardian
 Tether is ally to the U.S. economy. USDT brings financial inclusion to ~500M people where banks don't reach—countering BRICS de-dollarization, especially Africa and Latin America.
 As 18th-largest Treasury holder, $125B purchases diversify U.S. debt ownership. vs. China as single holder using debt geopolitically, 450M users spread risk. Reserves at Cantor Fitzgerald; $5B U.S. investments in tech, agriculture, etc.
 **05 — Diversified Investments: Bitcoin to AI**

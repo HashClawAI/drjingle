@@ -16,7 +16,7 @@ draft: false
 - For parents: teach fundamentals, use AI as a tool with personal accountability, assign projects that cannot be submitted alone, do not remove all friction, and evaluate careers by task bundles—not job titles.
 ## One-Line Summary
 
-**When cognition gets cheap, value shifts to judgment, coordination, trust, and accountability**—in careers and in parenting. The goal is not a faster answer machine but a person who can define problems, connect tasks, coordinate people, and own outcomes in a world without standard answers.
+When cognition gets cheap, value shifts to judgment, coordination, trust, and accountability—in careers and in parenting. The goal is not a faster answer machine but a person who can define problems, connect tasks, coordinate people, and own outcomes in a world without standard answers.
 
 ---
 
@@ -34,7 +34,7 @@ The guest on this [Markus’ Academy interview](https://www.youtube.com/watch?v=
 Jin Li is Professor of Economics and Strategy at HKU Business School and Director of the Centre for AI, Management and Organization (CAMO).
 ![Co-author Jin Li, HKU](/images/articles/messy-jobs/book-02.jpg)
 Yanhui Wu is Department Chair of Economics at HKU Business School. The three authors are not asking “how to write better prompts.” They ask a messier question:
-**As cognitive capability gets cheaper, what stays scarce in human work?**
+As cognitive capability gets cheaper, what stays scarce in human work?
 The answer is not creativity alone, emotional intelligence alone, or whichever major is trending this year.
 The word they use is **messiness**.
 Messy here does not mean sloppy, slow, or office politics. It means the parts of work that cannot easily be split, measured, or outsourced: judgment, coordination, responsibility, tacit understanding, conflict, relationships, and execution.
@@ -42,7 +42,7 @@ The title looks like a book about jobs. It is also a question for every parent: 
 ## AI can do tasks; that does not mean it takes over a job
 
 Early in the interview, Garicano states a line that runs through the book:
-**“Tasks are not jobs.”**
+“Tasks are not jobs.”
 A job looks like one noun, but it packs many different kinds of work.
 A radiologist does not only read scans—they talk with patients, consult surgeons, decide under ambiguity, and own the judgment. A plant engineer does not only calculate capacity—they persuade workers to accept new machines, coordinate with local officials, and land process change on the shop floor.
 AI can rapidly absorb several tasks without absorbing the whole job.
@@ -71,13 +71,13 @@ Around **42 minutes** into the interview, a practical problem appears: companies
 Where do tomorrow’s leaders come from?
 Garicano’s answer is uncomfortable. Universities and schools must “raise the difficulty”—they cannot leave all foundational skills for employers to train on the job. The interview also mentions paid-internship ads in Hong Kong: when work experience itself becomes scarce, young people may pay to enter real organizations and learn.
 That is not an endorsement of paid internships. It is a warning:
-**What AI may take first is not your child’s final job title, but the practice ground from novice to expert.**
+What AI may take first is not your child’s final job title, but the practice ground from novice to expert.
 ## Jin Li’s “Great Compression”
 
 On June 21, HKU CAMO held a book launch.
 Jin Li uses **Great Compression** to describe another AI effect: AI is flattening the distribution of work quality. Tasks once done well only by a few skilled people can now be done “well enough” by many with model help.
 He said on stage:
-**“We are outsourcing memory, attention, understanding, and communication.”**
+“We are outsourcing memory, attention, understanding, and communication.”
 Parents should pause on that line.
 A child who remembered more, calculated faster, and formatted cleanly could lead on standardized tests. Those abilities still matter—but tools increasingly close the gap.
 When “a decent answer” gets cheap, gaps open elsewhere:
@@ -101,7 +101,7 @@ Asking “why is this answer worth trusting?” beats ten more identical drill i
 ### 2. Treat AI as a tool early—not an opponent
 
 Not using AI does not make you more human. It removes baseline productivity.
-Let children use AI to research, compare options, and revise work—with one rule: **final judgment is theirs, citations must be checkable, errors are theirs to own.**
+Let children use AI to research, compare options, and revise work—with one rule: final judgment is theirs, citations must be checkable, errors are theirs to own.
 ### 3. Do more projects that cannot be submitted alone
 
 Run an event, put on a play, compete on a team, lead a club, care for a pet, plan a trip.
@@ -127,12 +127,12 @@ Safety is not on the business card. It is in the tasks that happen every day.
 From a project-management view, any job can be decomposed via WBS into smaller **atomic tasks**. That explains AI’s speed: the clearer the input, output, and acceptance criteria, the better the fit for models.
 What *Messy Jobs* calls “cannot be split” is not always technically indivisible. More precisely, **some work loses value when split**.
 A major product decision can decompose into gathering requirements, analyzing data, estimating cost, coordinating departments, drafting plans, and driving execution. AI may take each node. The hard parts often sit **between** nodes: whose needs come first, how to choose under incomplete information, how to get people with different goals to accept a call, and who owns failure.
-Future edge may not hide in one atomic task AI never touches. It may sit **at the connections between tasks and at the boundary of project accountability**.
+Future edge may not hide in one atomic task AI never touches. It may sit at the connections between tasks and at the boundary of project accountability.
 That boundary moves.
 If world models improve sharply and agents gain better physical causality, spatial reasoning, tool use, and long-horizon action, they upgrade from executing atomic tasks to **managing task bundles**. Messy-looking field dispatch, engineering planning, and robot operations may automate further.
 What remains harder is another class of rules not written into the world in advance: who has decision rights, who trusts whom, what counts as fair, who pays when things break. Models predict consequences; they cannot alone decide “who should be sacrificed.” They propose plans; organizations and society still answer who authorizes, signs, and carries responsibility.
 So **The Work That AI Cannot Reach** is better read as a **moving frontier**, not a permanent career list:
-**After AI absorbs stable, clear, verifiable work, value keeps migrating toward what is still ambiguous, coupled, conflicted, and accountable.**
+After AI absorbs stable, clear, verifiable work, value keeps migrating toward what is still ambiguous, coupled, conflicted, and accountable.
 For children, the goal is not hunting one “skill AI will never have.” It is learning to define problems, connect tasks, coordinate relationships, and judge and own outcomes without a standard answer key.
 ## Who should buy this book
 
@@ -150,7 +150,7 @@ It fits three groups:
 
 Among headlines screaming “this job vanishes in two years,” the book at least asks the right question:
 
-**How many tasks AI can do is not how much work it can carry.**
+How many tasks AI can do is not how much work it can carry.
 
 We do not need to raise children to be machines slower than AI.
 
