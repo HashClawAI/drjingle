@@ -11,6 +11,8 @@ const site = process.env.PUBLIC_SITE_URL || 'https://drjingle.com';
 function legacyEnRedirects() {
   const articlesDir = path.join(__dirname, 'src/content/articles');
   const redirects = {
+    '/article/one-token-llm-behavioral-fingerprinting':
+      '/article/问ai一个简单问题-一篇论文发现了大模型的行为指纹',
     '/category/sites': '/category/ecosystem',
     '/category/papers': '/category/research',
     '/zh/category/papers': '/zh/category/research',
