@@ -4,7 +4,7 @@ description: "A study of 165 models and 326,047 API requests finds that single-t
 pubDate: 2026-07-22
 category: research
 locale: en
-articleSlug: "one-token-llm-behavioral-fingerprinting"
+articleSlug: "问ai一个简单问题-一篇论文发现了大模型的行为指纹"
 draft: false
 ---
 
