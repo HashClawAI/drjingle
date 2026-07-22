@@ -2,21 +2,73 @@
 import SiteHeader from '@/components/SiteHeader.astro';
 import SiteFooter from '@/components/SiteFooter.astro';
 import type { Locale } from '@/lib/i18n';
-import { t } from '@/lib/i18n';
+import { t, localeSwitchPath } from '@/lib/i18n';
 
 interface Props {
   locale: Locale;
   title: string;
   description: string;
   navCurrent?: 'home' | 'events' | 'insights' | 'research' | 'ecosystem';
+  pageType?: 'website' | 'article';
+  image?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  tags?: string[];
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  alternatePath?: string | null;
 }
 
-const { locale, title, description, navCurrent = 'home' } = Astro.props;
+const {
+  locale,
+  title,
+  description,
+  navCurrent = 'home',
+  pageType = 'website',
+  image = '/themes/drjingle-mirror/avatar-real-crop.jpg',
+  publishedTime,
+  modifiedTime,
+  tags = [],
+  structuredData,
+  alternatePath,
+} = Astro.props;
 const tr = t(locale);
-const siteTitle = `${title} · ${tr.siteName}`;
+const siteTitle = title === tr.siteName ? tr.siteName : `${title} · ${tr.siteName}`;
 const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
+const resolvedAlternatePath = alternatePath === undefined ? localeSwitchPath(locale, Astro.url.pathname) : alternatePath;
+const alternateUrl = resolvedAlternatePath ? new URL(resolvedAlternatePath, siteOrigin).href : null;
+const defaultLanguageUrl = locale === 'en' || !alternateUrl ? canonicalUrl : alternateUrl;
+const imageUrl = new URL(image, siteOrigin).href;
 const year = new Date().getFullYear();
+const baseGraph = [
+  {
+    '@type': 'Person',
+    '@id': `${siteOrigin}#person`,
+    name: 'Michael Cheung',
+    alternateName: ['Dr.Jingle', '金狗博士'],
+    url: siteOrigin,
+    image: new URL('/themes/drjingle-mirror/avatar-real.jpg', siteOrigin).href,
+    jobTitle: ['Lecturer', 'Researcher', 'Founder'],
+    knowsAbout: ['AI agents', 'real-world asset tokenization', 'blockchain protocols', 'Canton Network', 'Bitcoin'],
+    sameAs: [
+      'https://x.com/drjingle',
+      'https://github.com/HashClawAI',
+      'https://paragraph.com/fahayek.eth',
+      'https://t.me/Y2049',
+    ],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${siteOrigin}#website`,
+    url: siteOrigin,
+    name: 'Dr.Jingle',
+    alternateName: ['Michael Cheung', '金狗博士'],
+    inLanguage: ['en', 'zh-Hans'],
+    publisher: { '@id': `${siteOrigin}#person` },
+  },
+];
+const extraGraph = structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [];
+const jsonLd = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...extraGraph] };
 ---
 
 <!doctype html>
@@ -26,16 +78,37 @@ const year = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content={tr.siteKeywords} />
+    <meta name="author" content="Michael Cheung (Dr.Jingle)" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonicalUrl} />
+    {alternateUrl && <link rel="alternate" hreflang={locale === 'en' ? 'zh-Hans' : 'en'} href={alternateUrl} />}
+    <link rel="alternate" hreflang={locale === 'en' ? 'en' : 'zh-Hans'} href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={defaultLanguageUrl} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={pageType} />
+    <meta property="og:site_name" content="Dr.Jingle" />
+    <meta property="og:locale" content={locale === 'zh' ? 'zh_CN' : 'en_US'} />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/themes/drjingle-mirror/avatar-real-crop.jpg', siteOrigin).href} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="Dr.Jingle · Michael Cheung" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@drjingle" />
+    <meta name="twitter:creator" content="@drjingle" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {pageType === 'article' && <meta property="article:author" content="Michael Cheung" />}
+    {tags.map((tag) => <meta property="article:tag" content={tag} />)}
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs index" />
+    <link rel="alternate" type="application/rss+xml" href={locale === 'zh' ? '/zh/rss.xml' : '/rss.xml'} title={`Dr.Jingle ${locale === 'zh' ? '中文' : 'English'} RSS`} />
+    <link rel="alternate" type="application/feed+json" href={locale === 'zh' ? '/zh/feed.json' : '/feed.json'} title={`Dr.Jingle ${locale === 'zh' ? '中文' : 'English'} JSON Feed`} />
     <link rel="icon" href="/themes/drjingle-mirror/drjingle-logo-icon.png?v=6" type="image/png" />
     <link rel="stylesheet" href="/themes/drjingle-mirror/theme.css?v=43" />
     <title>{siteTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="dj-body">
     <div class="dj-cosmos-bg" aria-hidden="true">

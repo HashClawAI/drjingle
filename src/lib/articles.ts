@@ -46,3 +46,7 @@ export function excerpt(entry: ArticleEntry, max = 140): string {
   const body = entry.body.replace(/^#.+$/m, '').replace(/\*\*/g, '').trim();
   return body.slice(0, max);
 }
+
+export function articleImage(entry: ArticleEntry): string | undefined {
+  return entry.body.match(/!\[[^\]]*\]\((\/[^)\s]+)(?:\s+"[^"]*")?\)/)?.[1];
+}
