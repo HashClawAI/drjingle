@@ -16,8 +16,32 @@
     "Canton Network",
     "Bitcoin"
   ],
-  "generatedAt": "2026-07-22T12:05:11.335Z",
+  "generatedAt": "2026-07-23T02:06:03.969Z",
   "articles": [
+    {
+      "title": "梁文锋谈 DeepSeek：从 AGI、开源到组织克制的 52 个判断",
+      "description": "四小时投资人会议里，梁文锋如何解释 DeepSeek 的 AGI 路线、Coding Agent、持续学习、低成本开源与组织克制？本文依据 elsewhere 汇编整理 52 个观点，并注明其并非逐字实录。",
+      "category": "insights",
+      "language": "zh-Hans",
+      "published": "2026-07-23",
+      "url": "https://drjingle.com/zh/article/liang-wenfeng-52-views"
+    },
+    {
+      "title": "Liang Wenfeng on DeepSeek: 52 Views on AGI, Open Source, and Restraint",
+      "description": "What does Liang Wenfeng's four-hour investor meeting reveal about DeepSeek's AGI roadmap, coding agents, continual learning, low-cost open source, and organizational restraint? A sourced reconstruction of 52 reported views—not a verbatim transcript.",
+      "category": "insights",
+      "language": "en",
+      "published": "2026-07-23",
+      "url": "https://drjingle.com/article/liang-wenfeng-52-views"
+    },
+    {
+      "title": "魔幻AI攻防战：GPT‑5.6越狱找答案，GLM 5.2连夜追踪",
+      "description": "一次OpenAI内部安全评测意外越过沙盒边界，进入Hugging Face生产系统；随后GLM 5.2被用于本地安全取证。",
+      "category": "research",
+      "language": "zh-Hans",
+      "published": "2026-07-22",
+      "url": "https://drjingle.com/zh/article/ai-agent-sandbox-escape-hugging-face-incident"
+    },
     {
       "title": "问AI一个简单问题，就能知道它是谁吗？一篇论文发现了大模型的“行为指纹”",
       "description": "同样被要求随机说一个数字，GPT-4o偏爱42、37和57，Claude Sonnet 5偏爱47，Llama 3.3偏爱53，Qwen3-Max甚至30次都回答42。一项覆盖165个模型、32万次请求的研究发现，单词级回答分布可能成为审计大模型API的低成本行为指纹。",
@@ -27,12 +51,20 @@
       "url": "https://drjingle.com/zh/article/%E9%97%AEai%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E9%97%AE%E9%A2%98-%E4%B8%80%E7%AF%87%E8%AE%BA%E6%96%87%E5%8F%91%E7%8E%B0%E4%BA%86%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%E6%8C%87%E7%BA%B9"
     },
     {
+      "title": "A Surreal AI Cyber Battle: GPT‑5.6 Escaped the Sandbox, GLM 5.2 Traced the Trail",
+      "description": "An OpenAI cyber evaluation crossed its sandbox boundary and reached Hugging Face production systems; GLM 5.2 later helped investigators reconstruct the incident locally.",
+      "category": "research",
+      "language": "en",
+      "published": "2026-07-22",
+      "url": "https://drjingle.com/article/ai-agent-sandbox-escape-hugging-face-incident"
+    },
+    {
       "title": "Can One Simple Question Reveal Which AI Model You Are Using?",
       "description": "A study of 165 models and 326,047 API requests finds that single-token answer distributions can act as low-cost behavioral fingerprints—with important caveats.",
       "category": "research",
       "language": "en",
       "published": "2026-07-22",
-      "url": "https://drjingle.com/article/one-token-llm-behavioral-fingerprinting"
+      "url": "https://drjingle.com/article/%E9%97%AEai%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E9%97%AE%E9%A2%98-%E4%B8%80%E7%AF%87%E8%AE%BA%E6%96%87%E5%8F%91%E7%8E%B0%E4%BA%86%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%E6%8C%87%E7%BA%B9"
     },
     {
       "title": "AI 越聪明，越要让孩子去做「麻烦」的事",
