@@ -1,6 +1,6 @@
 ---
-title: "Inside Liang Wenfeng’s Investor Meeting: Seven Bets That Define DeepSeek"
-description: "A focused reading of DeepSeek’s reported AGI roadmap, continual learning bet, open-model economics, compute constraints, domestic chips, team stability, and commercial floor."
+title: "Inside Liang Wenfeng’s Investor Meeting: What DeepSeek Is Actually Betting On"
+description: "A close read of the hosted investor-meeting transcript: AGI first, continual learning after agents, open models, compute, and why team stability comes before traffic."
 pubDate: 2026-07-23
 category: insights
 tags: ["Liang Wenfeng", "DeepSeek", "AGI", "Continual Learning", "Open-Source AI", "AI Compute"]
@@ -9,141 +9,102 @@ locale: en
 draft: false
 ---
 
-An investor meeting lasting almost four hours can contain a great deal: technical roadmaps, products, revenue, GPUs, Huawei, organizational design, even whether a company should work overtime.
+“There may be a watermelon farther ahead; what you see now might all be sesame seeds.”
 
-One question connects almost everything in this account:
-
-**Which choices most increase DeepSeek’s probability of reaching artificial general intelligence (AGI)?**
+An investor meeting that runs almost four hours can cover products, revenue, GPUs, Huawei, overtime rules, and a dozen other topics. In this account, one question keeps resurfacing: **which choices most increase DeepSeek’s chance of reaching artificial general intelligence (AGI)?**
 
 ![Essentials from Liang Wenfeng’s investor meeting: open source, continual learning, compute, team stability, and embodied intelligence form DeepSeek’s roadmap](/images/articles/liang-wenfeng-meeting-essentials/cover.png)
 
-According to a [transcript hosted by drjingle.com](https://drjingle.com/files/liang-wenfeng-investor-meeting-transcript.pdf), DeepSeek is not indifferent to consumer traffic, enterprise revenue, or products. It simply ranks them below AGI. Open releases, low prices, focus, and research autonomy are not four separate policies; they are parts of the same long-term wager.
+This piece follows a [transcript hosted on drjingle.com](https://drjingle.com/files/liang-wenfeng-investor-meeting-transcript.pdf). The file runs about 42 pages and says it was speech-to-text plus machine editing from roughly three hours and 44 minutes of audio, with no speaker labels. Numbers and model names may be wrong. It is not an official DeepSeek release. What follows is thematic organization, not a verbatim record; treat revenue, chip counts, and timelines as transcript claims, not guidance.
 
-The evidence boundary matters. The 42-page file says it was automatically transcribed and AI-edited from roughly three hours and 44 minutes of audio. It does not identify speakers, and some numbers, model names, and proper nouns may be wrong. It is not an official DeepSeek announcement. The article below is a thematic synthesis, not a verbatim record; statements about revenue, chip quantities, and timelines should not be treated as formal company guidance.
+The through-line is straightforward: DeepSeek is not indifferent to traffic or enterprise revenue, but it ranks both below AGI. Open weights, low prices, focus, and slack time for researchers sound like four unrelated policies. In the meeting they read as one long bet seen from different angles.
 
-## Bet one: AGI is the destination; today’s businesses are outputs along the road
+## AGI first; chat and APIs are side products
 
-Liang repeatedly distinguishes the objective from its by-products.
+Liang keeps separating the objective from its by-products. The objective is AGI. Consumer chat, enterprise APIs, and future agent services are capabilities that show up as the models advance. Once a capability exists, it can serve users and generate cash. The company does not need to halt the main research program to maximize one intermediate product.
 
-DeepSeek’s objective is AGI. Consumer chat, enterprise APIs, and future agent services are capabilities that naturally emerge as the models advance. Once a useful capability exists, it can serve users and generate revenue. But the company need not stop the main research program to maximize one intermediate output.
+The watermelon-and-sesame metaphor is doing the same work. The sesame seeds are not trivial: daily active users, enterprise revenue, and a public-company base are real money. Liang’s reported view is that if the space behind AGI is large enough, DeepSeek should not reshape itself into the next ByteDance or Tencent just to win one distribution channel.
 
-The transcript uses a memorable metaphor: there may be a watermelon farther ahead, while the visible prizes are sesame seeds.
+Hence the split posture: maintain a consumer product and serve businesses, without treating the super-app race, a heavy sales org, or vertical lock-in as top priority. Research keeps moving; commercialization happens when it happens.
 
-Those “sesame seeds” can be large. Consumer daily active users, enterprise revenue, and even the foundation of a listed company represent real money. Liang’s reported judgment is that if AGI’s eventual economic space is vast enough, DeepSeek should not reshape itself into the next ByteDance or Tencent merely to capture one current distribution channel.
+## After agents, the hard part is continual learning
 
-That explains why DeepSeek can maintain a consumer product and serve businesses without treating the super-app race, a large sales organization, or vertical industry control as its highest priority. The technical program keeps moving; commercialization happens along the way.
+The transcript describes progress as a staircase: language models, chain-of-thought reasoning, agents with tools and longer tasks—and then continual learning as the next bottleneck.
 
-## Bet two: agents are not the destination; continual learning is the next gate
+With full context, today’s models can beat people on hard tasks. A new hire, though, spends weeks learning colleagues, processes, and unwritten habits. AI usually lacks that sediment. If every assignment starts with “who is Xiao Wang?” and “why did we change the plan last time?”, the model never becomes part of the organization.
 
-The meeting’s most important technical idea describes AI progress as a staircase.
+Continual learning is not an infinitely long chat log. A model must absorb experience from ongoing work without forgetting old skills or being poisoned by bad feedback. Nobody has a reliable solution yet, and the meeting does not claim DeepSeek has one.
 
-Language models form the base. Chain-of-thought reasoning lets the model work through a problem before answering. Agents add tools and longer-horizon execution. After agents, the binding constraint becomes continual learning.
+Liang still puts it at the center of the next generation because, if it works, you get a loop: AI helps researchers build the next AI; stronger systems accelerate what comes after. AGI may not flip on like a light switch; it may look like a curve that slowly steepens.
 
-With complete context, current models can outperform people on difficult tasks. But a human employee spends weeks or months learning colleagues, processes, history, and habits that no manual records. AI usually lacks that accumulation. If every assignment requires a fresh explanation of who “Xiao Wang” is and why the plan changed last time, the model cannot truly become part of an organization.
+## Coding agents first: AI should help build AI
 
-Continual learning is not simply an infinitely long chat history. A model must absorb experience from ongoing work without forgetting previous skills or being corrupted by accidental and malicious feedback. This remains an unsolved global research problem, and the meeting does not claim that DeepSeek has solved it.
+Finance, legal, medical, and general agents all appear on the menu, but the near-term priority in the transcript is blunt: **get coding agents right first.**
 
-Liang places it at the center of the next generation because continual learning could create a feedback loop: AI helps researchers build the next AI; the stronger system then contributes more effectively to further research. AGI may therefore arrive not as a light switching on one morning, but as a curve that gradually steepens.
+Not only because developers pay. Code is the most direct interface for AI participating in AI research—a model that reads repos, patches code, runs experiments, and chases bugs raises DeepSeek’s own research throughput first.
 
-## Bet three: coding agents come first because AI should help build AI
+That is a different product bar from a typical consumer company. The next model should be useful to DeepSeek’s researchers before it optimizes for everyone else. Shorten the cycle to the successor, and the model is both product and production tool.
 
-Among finance, legal, medical, and general agents, the near-term priority in the transcript is clear: build a strong coding agent first.
+Multimodality is on the roadmap but treated as a component. Video, 3D, and “world models” are not framed as the immediate path to a higher intelligence ceiling. Hallucinations matter, yet the transcript files them closer to post-training and product polish than to the core research wall.
 
-The reason goes beyond willingness to pay. Code is the most direct interface through which AI can participate in AI research. A model that understands a codebase, edits programs, runs experiments, and tracks failures can first improve DeepSeek’s own productivity.
+The ordering may be wrong, but it is legible: **a hot or profitable direction does not automatically land on the AGI map.**
 
-That creates a product standard unlike the one used by a conventional software company. The next model should first become useful to DeepSeek itself, before optimizing entirely for broad marketability. Once a model helps the team build its successor faster, it is both a product and a means of production.
+## Open models and low prices are still a business
 
-DeepSeek will pursue multimodality, but treats it as a component. Video generation, 3D, and the currently broad category of “world models” are not presented as the immediate path to a higher ceiling of intelligence. Hallucinations need improvement as well, but the transcript places them closer to post-training and product experience than to the central research bottleneck.
+DeepSeek’s open-source story mixes mission and competition. AI may be too consequential for one company to own; grabbing too much of the value invites rivals, regulators, and public pushback. Sharing weights is part of what they call goodwill and restraint.
 
-The prioritization may turn out to be wrong, but it is legible: popularity or attractive margins do not automatically place a technology on the AGI roadmap.
+Commercially, open weights still leave deployment, kernels, clusters, latency, and cost on the table—publishing a jet design is not the same as running a cheap airline. DeepSeek does not want secrecy to be its only moat; it wants to ship comparable capability faster and cheaper.
 
-## Bet four: open models and low prices do not mean abandoning business
+On API pricing, the transcript mentions a rough benchmark: equipment paid back in about ten months (not confirmed disclosure—do not hard-code it in a model). The point is reasonable return for risk and research, not the highest price users will tolerate.
 
-DeepSeek’s argument for open source has two layers.
+Liang also offers a sharp line: **the player who insists on taking more may lose to one willing to take less.** Openness and low prices are not only posture; they shrink the profit pool for whoever follows.
 
-The first is mission. AI may matter too much for any company to own it all. Attempting to retain an excessive share of the value would invite challengers, regulation, and social resistance. Sharing model capability is a practical expression of the company’s language of goodwill and restraint.
+## Compute: what China lacks is experiment volume
 
-The second layer is competitive. Even with open weights, another provider must solve deployment, kernels, clusters, latency, and cost. Publishing an engine design does not instantly create a low-cost airline. DeepSeek does not want its only moat to be secrecy; it wants to produce comparable capability faster and more cheaply.
+On the China–US gap, the transcript keeps returning to resources—not a lack of smart people, but how many accelerators a team can use, how many experiments it can run, and how large a model it can train. Less compute caps scale; fewer experiments also mean fewer chances for researchers to learn by doing. Part of the “talent gap” is an experimentation-budget gap.
 
-The transcript describes a pricing benchmark of roughly ten months to recover equipment cost. The figure is not confirmed formal disclosure and should not be hard-coded into a financial model. Its significance lies in the philosophy: seek a reasonable return that covers risk and continued research, rather than the highest price users will tolerate.
+DeepSeek does not treat scarcity as a reason to abandon scaling. Liang reportedly wants to buy chips at reasonable prices, build clusters, and keep growing models. Current sizes reflect budget and supply more than a belief that “big enough is big enough.”
 
-Liang offers a severe competitive principle: the player that wants to take more may be defeated by one willing to take less. Openness and low prices are therefore not only moral gestures. They also compress the profit pool available to a future challenger.
+When brute-force parity is off the table, efficiency is another way to catch up: the same cluster, used more cheaply, buys another training run or another research loop. Low cost shows up in the API bill and in lab velocity.
 
-## Bet five: China’s principal AI constraint is experimental compute
+## Domestic chips: software may ease, supply stays hard
 
-On the gap between China and the American frontier, the transcript concentrates on one word: resources.
+The transcript is optimistic about Chinese accelerators but leaves a hole. NVIDIA’s edge has been CUDA and its ecosystem, not silicon alone. Liang argues that higher-level languages, compilers, and AI-assisted coding lower the cost of rebuilding that stack. TileLang appears as an attempt to describe computation at a higher level and port it across hardware instead of binding everything to one vendor.
 
-It does not argue that China lacks sufficiently capable people. The decisive difference is how many accelerators a research team can use, how many experiments it can run, and how large a model it can train. Less compute restricts model scale; fewer experiments also slow the development of researchers. Part of the apparent talent gap may itself be a compute gap.
+If that works, “hard to use” domestic chips may soften; manufacturing capacity becomes the harder question—enough units, enough power, enough total cost to build large clusters.
 
-DeepSeek does not reject scaling because resources are limited. Liang reportedly says the company wants to buy as much compute as possible at reasonable prices, build its own clusters, and train larger models. Current model sizes reflect budgets and chip supply more than a belief that the present scale is sufficient.
+Figures about Huawei accelerators and performance ratios are especially transcription-prone; do not treat them as facts. Two safer takeaways: DeepSeek intends to work deeply on software for domestic compute; near-term supply still looks insufficient for the largest frontier training runs.
 
-When brute-force parity is unavailable, efficiency becomes another route to catch up. Producing similar capability with less computation can narrow the time gap and support more experiments on the same hardware. DeepSeek’s low cost therefore matters not only to the API bill; it also affects research velocity.
+The company will build clusters without rushing to design its own chips. Liang’s analogy: you can run a power plant without manufacturing the generator. If chips are buyable at fair prices, stay on the layer where you are strongest.
 
-## Bet six: the domestic-chip problem may move from software to supply
+## The team is the line you do not cross
 
-The transcript is optimistic about Chinese AI accelerators, with one hard qualification.
+Among commercial interests, Liang names one non-negotiable: **team stability.**
 
-Historically, NVIDIA’s advantage has included not only chip performance but also CUDA and its software ecosystem. Liang argues that higher-level languages, compilers, and AI-assisted programming are lowering the cost of rebuilding that ecosystem. The meeting mentions TileLang as an effort to describe computation at a higher level and adapt it across hardware, rather than binding the entire stack to one accelerator vendor.
+A failed training run may cost months. Late hardware delays a roadmap. When core researchers leave, they take shared knowledge that never made it into papers or repos. People intact, time and money can often be repaired; people gone, organizational memory actually breaks.
 
-If that approach works, the problem of domestic chips being difficult to use could recede. Manufacturing capacity would remain the tougher constraint: whether enough chips can be produced and assembled into large clusters at acceptable power and total cost.
+That matches the org design in the transcript: top-down coordination when a model must ship; substantial unscheduled time for researchers to choose problems. KPIs and overtime are not treated as the main engine of discovery—unknown problems need slack and curiosity.
 
-The transcript includes sensitive figures for Huawei accelerators, performance ratios, and generational gaps. Those details are particularly vulnerable to transcription errors and should not be treated as confirmed facts. Two conclusions can be extracted more carefully:
+Growth will force hierarchy and accountability. The trick is to make engineering and operations orderly without turning frontier research into quarterly homework. Vision travels by osmosis in a small team; in a large company it must survive process—and that may matter more than hiring a star.
 
-- DeepSeek is willing to participate deeply in software adaptation for Chinese compute.
-- In the near term, domestic supply still appears insufficient for the largest frontier training runs.
+## When founders stop debating which way the fish head points
 
-DeepSeek intends to build clusters, but does not appear eager to design its own chips. Liang’s analogy is that operating a power plant does not require manufacturing the generator. If chips can be bought at reasonable prices, the company would rather concentrate on the layer where it believes it is strongest.
+After the transcript circulated, what stood out was not any single forecast but Liang’s tone: less founder mythology, less management jargon, more plain trade-offs—products as by-products, restraint as strategy, reasonable profit as enough, team over market share, “ordinary people doing something unusual” over genius cults.
 
-## Bet seven: the irreplaceable asset is the team
+Because the source is automated transcription, read these as compressed ideas, not verified quotes. Together they still sound decisive about what to pursue and what to decline—without needing a thick managerial vocabulary to authorize the choice.
 
-Among all commercial interests, Liang identifies one on which DeepSeek cannot compromise: team stability.
+A decade ago, Chinese internet founders joked at dinners about whole fish: should the head face the boss or the client? Etiquette, but also hierarchy and signals. Many built elaborate management philosophies. AI companies cannot escape management—DeepSeek admits departments and accountability as headcount grows—but the center of gravity shifts: **technical judgment, not organizational theater, sits at the top.**
 
-The reasoning is straightforward. A failed training run may cost months. Late hardware may delay a roadmap. When core researchers leave, they take shared knowledge that never appeared in papers, code, or process documents. If the key team remains intact, time and resource gaps can still be repaired.
+For a research company, organization collapses to a few aims: keep the people who understand the problem, give them room, coordinate when shipping. Where the fish head points still matters; it just should not consume the founder’s best attention while chasing AGI on a permanent chip shortage. Whether that holds from hundreds to thousands of employees is an open question.
 
-That also explains DeepSeek’s organizational experiment. The transcript describes two parallel modes: formal releases are coordinated from the top down, while researchers retain substantial time for self-directed exploration. KPIs and overtime are not treated as the primary source of research productivity because unknown problems require slack, curiosity, and accidental discovery.
+## What an investor actually gets from the meeting
 
-The structure cannot remain unchanged forever. Liang acknowledges that a growing company needs clearer departments, hierarchy, and accountability in some functions. The challenge is to make engineering and operations orderly without turning frontier research into quarterly homework.
+Do not expect a clean ARR figure or an accelerator count from this file—both sensitive and easy to garble in transcription.
 
-Vision travels through tacit understanding in a small team. In a large company it must survive institutionalization. Whether DeepSeek can expand without losing its research culture may matter more than recruiting any single star.
+What you do get is a set of claims you can check later: after agents, bet on continual learning and AI helping build AI; use APIs and consumer products for cash without letting near-term revenue steer research; compete with openness, price, and efficiency, not secrecy alone; admit the compute gap, buy where you can, and adapt software domestically; put team stability ahead of traffic and margin.
 
-## When a new generation of Chinese AI founders stops studying where the fish head points
+In the optimistic story, those reinforce each other. In the pessimistic one, continual learning stalls, APIs commoditize, the compute gap widens, growth makes the org sluggish, and “restraint” becomes missing the window.
 
-After this nearly four-hour transcript began circulating, the most revealing feature may not have been any single technical forecast. It was the manner of speaking attributed to Liang Wenfeng.
+When judging DeepSeek, ask less whether it picked up every sesame seed and more whether the next release, price move, product expansion, or reorg still moves along the AGI line.
 
-There is little of the grand narrative associated with an earlier generation of internet founders, and relatively little management jargon. The reported propositions are plain choices: products are outputs on the road to AGI; restraint can be a strategy; the company needs only a reasonable profit; team stability matters more than capturing every market; and the preferred story is ordinary people accomplishing something unusual rather than a mythology of geniuses.
-
-Because the source is an automated transcript, these lines are better treated as compressed statements of the meeting’s ideas than as formally verified quotations. Together, however, they convey strong conviction. What the company will pursue—and what it will decline—does not appear to require an elaborate managerial vocabulary for validation.
-
-A decade ago, Chinese internet founders spoke constantly about business models, growth, KPIs, public listings, and organizational management. Business dinners supplied a durable joke: when a whole fish arrives at the table, should its head point toward the boss or the client? The joke is about etiquette, but it also captures a world intensely attentive to hierarchy, relationships, and organizational signals.
-
-Many founders built extensive philosophies of management, culture, and organizational method. A new generation of AI companies cannot actually escape management. DeepSeek itself acknowledges that growth will require departments, hierarchy, and clearer accountability. Yet the meeting suggests a shift in emphasis:
-
-**Management is no longer presented as the founder’s principal intellectual creation. Technical judgment is.**
-
-For a research company such as DeepSeek, the organizational problem is reduced to a few practical aims: keep the people who truly understand the problem, give them room to explore, and coordinate when a model must ship. Where the fish head points has not become meaningless. It simply does not deserve the founder’s best attention when the team is chasing AGI and compute is permanently scarce.
-
-This may represent a generational change in Chinese technology entrepreneurship. The previous internet generation made organizational capability a competitive moat; the new AI generation is attempting to return organization to the status of a tool. Whether that remains possible is unknown. When a team grows from hundreds to thousands, the fish head may quietly swim back.
-
-## What the meeting actually gives an investor
-
-The transcript’s most useful content is not an ARR forecast or an accelerator count. Those figures are both sensitive and vulnerable to transcription error.
-
-What it provides is a roadmap that can be tested over time:
-
-- Technically, move from agents to continual learning, let AI accelerate AI, and eventually pursue embodied intelligence.
-- Commercially, use API and consumer services for cash flow without allowing current revenue to redirect research.
-- Competitively, build adoption through open models, low prices, and efficiency rather than secrecy alone.
-- Operationally, acknowledge the compute gap, buy hardware where possible, and reduce dependence through software efficiency and domestic adaptation.
-- Organizationally, rank team stability above traffic, profit, and the breadth of the product empire.
-
-In the optimistic case, these lines reinforce one another: better technology attracts users; users create cash flow; cash buys compute; an open ecosystem attracts talent; talent advances AGI.
-
-The pessimistic case is equally clear: continual learning remains unsolved, APIs commoditize, the compute gap widens, the organization loses effectiveness as it grows, and “restraint” becomes another name for missing the market.
-
-DeepSeek should therefore be judged neither by whether it collects every visible sesame seed nor by how vividly it describes a distant watermelon. A better test is whether each model release, pricing decision, product expansion, and organizational change still follows the same map.
-
-A company’s vision is not ultimately where it says it is going.
-
-It is where the company still refuses to go when the opportunity suddenly appears.
-
-*This article is a thematic synthesis and analysis of a publicly hosted transcript. It does not represent the formal position of Liang Wenfeng or DeepSeek and is not investment advice. Financial data, chip quantities, product timelines, and technical forecasts should be checked against verifiable primary sources and formal company disclosures.*
+*Thematic synthesis of a public transcript; not the formal view of Liang Wenfeng or DeepSeek; not investment advice. Check financials, chip counts, and timelines against primary sources and official disclosures.*
