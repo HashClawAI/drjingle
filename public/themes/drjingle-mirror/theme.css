@@ -1872,6 +1872,7 @@ html[lang="en"] .dj-titles-zh { display: none; }
 
 .dj-site-card-cyan:hover { border-color: rgba(103, 232, 249, 0.42); }
 .dj-site-card-gold:hover { border-color: rgba(246, 193, 91, 0.42); }
+.dj-site-card-green:hover { border-color: rgba(120, 242, 180, 0.42); }
 .dj-site-card-violet:hover { border-color: rgba(155, 140, 255, 0.42); }
 
 .dj-site-card.is-current {
@@ -1942,6 +1943,7 @@ html[lang="en"] .dj-titles-zh { display: none; }
 }
 
 .dj-site-card-gold .dj-site-card-cta { color: var(--dj-gold); }
+.dj-site-card-green .dj-site-card-cta { color: var(--dj-green); }
 .dj-site-card-violet .dj-site-card-cta { color: var(--dj-violet); }
 
 .dj-site-card-violet .dj-site-card-mark {
