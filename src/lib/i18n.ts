@@ -87,7 +87,7 @@ const zh = {
   card: { read: '阅读全文' },
   ecosystem: {
     drjingle: { tag: '个人 IP', desc: '个人网站' },
-    metastrategy: { tag: '投资品牌', desc: '香港元策 — AI Agent 与区块链未来科技投资。' },
+    metastrategy: { tag: '关注未来科技', desc: '香港元策 — AI Agent 与区块链未来科技投资。' },
     hashclaw: { tag: '组织品牌', desc: '进化中的超级智能体哈希龙虾' },
     canton: { tag: '教育垂直', desc: 'Canton Network 双语教育站，教程、新闻与生态索引。' },
   },
@@ -178,7 +178,7 @@ const en: typeof zh = {
   card: { read: 'Read' },
   ecosystem: {
     drjingle: { tag: 'Personal IP', desc: 'Personal website' },
-    metastrategy: { tag: 'Investment', desc: 'Hong Kong Meta Strategy — AI agents & blockchain investment.' },
+    metastrategy: { tag: 'Future technology', desc: 'Hong Kong Meta Strategy — AI agents & blockchain investment.' },
     hashclaw: { tag: 'Org brand', desc: 'HashClaw—the evolving super-agent' },
     canton: { tag: 'Education', desc: 'Bilingual Canton Network education hub.' },
   },
