@@ -17,7 +17,7 @@ CanPayAI 把主网钱包集成到基于 ESP32 的 [StackChan](https://github.com
 
 我们的判断是：近期最值得探索的课题，在机器能够执行交易、而交易目标与责任仍由人类界定的窄缝里。CanPay 与 StackChan 的结合，适合当作观察这个课题的案例。
 
-![桌面机器人接入区块链钱包后，支付能力落进一条由人类界定的窄缝](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover.png)
+![StackChan 站在 CanPay 钱包方块前，面向一道透出城市天光的窄缝](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover.png)
 
 ## 钱包给了身体，没有自动给产权
 
