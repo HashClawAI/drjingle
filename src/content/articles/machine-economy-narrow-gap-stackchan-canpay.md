@@ -17,7 +17,7 @@ CanPayAI 将主网钱包集成到基于 ESP32 的 [StackChan](https://github.com
 
 我们的判断是：机器经济近期最值得探索的课题，在于机器能够执行交易、而交易目标与责任仍由人类界定的窄缝之中。而 CanPay 与 StackChan 的结合，适合作为观察这一课题的案例。
 
-![StackChan 站在 CanPay 钱包方块前，面向一道透出城市天光的窄缝](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover-narrow-gap.jpg)
+![StackChan 站在 CanPay 钱包方块前，面向一道透出城市天光的窄缝](/images/articles/machine-economy-narrow-gap-stackchan-canpay/hero.jpg)
 
 StackChan 的意义，首先在于它让支付能力获得了一个可感知的身体。他主要基于 M5Stack 版本采用的 ESP32-S3，具有显示、音频和网络连接等能力。
 
