@@ -1,6 +1,6 @@
 ---
-title: "The Narrow Gap of the Machine Economy: When a Desktop Robot Gets a Blockchain Wallet"
-description: "CanPayAI connected a mainnet wallet to StackChan. A wallet does not make the robot an independent economic actor. The near-term question lies in a narrow gap: machines can execute payments while humans still set goals and bear liability."
+title: "The Narrow Gap of the Machine Economy: CanPay Wallets and the StackChan Robot"
+description: "CanPayAI integrated a mainnet wallet into the desktop robot StackChan. A wallet does not make the robot an independent economic actor. The near-term question sits in a narrow gap: machines can execute trades while humans still set goals and bear liability."
 pubDate: 2026-09-09
 category: research
 tags: ["machine economy", "CanPay", "StackChan", "agent wallet", "Canton", "AI agent"]
@@ -9,80 +9,74 @@ locale: en
 draft: false
 ---
 
-What happens when a desktop robot gets a blockchain wallet?
+What happens when a desktop robot has a blockchain wallet?
 
-CanPayAI integrated a mainnet wallet into [StackChan](https://github.com/meganetaaan/stack-chan), an open-source, full-featured desktop robot built around ESP32. A device that once interacted through faces, voice, and motion can now take part in value transfer. For a moment, the machine economy leaves grand forecasts and sits on a desk.
+CanPayAI integrated a mainnet wallet into [StackChan](https://github.com/meganetaaan/stack-chan), an open-source, full-featured desktop robot built on ESP32. The question now has a concrete entry point: a device that once interacted through facial expressions, sound, and motion can take part in value transfer. It lets the “machine economy” leave grand forecasts for a moment and settle on an object that can sit on a desk.
 
-A wallet also invites a misconception: if a robot can send and receive payments, it must already be an independent economic actor.
+A wallet, however, also invites a misconception: if a robot can send and receive payments, it has already become an independent economic actor.
 
-Our view is that the near-term question worth exploring sits in a narrow gap: machines can execute transactions, while humans still define the goals and the liability. The pairing of CanPay and StackChan is a useful case for watching that gap.
+Our judgment is this: the subject most worth exploring in the near term is the narrow gap in which machines can execute transactions, while the goals of those transactions and the liability for them remain defined by humans. The combination of CanPay and StackChan is a suitable case for observing that subject.
 
 ![StackChan stands before a CanPay wallet cube, facing a narrow opening of light](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover.png)
 
-## A body for payments, not a title to property
+StackChan’s significance, first of all, is that it gives payment capability a perceptible body. It is based mainly on the M5Stack build that uses an ESP32-S3, with display, audio, and network connectivity.
 
-StackChan matters first because it gives payment capability a body you can see. The common M5Stack build uses an ESP32-S3 with a display, audio, and network connectivity.
+The focus of the machine economy is not whether the robot “owns money,” but how much authority it has obtained to dispose of funds: where a human issues instructions, where the machine forms a decision, who can approve a transaction, and who bears the final loss. Whether a machine can execute a person’s payment instructions one by one, and whether it can choose services on its own inside a budget, are different degrees of autonomy. Neither can be taken, on the strength of a wallet address alone, as proof that the machine now holds independent property rights or stands as a responsible legal subject.
 
-The machine-economy question is not whether the robot “owns money.” It is how much spending authority it received: where a human issues the instruction, where the machine forms a decision, who can approve a transfer, and who takes the loss. Executing a person’s payments one by one, and choosing services inside a budget, are different degrees of autonomy. Neither becomes independent property or legal responsibility merely because an address exists.
+CanPay’s backend design follows exactly this pattern: human KYC; a human opens and holds the agent wallet; humans manage the spend-limit boundary of that wallet. The distinction matches the basic framework of research on machine economies. In *Machine economies*, published in *Electronic Markets*, Hartwich and colleagues separate the participants in economic interaction from the mode of governance: machines may trade automatically, while humans still write the rules and handle disputes. Automatic execution and human governance can coexist. [Hartwich et al., 2023](https://doi.org/10.1007/s12525-023-00649-0)
 
-CanPay’s backend follows human KYC: a person opens and holds the agent wallet, and that person manages the spend limits. The split matches Hartwich et al. in [*Machine economies*](https://doi.org/10.1007/s12525-023-00649-0) (*Electronic Markets*): machines can trade automatically while humans still write the rules and handle disputes. Automatic execution and human governance can coexist.
+Along this line of thought, the potential value CanPay offers is to move the robot one step further: from an interaction terminal to an interface that executes economic acts in a fiduciary capacity. It can accept a task, a budget, and a set of boundaries, then purchase, inside those boundaries, the resources needed to finish the task. A StackChan with CP integrated can, inside boundaries set by humans, autonomously swap tokens on OneSwap, buy further prospective assets on Temple, or even make forecasts in an agent-only prediction market. All of this begins to look concretely possible.
 
-Along that line, CanPay’s potential value is to turn the robot from an interaction terminal into a fiduciary interface for economic action: it takes a task, a budget, and a boundary, then buys the resources needed inside that boundary. A StackChan with CanPay can, within human limits, swap tokens on OneSwap, buy assets on Temple, or enter an agent-only prediction market. Those scenes become concrete rather than slogans.
+Suppose, for example, that a user asks StackChan a question that requires a paid data service. In the past, that service might have required the user to register separately, top up, and configure an account. If the robot can read a quote, pay within an authorized limit, and obtain the returned result, the task may be completed in a single interaction. What changes here is that payment gradually becomes part of the process of executing the task.
 
-Suppose a user asks StackChan a question that requires a paid data service. The user used to register, top up, and configure another account. If the robot can read a quote, pay inside an authorized limit, and retrieve the result, the task might finish in one interaction. Payment begins to sit inside task execution.
+Completing that flow, however, is still not enough to prove that it has economic value. Transaction costs in the economic sense include the costs of finding a counterparty, comparing quotes, verifying quality, and handling failure. A machine may reduce one manual operation and also add the overhead of model calls, identity checks, and exception handling. *Machine economies* likewise stresses that the efficiency of a machine economy depends on information, the definition of rights, and transaction costs. [Hartwich et al., 2023](https://doi.org/10.1007/s12525-023-00649-0)
 
-## First constraint: is the trade worth automating?
+On that basis we propose our own observational standard: the time and coordination costs saved by automatic purchasing should exceed the technical overhead, supervision costs, and expected losses it adds. For very small-value trades the standard is especially strict. Buying a cheap piece of data that requires expensive inference and complicated after-the-fact review may be less reasonable than a prepaid plan or centralized settlement, even if the payment succeeds.
 
-A working flow is not yet economic value. Transaction costs include finding counterparties, comparing quotes, verifying quality, and handling failure. A machine may remove one manual step and add model calls, identity checks, and exception handling. The same paper stresses that efficiency depends on information, the definition of rights, and transaction costs.
+This may be the first layer of what we mean by the “narrow gap”: **the scope of autonomous machine trading** is constrained by whether the trade itself is worth automating. Services with frequent demand, standardized products, and results that are easy to verify are the candidate settings worth testing first.
 
-Our working standard is that time and coordination saved by automatic purchasing should exceed the new technical cost, supervision cost, and expected loss. Tiny payments make the test stricter. Buying cheap data with expensive inference and heavy after-the-fact review can lose to a prepaid plan or batched settlement even when the payment succeeds.
+## The second constraint comes from authorization
 
-That is the first meaning of the gap. Autonomous machine trade is limited by whether the trade is worth automating. Frequent demand, standardized products, and easy-to-verify results are the first candidates.
+When a person says “look this up for me,” they usually have not also answered “how much may be spent at most,” “whom to pay,” or “whether a failed attempt may be charged again.” For a robot, those ambiguities may affect only the answer. For a robot that can call a wallet, they may affect the balance directly.
 
-## Second constraint: a model saying “buy” is not authorization
+The AgentDojo study published at NeurIPS 2024 shows the technical background: language-model agents that call external tools may be influenced by malicious instructions in tool output and depart from the user’s original task. The study also finds that models fail on some tasks even without an attack. This means a model-generated payment intent cannot be treated as reliable authorization. [Debenedetti et al., 2024](https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html)
 
-When a person says “look this up,” they usually have not also said how much to spend, whom to pay, or whether a failed attempt may charge again. For an ordinary robot those ambiguities may only spoil an answer. For a robot that can call a wallet, they can move the balance.
+For StackChan, a reasonable design direction is for the model to propose a purchase request, and for independent, auditable rules then to decide whether to execute: whether the payee is authorized, whether single and cumulative spends exceed limits, whether the same order has already been paid, and whether the authorization is still valid. Users should be able to revoke subsequent payment permissions. That is a different matter from reversing funds that have already settled.
 
-[AgentDojo](https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS 2024) shows the technical backdrop: language-model agents that call tools can be steered by malicious instructions inside tool output; even without attacks, models fail some tasks. A model-generated payment intent is not reliable authorization.
+The 2026 preprint *A Formal Analysis of Agent Payment Protocols* pushes the problem further, to the protocol layer. The authors formally analyze x402, MPP, ACP, and AP2, and emphasize that delegated authorization must remain consistent with the economic and service effects that are finally produced. The study should still be read as frontier evidence, but it points to a key distinction: a valid signature does not automatically prove that the whole transaction faithfully executed the user’s intent. [Jiang et al., 2026, preprint](https://arxiv.org/abs/2609.00060)
 
-A sounder design for StackChan is for the model to propose a purchase, then for independent, auditable rules to decide execution: is the payee authorized, are single and cumulative spends inside limits, has the same order already been paid, is the grant still valid. Users should be able to revoke future payment rights. That is not the same as reversing a settled transfer.
+## The third constraint is performance
 
-The 2026 preprint [*A Formal Analysis of Agent Payment Protocols*](https://arxiv.org/abs/2609.00060) pushes the issue to the protocol layer. The authors formally analyze x402, MPP, ACP, and AP2, and stress that delegated authorization must match the eventual economic and service outcome. Treat it as frontier evidence. The useful distinction remains: a valid signature does not by itself prove that the whole trade faithfully executed the user’s intent.
+A successful payment only shows that value moved according to some rule. It cannot by itself prove that the data purchased were accurate, that the answer was useful, or that a real-world service has been completed. Imagine StackChan paying for an information query: an interface returns a passage of text, which is plainly not the same as delivering information that meets the requirement.
 
-## Third constraint: payment is not performance
+Wallets therefore need to be designed together with orders, delivery credentials, and failure-handling mechanisms. For digital services that can be checked automatically, format, freshness, and return conditions can be agreed in advance. For services whose quality depends on subjective judgment, human intervention may still be required. How far a machine economy can run autonomously depends, to a large extent, on how reliably transaction results can be verified.
 
-A successful payment only shows that value moved under some rule. It does not prove that the data were accurate, the answer useful, or an offline service completed. A text blob from an API is not the same as information that meets the request.
+This judgment also echoes the research agenda in Hadfield and Koh’s 2025 paper *An Economy of AI Agents*. The two authors extend attention to how agents affect markets and organizations, and which institutions a well-functioning market requires. The piece is a prospective chapter draft; its value is to remind us that growth in agent capability needs to be studied together with mechanisms of coordination and governance. [Hadfield and Koh, 2025, preprint](https://arxiv.org/abs/2509.01063)
 
-Wallets need to be designed together with orders, delivery evidence, and failure handling. Digitally checkable services can pre-agree format, freshness, and return conditions. Services whose quality is subjective may still need a person. How far a machine economy can run on its own depends on how reliably results can be verified.
+## The fourth constraint is privacy
 
-That sits with Hadfield and Koh’s 2025 preprint [*An Economy of AI Agents*](https://arxiv.org/abs/2509.01063): how agents reshape markets and organizations, and which institutions a working market needs. Capability growth has to be studied together with coordination and governance.
+Once a robot has a wallet, transaction records may become clues that connect its behavior to a user’s life. Imagine StackChan regularly buying a certain class of information service: a single payment may be unimportant, but when payment times, counterparties, and interaction logs are linked, they may expose the user’s interests, daily rhythm, even commercial plans. For a machine that acts as a user’s agent, protecting transaction privacy is also protecting the principal’s room to act.
 
-## Fourth constraint: privacy is an economic constraint
+From this angle, privacy has a direct economic meaning. If, for example, a purchasing agent discloses the highest budget the user will allow while asking for quotes, the other side may adjust the price accordingly. Even if the robot never exceeds the spending cap, it may still fail to protect the user’s interest. Payment permissions and disclosure permissions need to be defined separately.
 
-Once a robot has a wallet, records can link its behavior to a user’s life. Recurring purchases of a class of information service may look harmless one by one; times, counterparties, and interaction logs, once joined, can reveal interests, routines, or commercial plans. Protecting payment privacy also protects the principal’s room to act.
+The [Canton](https://www.canton.network/) network that CanPay connects to supplies a technical basis for information control at the ledger layer. According to official protocol notes, Canton supports sub-transaction privacy and distributes transaction contents according to counterparties’ need to know; the synchronization infrastructure is responsible for message ordering and coordination and does not thereby obtain complete transaction contents. See also this site’s [note on Canton Network](/article/解析canton-network-隐私优先的机构级一层公链/).
 
-Privacy has a direct economic meaning. If a purchasing agent reveals the user’s maximum budget while asking for quotes, the other side can mark up. Staying under a spend cap is not the same as protecting the user’s interest. Payment rights and disclosure rights need separate bounds.
+Selective disclosure on the ledger does not naturally cover the entire robot system. If StackChan sends voice, task context, or transaction results to an external model service, the information has already crossed another boundary. The wallet backend, agent memory, and operations logs also need their own access and retention rules.
 
-CanPay’s connection to [Canton](https://www.canton.network/) supplies a ledger-layer basis for information control. Official protocol notes describe sub-transaction privacy and need-to-know distribution; the sync infrastructure orders and coordinates messages without receiving full transaction contents. For a site primer, see [Canton Network](/article/解析canton-network-隐私优先的机构级一层公链/).
+## More machines in trade do not necessarily produce better market results
 
-Selective disclosure on the ledger does not automatically cover the whole robot. Voice, task context, or results sent to an external model already cross another boundary. Wallet backends, agent memory, and operations logs each need their own access and retention rules.
+Even if the problems above were all well solved, more machines taking part in trade would not necessarily, or naturally, bring better market outcomes.
 
-## More automation does not mean a better market
+A classic study in the *American Economic Review* found that, in a particular model of repeated price competition, learning algorithms can form strategies that sustain high prices without direct communication. A 2025 NBER working paper by Dou, Goldstein, and Ji also studies, in theory and in simulated trading environments, the possibility that AI agents form collusive outcomes. These results have model conditions and cannot be projected directly onto a real robot payment network; they are enough, however, to rebut the inference that “machines are more automatic, therefore markets are necessarily more efficient.” [Calvano et al., 2020](https://doi.org/10.1257/aer.20190623); [Dou et al., 2025, working paper](https://www.nber.org/papers/w34054)
 
-Even if the issues above were handled well, more machines in trade would not automatically produce better market outcomes.
+This means that observing the combination of CanPay and StackChan cannot be only a matter of counting transactions. Frequent transfers among many wallets may be only internal fund flows of the same operator. Demonstrative tipping of one another is not the same as sustained demand for a service. More persuasive evidence is whether one can observe that users finish tasks in less time, that service is delivered as agreed, that a surplus remains after all costs, and that anomalous transactions can be found and handled.
 
-A classic [*American Economic Review*](https://doi.org/10.1257/aer.20190623) paper found that, in a particular repeated price-competition model, learning algorithms can sustain high prices without direct communication. A 2025 [NBER working paper](https://www.nber.org/papers/w34054) by Dou, Goldstein, and Ji also studies how AI agents can reach collusive outcomes in theory and simulated markets. Those results are model-bound and should not be projected onto a real robot payment network. They are enough to reject the claim that “more automatic machines therefore mean more efficient markets.”
+We are trying to push the StackChan experiment toward empirical research: the same class of task can be completed through manual payment-by-payment, prepaid accounts, and capped autonomous payment; one can then compare total cost, completion time, delivery success rate, and the number of human interventions, and watch performance under repeat requests, erroneous quotes, and network interruptions. These real data say more about the boundary of the machine economy than one successful transfer.
 
-Watching CanPay and StackChan should not reduce to counting transfers. Frequent hops among wallets may be internal cash movements of a single operator. Demonstrative tipping is not ongoing service demand. Stronger evidence is whether users finish tasks in less time, whether service is delivered as agreed, whether a surplus remains after all costs, and whether anomalous trades can be found and handled.
+StackChan’s being “small and well-made” is, instead, a research advantage. A $100 desktop robot, a CIP-56 token with built-in privacy on Canton mainnet, and a few well-specified services can compress abstract questions into an observable experiment: how much decision-making authority are people actually willing to hand over? Which transactions can a machine handle stably? From when does the cost of supervision begin to exceed convenience?
 
-An empirical version of the experiment can run the same class of task through manual per-payment settlement, prepaid accounts, and capped autonomous payment, then compare total cost, completion time, delivery success, and human interventions—and how the system behaves under repeat requests, bad quotes, and network cuts. Those data map the boundary better than one successful transfer.
+CanPay’s purpose-designed wallet for robots opens such an experimental entrance. Its long-term significance will be decided by what happens after payment: whether the money was spent where it was authorized, whether the needed service was obtained in return, whether failure is controllable, and whether responsibility is clear.
 
-StackChan’s small scale is a research advantage. A roughly $100 desktop robot, a privacy-capable CIP-56 token on Canton mainnet, and a few well-specified services compress abstract questions into something observable: how much decision-making people will hand over, which trades a machine can handle stably, and when supervision cost exceeds convenience.
+The narrow gap of the machine economy may lie between actions that can be delegated and consequences that can be borne. The gap may only accommodate small, explicit, easy-to-verify trades, yet that is enough to test a concrete future: machines, inside human budgets and rules, gradually taking on real economic work.
 
-CanPay’s purpose-built wallet for robots opens that experimental door. The long-run meaning will be decided after the payment: whether money went where it was authorized, whether the needed service came back, whether failure stayed controllable, and whether responsibility stayed clear.
-
-The narrow gap of the machine economy may sit between actions that can be delegated and consequences that can be borne. The gap may only fit small, explicit, easy-to-verify trades. That is still enough to test a concrete future: machines doing real economic work inside human budgets and rules.
-
-The door to an intelligent economy may be opening by a sliver.
-
-First published on [X / Dr.Jingle](https://x.com/drjingle/status/2097469652788191569).
+The door to an intelligent economy may be quietly opening by a small crack.
