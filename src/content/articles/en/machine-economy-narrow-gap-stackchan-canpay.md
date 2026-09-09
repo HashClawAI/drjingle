@@ -11,7 +11,7 @@ draft: false
 
 What happens when a desktop robot has a blockchain wallet?
 
-CanPayAI integrated a mainnet wallet into [StackChan](https://github.com/meganetaaan/stack-chan), an open-source, full-featured desktop robot built on ESP32. The question now has a concrete entry point: a device that once interacted through facial expressions, sound, and motion can take part in value transfer. It lets the “machine economy” leave grand forecasts for a moment and settle on an object that can sit on a desk.
+CanPayAI integrated a mainnet wallet into [StackChan](https://github.com/stack-chan/stack-chan), an open-source, full-featured desktop robot built on ESP32. The question now has a concrete entry point: a device that once interacted through facial expressions, sound, and motion can take part in value transfer. It lets the “machine economy” leave grand forecasts for a moment and settle on an object that can sit on a desk.
 
 A wallet, however, also invites a misconception: if a robot can send and receive payments, it has already become an independent economic actor.
 
@@ -67,7 +67,7 @@ Selective disclosure on the ledger does not naturally cover the entire robot sys
 
 Even if the problems above were all well solved, more machines taking part in trade would not necessarily, or naturally, bring better market outcomes.
 
-A classic study in the *American Economic Review* found that, in a particular model of repeated price competition, learning algorithms can form strategies that sustain high prices without direct communication. A 2025 NBER working paper by Dou, Goldstein, and Ji also studies, in theory and in simulated trading environments, the possibility that AI agents form collusive outcomes. These results have model conditions and cannot be projected directly onto a real robot payment network; they are enough, however, to rebut the inference that “machines are more automatic, therefore markets are necessarily more efficient.” [Calvano et al., 2020](https://doi.org/10.1257/aer.20190623); [Dou et al., 2025, working paper](https://www.nber.org/papers/w34054)
+A classic study in the *American Economic Review* found that, in a particular model of repeated price competition, learning algorithms can form strategies that sustain high prices without direct communication. A 2025 NBER working paper by Dou, Goldstein, and Ji also studies, in theory and in simulated trading environments, the possibility that AI agents form collusive outcomes. These results have model conditions and cannot be projected directly onto a real robot payment network; they are enough, however, to rebut the inference that “machines are more automatic, therefore markets are necessarily more efficient.” [Calvano et al., 2020](https://www.aeaweb.org/articles?id=10.1257/aer.20190623); [Dou et al., 2025, working paper](https://www.nber.org/papers/w34054)
 
 This means that observing the combination of CanPay and StackChan cannot be only a matter of counting transactions. Frequent transfers among many wallets may be only internal fund flows of the same operator. Demonstrative tipping of one another is not the same as sustained demand for a service. More persuasive evidence is whether one can observe that users finish tasks in less time, that service is delivered as agreed, that a surplus remains after all costs, and that anomalous transactions can be found and handled.
 
