@@ -17,7 +17,7 @@ A wallet, however, also invites a misconception: if a robot can send and receive
 
 Our judgment is this: the subject most worth exploring in the near term is the narrow gap in which machines can execute transactions, while the goals of those transactions and the liability for them remain defined by humans. The combination of CanPay and StackChan is a suitable case for observing that subject.
 
-![StackChan stands before a CanPay wallet cube, facing a narrow opening of light](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover.png)
+![StackChan stands before a CanPay wallet cube, facing a narrow opening of light](/images/articles/machine-economy-narrow-gap-stackchan-canpay/cover-narrow-gap.jpg)
 
 StackChan’s significance, first of all, is that it gives payment capability a perceptible body. It is based mainly on the M5Stack build that uses an ESP32-S3, with display, audio, and network connectivity.
 
