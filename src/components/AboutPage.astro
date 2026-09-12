@@ -9,9 +9,18 @@ const title = zh ? '关于 Michael Cheung · 金狗博士' : 'About Michael Cheu
 const description = zh ? '认识 Dr.Jingle（金狗博士）：围绕 AI 智能体、RWA 与区块链协议的研究、实践观察，以及本站的来源和更正原则。' : 'Meet Dr.Jingle (Michael Cheung): research on AI agents, RWA and blockchain protocols, with notes on sources, interpretation and corrections.';
 ---
 <BaseLayout locale={locale} title={title} description={description} structuredData={{ '@type': 'AboutPage', mainEntity: { '@id': 'https://drjingle.com/#person' } }}>
-  <div class="dj-shell dj-article-shell">
-    <article class="dj-article">
-      <h1 class="dj-article-title">{title}</h1>
+  <div class="dj-shell dj-article-shell dj-about">
+    <article class="dj-article dj-about-panel">
+      <header class="dj-about-header">
+        <div>
+          <p class="dj-about-eyebrow">{zh ? '关于作者' : 'About the author'}</p>
+          <h1 class="dj-about-title">Michael Cheung<span>Dr.Jingle {zh ? '／ 金狗博士' : '· 金狗博士'}</span></h1>
+          <div class="dj-about-topics" aria-label={zh ? '研究方向' : 'Research interests'}>
+            <span>AI Agents</span><span>RWA</span><span>Blockchain</span>
+          </div>
+        </div>
+        <img class="dj-about-portrait" src="/themes/drjingle-mirror/avatar-real-crop.jpg?v=2" alt="Michael Cheung · Dr.Jingle" width="144" height="144" decoding="async" />
+      </header>
       <div class="dj-prose">
         {zh ? <>
           <p>我是 Michael Cheung，也使用 Dr.Jingle 和金狗博士这两个名字。这个网站记录我对 AI 智能体、现实世界资产代币化（RWA）和区块链协议的研究与观察。</p>
@@ -30,9 +39,41 @@ const description = zh ? '认识 Dr.Jingle（金狗博士）：围绕 AI 智能�
           <p>The site includes research explainers, field observations, and personal interpretation. Citing a source does not endorse every claim it contains. Secondary compilations, unofficial transcripts, forecasts, and experimental results should be read and quoted with their limitations intact. Chinese and English editions may use different phrasing, but should preserve the same evidence boundaries.</p>
           <p>If you spot a wrong number, quotation, or link, contact me through the public accounts below with the article URL and verifiable supporting material. Substantive revisions carry an updated date. Links to institutional homepages provide background, not independent verification of an individual's position.</p>
         </>}
-        <p><a href={`${prefix}/category/research/`}>{zh ? '全部研究文章' : 'All research articles'}</a> · <a href={`${prefix}/rss.xml`}>RSS</a></p>
+        <div class="dj-about-actions"><a href={`${prefix}/category/research/`}>{zh ? '浏览研究文章' : 'Explore the research'} <span aria-hidden="true">↗</span></a><a href={`${prefix}/rss.xml`}>{zh ? '订阅 RSS' : 'Subscribe via RSS'} <span aria-hidden="true">↗</span></a></div>
       </div>
     </article>
     <AuthorCard locale={locale} />
   </div>
 </BaseLayout>
+
+<style>
+  .dj-about { max-width: 1080px; }
+  .dj-about-panel { padding: clamp(26px, 5vw, 64px); border-radius: 28px; }
+  .dj-about-header { display: flex; align-items: center; justify-content: space-between; gap: 36px; max-width: 800px; margin: 0 auto 38px; padding-bottom: 38px; border-bottom: 1px solid rgba(156, 248, 231, .18); }
+  .dj-about-eyebrow { margin: 0 0 18px; color: #9cf8e7; font-size: 12px; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; }
+  .dj-about-title { margin: 0; color: #f1f7fa; font-size: clamp(32px, 4vw, 48px); font-weight: 750; line-height: 1.12; letter-spacing: -.035em; }
+  .dj-about-title span { display: block; margin-top: 14px; color: #b2c5d2; font-size: 18px; font-weight: 450; letter-spacing: .02em; line-height: 1.5; }
+  .dj-about-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .dj-about-topics span { padding: 6px 12px; border: 1px solid rgba(156, 248, 231, .16); border-radius: 999px; background: rgba(156, 248, 231, .045); color: #b9dad5; font-size: 11px; letter-spacing: .04em; }
+  .dj-about-portrait { flex: 0 0 auto; width: 144px; height: 144px; border-radius: 50%; object-fit: cover; padding: 6px; border: 1px solid rgba(156, 248, 231, .35); background: rgba(156, 248, 231, .04); box-shadow: 0 12px 48px rgba(0, 0, 0, .18); }
+  .dj-about :global(.dj-prose) { max-width: 800px; font-size: 17px; line-height: 1.95; color: #c8d5e0; }
+  .dj-about :global(.dj-prose > p:first-child) { color: #edf5f8; font-size: 19px; line-height: 1.85; }
+  .dj-about :global(.dj-prose h2) { margin-top: 42px; padding-top: 28px; font-size: 24px; line-height: 1.45; font-weight: 650; border-color: rgba(190, 214, 227, .12); }
+  .dj-about-actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 26px; margin-top: 30px; border-top: 1px solid rgba(190, 214, 227, .12); }
+  .dj-about-actions a { display: inline-flex; align-items: center; gap: 22px; padding: 10px 16px; border: 1px solid rgba(156, 248, 231, .25); border-radius: 12px; background: rgba(156, 248, 231, .05); text-decoration: none; font-size: 14px; color: #b5f4e9; transition: background .2s, border-color .2s; }
+  .dj-about-actions a:hover { background: rgba(156, 248, 231, .12); border-color: rgba(156, 248, 231, .5); }
+  .dj-about-actions a:focus-visible { outline: 2px solid #9cf8e7; outline-offset: 4px; }
+  @media (max-width: 600px) {
+    .dj-about-panel { border-radius: 20px; padding: 26px 22px; }
+    .dj-about-header { align-items: flex-start; gap: 16px; margin-bottom: 26px; padding-bottom: 26px; }
+    .dj-about-title { font-size: 30px; }
+    .dj-about-title span { font-size: 14px; margin-top: 10px; }
+    .dj-about-eyebrow { font-size: 10px; margin-bottom: 12px; }
+    .dj-about-portrait { width: 68px; height: 68px; padding: 3px; }
+    .dj-about-topics { gap: 6px; margin-top: 18px; }
+    .dj-about-topics span { font-size: 10px; padding: 4px 8px; }
+    .dj-about :global(.dj-prose) { font-size: 16px; line-height: 1.9; }
+    .dj-about :global(.dj-prose > p:first-child) { font-size: 17px; }
+    .dj-about :global(.dj-prose h2) { font-size: 21px; margin-top: 32px; padding-top: 24px; }
+  }
+</style>

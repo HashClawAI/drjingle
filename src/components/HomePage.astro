@@ -64,7 +64,7 @@ const seriesEntries = Object.entries(seriesData);
           </div>
 
           <div class="dj-hero-links">
-            <a href={localePath(locale, '/about/')} class="dj-btn">{locale === 'zh' ? '关于我与研究方向' : 'About me & my research'}</a>
+            <a href={localePath(locale, '/about/')} class="dj-btn dj-about-entry">{locale === 'zh' ? '关于我与研究方向' : 'About me & my research'}<span aria-hidden="true">↗</span></a>
             <a href="https://x.com/drjingle" class="dj-btn dj-btn-primary" target="_blank" rel="noopener noreferrer">{tr.home.followX}</a>
             <a href="https://paragraph.com/fahayek.eth" class="dj-btn dj-btn-wormhole" target="_blank" rel="noopener noreferrer">{tr.home.paragraph}</a>
           </div>
@@ -155,3 +155,11 @@ const seriesEntries = Object.entries(seriesData);
     )}
   </div>
 </BaseLayout>
+
+<style>
+  .dj-hero-links .dj-about-entry { display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 12px 20px; min-height: 44px; border: 1px solid rgba(156, 248, 231, .4); border-radius: 999px; background: rgba(96, 215, 197, .09); color: #b5f4e9; text-transform: none; letter-spacing: .02em; font-size: 13px; box-shadow: inset 0 1px 0 rgba(255,255,255,.07); transition: background .2s, border-color .2s; }
+  .dj-hero-links .dj-about-entry::before { display: none; }
+  .dj-hero-links .dj-about-entry:hover { background: rgba(96, 215, 197, .17); border-color: #9cf8e7; }
+  .dj-hero-links .dj-about-entry:focus-visible { outline: 2px solid #9cf8e7; outline-offset: 4px; }
+  .dj-about-entry span { font-size: 17px; line-height: 1; }
+</style>

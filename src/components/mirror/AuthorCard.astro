@@ -21,7 +21,7 @@ const tr = t(locale);
     <p class="dj-author-tagline">{tr.author.tagline}</p>
     <p class="dj-author-bio">{tr.author.bio}</p>
     <div class="dj-author-links">
-      <a href={locale === 'zh' ? '/zh/about/' : '/about/'}>{locale === 'zh' ? '关于作者与来源说明' : 'About the author & sources'}</a>
+      <a class="dj-author-about" href={locale === 'zh' ? '/zh/about/' : '/about/'}>{locale === 'zh' ? '关于作者与来源说明' : 'About the author & sources'} <span aria-hidden="true">↗</span></a>
       <a href="https://x.com/drjingle" target="_blank" rel="noopener noreferrer">X @drjingle</a>
       <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://t.me/Y2049" target="_blank" rel="noopener noreferrer">TG @Y2049</a>
@@ -29,3 +29,10 @@ const tr = t(locale);
     </div>
   </div>
 </section>
+
+<style>
+  .dj-author-links .dj-author-about { display: inline-flex; align-items: center; gap: 12px; min-height: 38px; padding: 8px 13px; border: 1px solid rgba(156, 248, 231, .3); border-radius: 10px; background: rgba(96, 215, 197, .07); color: #b5f4e9; text-decoration: none; transition: background .2s; }
+  .dj-author-links .dj-author-about:hover { background: rgba(96, 215, 197, .16); }
+  .dj-author-links .dj-author-about:focus-visible { outline: 2px solid #9cf8e7; outline-offset: 4px; }
+  .dj-author-about span { font-size: 16px; }
+</style>
