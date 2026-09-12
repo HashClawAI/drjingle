@@ -1861,6 +1861,11 @@ html[lang="en"] .dj-titles-zh { display: none; }
     border: 1px solid var(--dj-line);
 }
 
+.dj-site-card-logo-large {
+    width: 58px;
+    height: 58px;
+}
+
 .dj-site-card-tag {
     display: block;
     margin-bottom: 4px;

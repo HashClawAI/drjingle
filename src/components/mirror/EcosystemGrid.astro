@@ -12,8 +12,8 @@ const sites = [
   { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc, accent: 'cyan', current: true, logo: '/themes/drjingle-mirror/drjingle-logo-icon.png?v=6', logoGlass: true },
   { name: 'metastrategy.ltd', url: 'https://metastrategy.ltd/', tag: tr.ecosystem.metastrategy.tag, desc: tr.ecosystem.metastrategy.desc, accent: 'green', logo: '/themes/drjingle-mirror/metastrategy-logo.png' },
   { name: 'hashclaw.ai', url: 'https://hashclaw.ai', tag: tr.ecosystem.hashclaw.tag, desc: tr.ecosystem.hashclaw.desc, accent: 'gold', logo: '/themes/drjingle-mirror/hashclaw-logo.jpeg' },
-  { name: 'canpay.ai', url: 'https://canpay.ai', tag: tr.ecosystem.canpay.tag, desc: tr.ecosystem.canpay.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/cp-logo-256.png?v=1' },
-  { name: 'canpocket.ai', url: 'https://canpocket.ai', tag: tr.ecosystem.canpocket.tag, desc: tr.ecosystem.canpocket.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/cp-logo-256.png?v=1' },
+  { name: 'CanPay', url: 'https://canpay.ai', tag: tr.ecosystem.canpay.tag, desc: tr.ecosystem.canpay.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/cp-logo-256.png?v=1', logoLarge: true },
+  { name: 'CanPocket', url: 'https://canpocket.ai', tag: tr.ecosystem.canpocket.tag, desc: tr.ecosystem.canpocket.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/canpocket-icon-256.png?v=1', logoLarge: true },
   { name: 'ccprivacy.club', url: 'https://ccprivacy.club', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc, accent: 'violet', mark: 'CC' },
 ];
 ---
@@ -33,7 +33,7 @@ const sites = [
               <img src={site.logo} alt="" class="dj-site-logo dj-site-logo-icon" loading="lazy" decoding="async" />
             </span>
           ) : (
-            <img src={site.logo} alt="" class="dj-site-card-logo" loading="lazy" decoding="async" />
+            <img src={site.logo} alt="" class:list={['dj-site-card-logo', site.logoLarge && 'dj-site-card-logo-large']} loading="lazy" decoding="async" />
           )
         ) : site.mark ? (
           <span class="dj-site-card-mark" aria-hidden="true">{site.mark}</span>
