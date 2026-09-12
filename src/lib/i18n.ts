@@ -89,6 +89,8 @@ const zh = {
     drjingle: { tag: '个人 IP', desc: '个人网站' },
     metastrategy: { tag: '关注未来科技', desc: 'Meta Strategy — 聚焦 AI Agent 与区块链的融合。' },
     hashclaw: { tag: '组织品牌', desc: '进化中的超级智能体哈希龙虾' },
+    canpay: { tag: 'Canton Featured App', desc: '面向 AI Agent 与机器经济的支付网络，让智能体可以安全、可审计地收付款。' },
+    canpocket: { tag: 'Canton Featured App', desc: '给 Agent 使用的非托管钱包与支付入口，连接 Canton Network 上的开放服务。' },
     canton: { tag: '教育垂直', desc: 'Canton Network 双语教育站，教程、新闻与生态索引。' },
   },
 } as const;
@@ -180,6 +182,8 @@ const en: typeof zh = {
     drjingle: { tag: 'Personal IP', desc: 'Personal website' },
     metastrategy: { tag: 'Future technology', desc: 'Meta Strategy — focusing on the fusion of AI agents and blockchain.' },
     hashclaw: { tag: 'Org brand', desc: 'HashClaw—the evolving super-agent' },
+    canpay: { tag: 'Canton Featured App', desc: 'A payment network for AI agents and machine economies, built for safe and auditable agent payments.' },
+    canpocket: { tag: 'Canton Featured App', desc: 'A non-custodial wallet and payment entry point for agents, connecting open services on Canton Network.' },
     canton: { tag: 'Education', desc: 'Bilingual Canton Network education hub.' },
   },
 };
