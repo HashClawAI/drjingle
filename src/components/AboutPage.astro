@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import AuthorCard from '@/components/mirror/AuthorCard.astro';
+import type { Locale } from '@/lib/i18n';
+const { locale } = Astro.props as { locale: Locale };
+const zh = locale === 'zh';
+const prefix = zh ? '/zh' : '';
+const title = zh ? '关于 Michael Cheung · 金狗博士' : 'About Michael Cheung · Dr.Jingle';
+const description = zh ? '认识 Dr.Jingle（金狗博士）：围绕 AI 智能体、RWA 与区块链协议的研究、实践观察，以及本站的来源和更正原则。' : 'Meet Dr.Jingle (Michael Cheung): research on AI agents, RWA and blockchain protocols, with notes on sources, interpretation and corrections.';
+---
+<BaseLayout locale={locale} title={title} description={description} structuredData={{ '@type': 'AboutPage', mainEntity: { '@id': 'https://drjingle.com/#person' } }}>
+  <div class="dj-shell dj-article-shell">
+    <article class="dj-article">
+      <h1 class="dj-article-title">{title}</h1>
+      <div class="dj-prose">
+        {zh ? <>
+          <p>我是 Michael Cheung，也使用 Dr.Jingle 和金狗博士这两个名字。这个网站记录我对 AI 智能体、现实世界资产代币化（RWA）和区块链协议的研究与观察。</p>
+          <p>我关心的不只是技术能做什么，还包括它进入真实世界之后，谁来付钱、谁承担责任、人的决策会怎样改变。机器能自己转账，是否就有了自己的经济生活？资产搬到链上，哪些旧问题解决了，哪些只是换了一个地方？这些问题把这里的文章串在一起。</p>
+          <h2>从哪里读起</h2>
+          <p>想看具体实践，可以从<a href="/zh/article/machine-economy-narrow-gap-stackchan-canpay/">CanPay 钱包与 StackChan 机器人</a>以及<a href="/zh/article/agent-red-packet-machine-economy/">两个 Agent 的红包实验</a>读起。对创业与产品感兴趣，可以看<a href="/zh/series/ai-agent-pitfalls/">AI Agent 的现实陷阱</a>；对链上金融感兴趣，可以看<a href="/zh/series/stablecoin-2026/">稳定币系列</a>。</p>
+          <h2>文章中的事实、判断与来源</h2>
+          <p>这里既有研究解读，也有实践观察和个人判断。引用第三方材料不代表为其全部内容背书；二手汇编、未经官方确认的转写、预测与实验结果，应连同文章中的限制条件一起阅读和引用。中英文版本围绕同一主题，表达可以不同，证据边界应当一致。</p>
+          <p>如果发现数字、引文或链接有误，欢迎通过下方公开账号联系我，附上文章地址与可核验资料。文章发生实质修订时，页面会标出更新日期。机构首页仅提供机构背景，不应被当作对个人职务的独立证明。</p>
+        </> : <>
+          <p>I am Michael Cheung, also known as Dr.Jingle and 金狗博士. This site brings together my research and observations on AI agents, real-world asset tokenization (RWA), and blockchain protocols.</p>
+          <p>I am interested in what happens when a technical possibility meets a real decision: who pays, who takes responsibility, and what changes for people. Does a machine that can transfer money have an economic life of its own? When an asset moves on-chain, which problems disappear and which simply move with it? Those questions connect the writing here.</p>
+          <h2>A few places to start</h2>
+          <p>For practical observations, start with <a href="/article/machine-economy-narrow-gap-stackchan-canpay/">CanPay wallets and the StackChan robot</a> or <a href="/article/agent-red-packet-machine-economy/">two agents playing for red envelopes</a>. For product questions, try <a href="/series/ai-agent-pitfalls/">AI Agent Pitfalls</a>; for on-chain finance, explore the <a href="/series/stablecoin-2026/">stablecoin series</a>.</p>
+          <h2>Facts, interpretation, and sources</h2>
+          <p>The site includes research explainers, field observations, and personal interpretation. Citing a source does not endorse every claim it contains. Secondary compilations, unofficial transcripts, forecasts, and experimental results should be read and quoted with their limitations intact. Chinese and English editions may use different phrasing, but should preserve the same evidence boundaries.</p>
+          <p>If you spot a wrong number, quotation, or link, contact me through the public accounts below with the article URL and verifiable supporting material. Substantive revisions carry an updated date. Links to institutional homepages provide background, not independent verification of an individual's position.</p>
+        </>}
+        <p><a href={`${prefix}/category/research/`}>{zh ? '全部研究文章' : 'All research articles'}</a> · <a href={`${prefix}/rss.xml`}>RSS</a></p>
+      </div>
+    </article>
+    <AuthorCard locale={locale} />
+  </div>
+</BaseLayout>

@@ -1,8 +1,10 @@
 ---
 title: "梁文锋谈 DeepSeek：从 AGI、开源到组织克制的 52 个判断"
-description: "四小时投资人会议里，梁文锋如何解释 DeepSeek 的 AGI 路线、Coding Agent、持续学习、低成本开源与组织克制？本文依据 elsewhere 汇编整理 52 个观点，并注明其并非逐字实录。"
+description: "据 elsewhere 的会议言论汇编，整理梁文锋谈 DeepSeek 的 52 个观点，串起 AGI、编程智能体、持续学习、开源与组织克制。本文是二手材料的主题转述，不是官方声明或逐字实录。"
 pubDate: 2026-07-23
-updatedDate: 2026-07-23
+updatedDate: 2026-09-12
+image: "/images/articles/liang-wenfeng-meeting-essentials/cover.png"
+imageAlt: "DeepSeek 研究路线的概念插画：开源、持续学习、算力与团队，并非会议现场照片"
 category: insights
 tags: ["DeepSeek", "梁文锋", "AGI", "Coding Agent", "持续学习", "开源大模型"]
 articleSlug: "liang-wenfeng-52-views"
@@ -10,9 +12,7 @@ locale: zh
 draft: false
 ---
 
-“后面还有西瓜，前面的可能都是芝麻。”
-
-这是梁文锋在一场四小时投资人会议中被转述最多的比喻之一。Chatbot 流量、企业订单、超级 App，都是眼前的芝麻；真正的西瓜，是让机器持续学习，并最终走向通用人工智能（AGI）。
+在 elsewhere 汇编转述的梁文锋会议言论中，有一个西瓜与芝麻的比喻：Chatbot 流量、企业订单、超级 App，像眼前的芝麻；更远的西瓜，是让机器持续学习，并最终走向通用人工智能（AGI）。这份汇编不是官方实录，比喻的措辞也不能视为经过核验的原话。
 
 这也解释了为什么下面 52 个观点看起来横跨产品、价格、开源、人才和组织，最后却总会回到同一个问题：一件事究竟能不能提高 DeepSeek 做成 AGI 的概率？
 
@@ -106,4 +106,6 @@ draft: false
 
 这套选择能否成功，现在没人知道。持续学习仍然没有成熟答案，算力约束不会因为愿景消失，开源与低价也可能带来长期商业压力。但至少，这场会议给出了一张相当清楚的 DeepSeek 路线图：它不急着占领每一块已经看得见的市场，而是在赌更远处那只尚未切开的西瓜。
 
-*主要来源：elsewhere，《梁文锋四小时投资人会议实录》，2026 年 7 月 22 日。本文为主题化转述与双语整理，不是逐字引文；涉及梁文锋个人表述及 DeepSeek 战略的内容，应以公司正式发布和可核验原始材料为准。*
+如果想先抓住脉络，可以读[七个主题的导读](/zh/article/liang-wenfeng-meeting-essentials/)；如果更关心少赚一点是否划算，可以接着看[DeepSeek 的克制战略及其代价](/zh/article/deepseek-restraint-strategy/)。两篇同样基于非官方材料，不构成独立印证。
+
+*参考汇编：elsewhere，《梁文锋四小时投资人会议实录》，2026 年 7 月 22 日。以上 52 条均为该二手汇编所转述的观点，不是本站独立核实的公司事实或逐字引文；涉及梁文锋个人表述及 DeepSeek 战略的内容，应以公司正式发布和可核验原始材料为准。*

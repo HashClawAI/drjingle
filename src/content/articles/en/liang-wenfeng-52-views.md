@@ -1,8 +1,10 @@
 ---
 title: "Liang Wenfeng on DeepSeek: 52 Views on AGI, Open Source, and Restraint"
-description: "What does Liang Wenfeng's four-hour investor meeting reveal about DeepSeek's AGI roadmap, coding agents, continual learning, low-cost open source, and organizational restraint? A sourced reconstruction of 52 reported views—not a verbatim transcript."
+description: "52 reported Liang Wenfeng views on DeepSeek, AGI, coding agents and open source, drawn from a secondary compilation—not an official transcript."
 pubDate: 2026-07-23
-updatedDate: 2026-07-23
+updatedDate: 2026-09-12
+image: "/images/articles/liang-wenfeng-meeting-essentials/cover.png"
+imageAlt: "Concept illustration of DeepSeek research: open models, continual learning, compute and teams; not a meeting photograph"
 category: insights
 tags: ["DeepSeek", "Liang Wenfeng", "AGI", "Coding Agents", "Continual Learning", "Open-Source AI"]
 articleSlug: "liang-wenfeng-52-views"
@@ -10,9 +12,7 @@ locale: en
 draft: false
 ---
 
-“There may be a watermelon farther ahead. What lies in front of us may only be sesame seeds.”
-
-It is one of the most memorable metaphors attributed to Liang Wenfeng after a four-hour investor meeting. Chatbot traffic, enterprise contracts, and the race to build a super app are the sesame seeds. The watermelon is continual learning—and, eventually, artificial general intelligence (AGI).
+In elsewhere's compilation of remarks attributed to Liang Wenfeng, chatbot traffic, enterprise contracts, and super apps are compared to sesame seeds. The watermelon farther ahead is continual learning—and, eventually, artificial general intelligence (AGI). The compilation is not an official transcript, and the metaphor's wording should not be treated as a verified quotation.
 
 That metaphor turns 52 seemingly scattered views on products, pricing, open source, talent, and management into one coherent question: does this choice increase DeepSeek's probability of reaching AGI?
 
@@ -106,4 +106,6 @@ Lower prices encourage use. Open source earns ecosystem support and goodwill. A 
 
 Whether the wager works is unknown. Continual learning remains unsolved, vision does not remove compute constraints, and open models with low prices can create long-term commercial pressure. But the meeting sketches a remarkably legible DeepSeek strategy: do not rush to occupy every market already in sight when the larger prize may still be farther down the road.
 
-*Primary source: elsewhere, “Liang Wenfeng's Four-Hour Investor Meeting,” July 22, 2026. This article is a thematic bilingual paraphrase, not a verbatim quotation. Claims about Liang Wenfeng's remarks or DeepSeek's strategy should ultimately be checked against official releases and verifiable primary material.*
+For a shorter route through the material, read the [seven-theme meeting guide](/article/liang-wenfeng-meeting-essentials/). For an interpretation of the commercial trade-offs, continue with [DeepSeek's strategy of restraint and its costs](/article/deepseek-restraint-strategy/). Both also rely on unofficial material; they are not independent corroboration.
+
+*Reference compilation: elsewhere, “Liang Wenfeng's Four-Hour Investor Meeting,” July 22, 2026. All 52 points above paraphrase views reported in that secondary compilation, not company facts independently verified by this site or verbatim quotations. Claims about Liang Wenfeng's remarks or DeepSeek's strategy should ultimately be checked against official releases and verifiable primary material.*

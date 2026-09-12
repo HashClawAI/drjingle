@@ -2,6 +2,7 @@
 title: "Inside Liang Wenfeng’s Investor Meeting: What DeepSeek Is Actually Betting On"
 description: "A close read of the hosted investor-meeting transcript: AGI first, continual learning after agents, open models, compute, and why team stability comes before traffic."
 pubDate: 2026-07-23
+updatedDate: 2026-09-12
 category: insights
 tags: ["Liang Wenfeng", "DeepSeek", "AGI", "Continual Learning", "Open-Source AI", "AI Compute"]
 articleSlug: "liang-wenfeng-meeting-essentials"
@@ -106,5 +107,7 @@ What you do get is a set of claims you can check later: after agents, bet on con
 In the optimistic story, those reinforce each other. In the pessimistic one, continual learning stalls, APIs commoditize, the compute gap widens, growth makes the org sluggish, and “restraint” becomes missing the window.
 
 When judging DeepSeek, ask less whether it picked up every sesame seed and more whether the next release, price move, product expansion, or reorg still moves along the AGI line.
+
+This article interprets an unofficial transcript, not independently verified company disclosures. For point-by-point reference, see the [52-view thematic index](/article/liang-wenfeng-52-views/); for the commercial trade-offs, continue with [the strategy of restraint and its costs](/article/deepseek-restraint-strategy/). These are different reading routes through the same topic, not independent corroboration.
 
 *Thematic synthesis of a public transcript; not the formal view of Liang Wenfeng or DeepSeek; not investment advice. Check financials, chip counts, and timelines against primary sources and official disclosures.*

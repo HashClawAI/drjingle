@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SeriesPage from '@/components/mirror/SeriesPage.astro';
 import type { Locale } from '@/lib/i18n';
-import { getPublishedArticles } from '@/lib/articles';
+import { getPublishedArticles, articleSlug } from '@/lib/articles';
 import seriesData from '@/data/series.json';
 
 export function getStaticPaths() {
@@ -17,7 +17,7 @@ if (!meta) return Astro.redirect('/');
 const title = meta.title_en;
 const desc = meta.desc_en;
 const all = await getPublishedArticles(locale);
-const items = meta.articles.map((s) => all.find((a) => a.slug === s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
+const items = meta.articles.map((s) => all.find((a) => articleSlug(a) === s)).filter((a): a is NonNullable<typeof a> => Boolean(a));
 ---
 
 <BaseLayout locale={locale} title={title} description={desc} navCurrent="insights">

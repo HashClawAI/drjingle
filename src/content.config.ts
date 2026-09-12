@@ -14,6 +14,8 @@ const articles = defineCollection({
     draft: z.boolean().default(false),
     locale: z.enum(['zh', 'en']).default('zh'),
     articleSlug: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
   }),
 });
 

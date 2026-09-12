@@ -39,6 +39,9 @@ const lede = entry.data.description ?? excerpt(entry, 240);
       <div class="dj-article-meta">
         <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate, locale)}</time>
         <span>Dr.Jingle</span>
+        {entry.data.updatedDate && entry.data.updatedDate > entry.data.pubDate && (
+          <span>{locale === 'zh' ? '更新于 ' : 'Updated '}<time datetime={entry.data.updatedDate.toISOString()}>{formatDate(entry.data.updatedDate, locale)}</time></span>
+        )}
       </div>
       {lede && <p class="dj-article-lede">{lede}</p>}
       <ShareBar locale={locale} shareUrl={shareUrl} shareTitle={entry.data.title} />

@@ -24,7 +24,7 @@ export async function getArticlesByCategory(
 }
 
 export function articleHref(slug: string, locale: Locale): string {
-  const base = `/article/${slug}`;
+  const base = `/article/${slug}/`;
   return locale === 'zh' ? `/zh${base}` : base;
 }
 
@@ -48,5 +48,18 @@ export function excerpt(entry: ArticleEntry, max = 140): string {
 }
 
 export function articleImage(entry: ArticleEntry): string | undefined {
-  return entry.body.match(/!\[[^\]]*\]\((\/[^)\s]+)(?:\s+"[^"]*")?\)/)?.[1];
+  return entry.data.image ?? entry.body.match(/!\[[^\]]*\]\((\/[^)\s]+)(?:\s+"[^"]*")?\)/)?.[1];
+}
+
+export function articleImageAlt(entry: ArticleEntry): string {
+  return entry.data.imageAlt ?? entry.body.match(/!\[([^\]]*)\]\(\//)?.[1] ?? 'Dr.Jingle · Michael Cheung';
+}
+
+export function relatedArticles(entry: ArticleEntry, all: ArticleEntry[]): ArticleEntry[] {
+  const tags = new Set((entry.data.tags ?? []).map((tag) => tag.toLowerCase()));
+  const score = (a: ArticleEntry) => (a.data.tags ?? []).filter((tag) => tags.has(tag.toLowerCase())).length;
+  return all.filter((a) => articleSlug(a) !== articleSlug(entry))
+    .filter((a) => score(a) > 0 || a.data.category === entry.data.category)
+    .sort((a, b) => score(b) - score(a) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 5);
 }

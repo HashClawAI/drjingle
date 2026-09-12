@@ -3,7 +3,7 @@ import { render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ArticlePage from '@/components/mirror/ArticlePage.astro';
 import type { Locale } from '@/lib/i18n';
-import { getPublishedArticles, articleImage, articleSlug } from '@/lib/articles';
+import { getPublishedArticles, articleImage, articleImageAlt, articleSlug, relatedArticles } from '@/lib/articles';
 
 export async function getStaticPaths() {
   const { getCollection } = await import('astro:content');
@@ -18,9 +18,7 @@ const all = await getPublishedArticles(locale);
 const alternateArticles = await getPublishedArticles('zh');
 const slug = articleSlug(entry);
 const alternatePath = alternateArticles.some((article) => articleSlug(article) === slug) ? `/zh/article/${slug}/` : null;
-const related = all
-  .filter((a) => articleSlug(a) !== slug && a.data.category === entry.data.category)
-  .slice(0, 5);
+const related = relatedArticles(entry, all);
 const navCurrent =
   entry.data.category === 'research' ? 'research' : entry.data.category === 'events' ? 'events' : 'insights';
 const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
@@ -59,6 +57,7 @@ const articleSchema = [
   navCurrent={navCurrent}
   pageType="article"
   image={image}
+  imageAlt={articleImageAlt(entry)}
   publishedTime={entry.data.pubDate.toISOString()}
   modifiedTime={(entry.data.updatedDate ?? entry.data.pubDate).toISOString()}
   tags={entry.data.tags ?? []}

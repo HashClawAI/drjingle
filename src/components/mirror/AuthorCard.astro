@@ -21,6 +21,7 @@ const tr = t(locale);
     <p class="dj-author-tagline">{tr.author.tagline}</p>
     <p class="dj-author-bio">{tr.author.bio}</p>
     <div class="dj-author-links">
+      <a href={locale === 'zh' ? '/zh/about/' : '/about/'}>{locale === 'zh' ? '关于作者与来源说明' : 'About the author & sources'}</a>
       <a href="https://x.com/drjingle" target="_blank" rel="noopener noreferrer">X @drjingle</a>
       <a href="https://github.com/HashClawAI/drjingle" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://t.me/Y2049" target="_blank" rel="noopener noreferrer">TG @Y2049</a>

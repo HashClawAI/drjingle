@@ -5,7 +5,7 @@ import HeroTitles from '@/components/mirror/HeroTitles.astro';
 import ArticleCard from '@/components/mirror/ArticleCard.astro';
 import type { Locale } from '@/lib/i18n';
 import { t, localePath } from '@/lib/i18n';
-import { getArticlesByCategory } from '@/lib/articles';
+import { getArticlesByCategory, getPublishedArticles } from '@/lib/articles';
 import { getFeaturedArticles } from '@/lib/featured';
 import seriesData from '@/data/series.json';
 
@@ -15,13 +15,14 @@ interface Props {
 
 const { locale } = Astro.props;
 const tr = t(locale);
-const latestInsights = (await getArticlesByCategory('insights', locale)).slice(0, 3);
-const latestResearch = (await getArticlesByCategory('research', locale)).slice(0, 3);
+const latestArticles = (await getPublishedArticles(locale)).slice(0, 3);
+const latestIds = new Set(latestArticles.map((entry) => entry.id));
+const latestResearch = (await getArticlesByCategory('research', locale)).filter((entry) => !latestIds.has(entry.id)).slice(0, 3);
 const featured = await getFeaturedArticles(locale);
 const seriesEntries = Object.entries(seriesData);
 ---
 
-<BaseLayout locale={locale} title={tr.siteName} description={tr.siteDesc} navCurrent="home">
+<BaseLayout locale={locale} title={locale === 'zh' ? '金狗博士：AI 智能体、RWA 与区块链研究' : 'Michael Cheung: AI Agents, RWA & Blockchain Research'} description={tr.siteDesc} navCurrent="home">
   <div class="dj-shell">
     <section class="dj-hero">
       <div class="dj-hero-inner">
@@ -63,6 +64,7 @@ const seriesEntries = Object.entries(seriesData);
           </div>
 
           <div class="dj-hero-links">
+            <a href={localePath(locale, '/about/')} class="dj-btn">{locale === 'zh' ? '关于我与研究方向' : 'About me & my research'}</a>
             <a href="https://x.com/drjingle" class="dj-btn dj-btn-primary" target="_blank" rel="noopener noreferrer">{tr.home.followX}</a>
             <a href="https://paragraph.com/fahayek.eth" class="dj-btn dj-btn-wormhole" target="_blank" rel="noopener noreferrer">{tr.home.paragraph}</a>
           </div>
@@ -84,19 +86,20 @@ const seriesEntries = Object.entries(seriesData);
       </div>
     </section>
 
-    {latestInsights.length > 0 && (
+    {latestArticles.length > 0 && (
       <section class="dj-section dj-reveal">
         <div class="dj-section-head">
           <p class="dj-section-eyebrow">{tr.home.insightsEyebrow}</p>
-          <h2 class="dj-section-title"><span class="dj-section-dot"></span> {tr.home.insightsTitle}</h2>
+          <h2 class="dj-section-title"><span class="dj-section-dot"></span> {locale === 'zh' ? '最近发表' : 'Latest articles'}</h2>
         </div>
         <div class="dj-feed dj-feed-editorial dj-feed-insights">
-          {latestInsights.map((entry, index) => (
+          {latestArticles.map((entry, index) => (
             <ArticleCard entry={entry} locale={locale} variant="feed" rank={index + 1} />
           ))}
         </div>
         <div class="dj-latest-more">
           <a href={localePath(locale, '/category/insights')}>{tr.home.insightsMore}</a>
+          <span> · </span><a href={localePath(locale, '/category/research')}>{tr.home.researchMore}</a>
         </div>
       </section>
     )}

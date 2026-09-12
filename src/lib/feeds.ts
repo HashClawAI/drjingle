@@ -29,6 +29,7 @@ export async function jsonFeed(locale: Locale): Promise<Response> {
       url,
       title: entry.data.title,
       summary: entry.data.description ?? entry.data.title,
+      content_text: entry.body,
       date_published: entry.data.pubDate.toISOString(),
       date_modified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
       authors: [{ name: 'Michael Cheung (Dr.Jingle)', url: SITE_URL }],

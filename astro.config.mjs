@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import articleHeadings from './scripts/remark-article-headings.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const base = process.env.BASE_PATH || '/';
@@ -42,7 +43,19 @@ function legacyEnRedirects() {
 export default defineConfig({
   site,
   base,
-  integrations: [sitemap()],
+  markdown: { remarkPlugins: [articleHeadings] },
+  integrations: [sitemap({
+    serialize(item) {
+      // Use the rendered article's editorial date, never the deployment date.
+      const pathname = decodeURIComponent(new URL(item.url).pathname);
+      if (pathname.includes('/article/')) {
+        const html = readFileSync(path.join(__dirname, 'dist', pathname, 'index.html'), 'utf8');
+        const modified = html.match(/"dateModified":"([^"]+)"/);
+        if (modified) item.lastmod = new Date(modified[1]);
+      }
+      return item;
+    },
+  })],
   vite: {
     resolve: {
       alias: {

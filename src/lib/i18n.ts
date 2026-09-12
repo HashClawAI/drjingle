@@ -4,7 +4,7 @@ export type NavKey = 'home' | 'events' | 'insights' | 'research' | 'ecosystem';
 
 const zh = {
   siteName: 'Dr.Jingle',
-  siteDesc: '区块链协议与 AI 智能体研究 · GEO 知识流',
+  siteDesc: 'Michael Cheung（Dr.Jingle／金狗博士）的双语研究与科普文章：从 AI 智能体、机器经济到 RWA 资产代币化、Canton Network 与比特币，解释技术如何改变商业与人的决策。',
   siteKeywords: 'Dr.Jingle, 金狗博士, AI, RWA, Web3, Canton',
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: '首页', events: '活动', insights: '洞察', research: '研究', ecosystem: '生态', primary: '主导航' },
@@ -95,7 +95,7 @@ const zh = {
 
 const en: typeof zh = {
   siteName: 'Dr.Jingle',
-  siteDesc: 'Blockchain protocols & AI agents · GEO knowledge stream',
+  siteDesc: 'Research and explainers by Michael Cheung (Dr.Jingle) on AI agents, machine economies, RWA tokenization, Canton Network, and blockchain protocols.',
   siteKeywords: 'Dr.Jingle, AI, RWA, Web3, Canton',
   brand: { legalName: 'Michael Cheung', cnName: '金狗博士' },
   nav: { home: 'Home', events: 'Events', insights: 'Insights', research: 'Research', ecosystem: 'Ecosystem', primary: 'Main' },

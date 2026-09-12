@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/generate-geo-files.mjs && astro build",
+    "build": "astro build && node scripts/check-seo.mjs",
     "preview": "astro preview",
-    "geo:generate": "node scripts/generate-geo-files.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
+    "geo:generate": "astro build",
     "export:geoflow": "node scripts/export-from-geoflow.mjs",
     "import:cache": "python3 scripts/import-from-local-cache.py",
     "lint:articles": "python3 scripts/lint-article-markdown.py --write --refresh-description"

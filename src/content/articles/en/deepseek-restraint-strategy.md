@@ -2,6 +2,7 @@
 title: "Liang Wenfeng’s Strategy of Restraint: Why DeepSeek Chooses to Earn Less"
 description: "A hosted investor transcript suggests DeepSeek trades near-term margin for AGI odds—open weights, low prices, focus, and room for researchers—if the logic holds."
 pubDate: 2026-07-23
+updatedDate: 2026-09-12
 category: insights
 tags: ["DeepSeek", "Liang Wenfeng", "AGI", "Open-Source AI", "Continual Learning", "AI Business Models"]
 articleSlug: "deepseek-restraint-strategy"
@@ -80,5 +81,7 @@ Coherent is not guaranteed. Continual learning may stall for years; APIs may com
 The nastier exam arrives after success—when sesame seeds are already large enough to change everyone’s wealth and saying “we do not need to take much” is no longer cheap. Continuing toward a watermelon you cannot yet see takes discipline.
 
 So the useful residue of the meeting is not an unverified accelerator count. It is a question you can reuse: **does the next price move, open release, product expansion, or reorg raise the odds of AGI—or mark the moment present success reroutes the company?** The answer will not live on a mission statement; it will show up in the next trade-off.
+
+This article interprets an unofficial transcript, not independently verified company disclosures. For point-by-point reference, see the [52-view thematic index](/article/liang-wenfeng-52-views/); for a shorter overview, read the [seven-theme guide](/article/liang-wenfeng-meeting-essentials/). These are different reading routes through the same topic, not independent corroboration.
 
 *Independent analysis of a public transcript; not DeepSeek’s official view; not investment advice. Verify meeting claims, forecasts, chip counts, and timelines against primary sources and formal disclosures.*
