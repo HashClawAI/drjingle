@@ -34,7 +34,7 @@ const {
   alternatePath,
 } = Astro.props;
 const tr = t(locale);
-const siteTitle = title === tr.siteName ? tr.siteName : `${title} · ${tr.siteName}`;
+const siteTitle = title === tr.siteName || title.endsWith(` · ${tr.siteName}`) ? title : `${title} · ${tr.siteName}`;
 const siteOrigin = Astro.site?.href ?? 'https://drjingle.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href;
 const resolvedAlternatePath = alternatePath === undefined ? localeSwitchPath(locale, Astro.url.pathname) : alternatePath;
