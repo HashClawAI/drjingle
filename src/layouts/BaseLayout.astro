@@ -124,7 +124,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...e
     <div class="dj-grain" aria-hidden="true"></div>
     <div id="dj-read-progress" class="dj-read-progress" role="presentation"></div>
 
-    <SiteHeader locale={locale} navCurrent={navCurrent} pathname={Astro.url.pathname} />
+    <SiteHeader locale={locale} navCurrent={navCurrent} pathname={Astro.url.pathname} alternatePath={resolvedAlternatePath} />
     <main class="dj-main">
       <slot />
     </main>

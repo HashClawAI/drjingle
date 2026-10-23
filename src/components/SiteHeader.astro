@@ -6,11 +6,12 @@ interface Props {
   locale: Locale;
   navCurrent?: NavKey;
   pathname: string;
+  alternatePath?: string | null;
 }
 
-const { locale, navCurrent = 'home', pathname } = Astro.props;
+const { locale, navCurrent = 'home', pathname, alternatePath } = Astro.props;
 const tr = t(locale);
-const switchHref = localeSwitchPath(locale, pathname);
+const switchHref = alternatePath === undefined ? localeSwitchPath(locale, pathname) : alternatePath;
 
 const navItems: { key: NavKey; href: string; icon: string }[] = [
   { key: 'home', href: localePath(locale, '/'), icon: 'home' },
@@ -62,9 +63,9 @@ const navItems: { key: NavKey; href: string; icon: string }[] = [
     </nav>
 
     <div class="dj-header-actions">
-      <a href={switchHref} class="dj-locale-switch" aria-label={tr.localeSwitch.aria}>
+      {switchHref && <a href={switchHref} class="dj-locale-switch" aria-label={tr.localeSwitch.aria}>
         {locale === 'en' ? tr.localeSwitch.toZh : tr.localeSwitch.toEn}
-      </a>
+      </a>}
       <a href="https://x.com/drjingle" class="dj-link-out" target="_blank" rel="noopener noreferrer">@drjingle</a>
       <a href="https://github.com/HashClawAI/drjingle" class="dj-link-out dj-link-out-soft" target="_blank" rel="noopener noreferrer">GH</a>
       <a href="https://t.me/Y2049" class="dj-link-out dj-link-out-soft" target="_blank" rel="noopener noreferrer">TG</a>
