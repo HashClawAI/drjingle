@@ -10,11 +10,11 @@ const { locale } = Astro.props;
 const tr = t(locale);
 const sites = [
   { name: 'drjingle.com', url: 'https://drjingle.com', tag: tr.ecosystem.drjingle.tag, desc: tr.ecosystem.drjingle.desc, accent: 'cyan', current: true, logo: '/themes/drjingle-mirror/drjingle-logo-icon.png?v=6', logoGlass: true },
-  { name: 'metastrategy.ltd', url: 'https://metastrategy.ltd/', tag: tr.ecosystem.metastrategy.tag, desc: tr.ecosystem.metastrategy.desc, accent: 'green', logo: '/themes/drjingle-mirror/metastrategy-logo.png' },
+  { name: 'metastrategy.ltd', url: 'https://metastrategy.ltd/', tag: tr.ecosystem.metastrategy.tag, desc: tr.ecosystem.metastrategy.desc, accent: 'green', logo: '/images/ecosystem/brands/metastrategy.png', logoVariant: 'meta' },
   { name: 'hashclaw.ai', url: 'https://hashclaw.ai', tag: tr.ecosystem.hashclaw.tag, desc: tr.ecosystem.hashclaw.desc, accent: 'gold', logo: '/themes/drjingle-mirror/hashclaw-logo.jpeg' },
-  { name: 'CanPay', url: 'https://canpay.ai', tag: tr.ecosystem.canpay.tag, desc: tr.ecosystem.canpay.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/cp-logo-256.png?v=1', logoLarge: true },
-  { name: 'CanPocket', url: 'https://canpocket.ai', tag: tr.ecosystem.canpocket.tag, desc: tr.ecosystem.canpocket.desc, accent: 'gold', logo: '/images/ecosystem/canpay-canypocket/canpocket-icon-256.png?v=1', logoLarge: true },
-  { name: 'ccprivacy.club', url: 'https://ccprivacy.club', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc, accent: 'violet', mark: 'CC' },
+  { name: 'CanPay', url: 'https://canpay.ai', tag: tr.ecosystem.canpay.tag, desc: tr.ecosystem.canpay.desc, accent: 'gold', logo: '/images/ecosystem/brands/canpay.png', logoVariant: 'wordmark' },
+  { name: 'CanPocket', url: 'https://canpocket.ai', tag: tr.ecosystem.canpocket.tag, desc: tr.ecosystem.canpocket.desc, accent: 'gold', logo: '/images/ecosystem/brands/canpocket.png', logoVariant: 'pocket' },
+  { name: 'ccprivacy.club', url: 'https://ccprivacy.club', tag: tr.ecosystem.canton.tag, desc: tr.ecosystem.canton.desc, accent: 'violet', logo: '/images/ecosystem/brands/ccprivacy.png', logoVariant: 'privacy' },
 ];
 ---
 
@@ -33,7 +33,9 @@ const sites = [
               <img src={site.logo} alt="" class="dj-site-logo dj-site-logo-icon" loading="lazy" decoding="async" />
             </span>
           ) : (
-            <img src={site.logo} alt="" class:list={['dj-site-card-logo', site.logoLarge && 'dj-site-card-logo-large']} loading="lazy" decoding="async" />
+            <span class:list={['dj-site-card-brand', site.logoVariant && `dj-site-card-brand-${site.logoVariant}`]} aria-hidden="true">
+              <img src={site.logo} alt="" loading="lazy" decoding="async" />
+            </span>
           )
         ) : site.mark ? (
           <span class="dj-site-card-mark" aria-hidden="true">{site.mark}</span>
@@ -48,3 +50,28 @@ const sites = [
     </a>
   ))}
 </div>
+
+<style>
+  .dj-site-card-brand {
+    display: block;
+    position: relative;
+    width: 58px;
+    height: 58px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--dj-line);
+    border-radius: 12px;
+    background: #000;
+  }
+  .dj-site-card-brand img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .dj-site-card-brand-meta img { transform: scale(1.02); }
+  .dj-site-card-brand-pocket img { transform: scale(1.65); }
+  .dj-site-card-brand-privacy img { transform: translateY(10%) scale(2.1); }
+  .dj-site-card-brand-wordmark { width: 110px; }
+  .dj-site-card-brand-wordmark img { object-fit: cover; transform: scale(1.08); }
+</style>
